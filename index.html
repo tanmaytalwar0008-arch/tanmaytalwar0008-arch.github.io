@@ -1,120 +1,30 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BK Motors | Pre-Owned Two Wheelers</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BK Motors | Pre-Owned Two Wheelers</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#f5f6f8;color:#151515}
-header{background:#080808;color:#fff;position:sticky;top:0;z-index:9}
-.nav{max-width:1150px;margin:auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:25px;font-weight:900}.logo b{color:#e63946}
-nav a{color:#fff;text-decoration:none;margin-left:20px;font-size:14px;font-weight:bold}
-nav a:hover{color:#e63946}
-.hero{min-height:520px;padding:60px 20px;display:grid;place-items:center;text-align:center;color:#fff;background:linear-gradient(#000b,#000b),url("https://images.unsplash.com/photo-1558981806-ec527fa8[...]
-.hero h1{font-size:56px;line-height:1.05}.hero h1 b{color:#e63946}.hero p{max-width:700px;margin:18px auto 28px;color:#ddd;font-size:18px;line-height:1.6}
-.btn{display:inline-block;padding:13px 22px;border-radius:7px;font-weight:bold;text-decoration:none;margin:4px}.red{background:#e63946;color:#fff}.white{background:#fff;color:#111}
-.search{max-width:1120px;margin:-35px auto 20px;padding:0 18px;position:relative}.searchbox{background:#fff;padding:22px;border-radius:14px;box-shadow:0 10px 35px #0002}.filters{display:grid;grid-temp[...]
-input,select,textarea{width:100%;padding:13px;border:1px solid #ddd;border-radius:7px;font:inherit;background:#fff}
-main section{padding:60px 20px}.wrap{max-width:1120px;margin:auto}.title{text-align:center;margin-bottom:35px}.title h2{font-size:34px;margin-bottom:8px}.title p{color:#777}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;border-radius:13px;overflow:hidden;box-shadow:0 5px 20px #0001}.photo{height:225px;position:relative}.photo img{wi[...]
-.dark{background:#111;color:#fff}.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.about p{color:#bbb;line-height:1.8;margin-top:15px}.features{display:grid;grid-template-[...]
-.why{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.why div{background:#fff;padding:28px 15px;text-align:center;border-radius:11px;box-shadow:0 5px 18px #0001}.why strong{display:block;mar[...]
-.form{max-width:720px;margin:auto;background:#fff;padding:28px;border-radius:13px;box-shadow:0 5px 25px #0001}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.full{grid-column:1/-1}.subm[...]
-.map{width:100%;height:380px;border:0;border-radius:13px}.contact{background:#111;color:#fff;border-radius:14px;text-align:center;padding:38px}.contact p{color:#aaa;margin:10px 0 20px}.wa{background:#[...]
-footer{background:#050505;color:#888;text-align:center;padding:24px;font-size:13px}
-.modal{display:none;position:fixed;inset:0;background:#000b;z-index:20;place-items:center;padding:20px}.modalbox{background:#fff;max-width:500px;width:100%;padding:28px;border-radius:13px;position:rel[...]
-@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.filters{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}}
-@media(max-width:600px){nav{display:none}.hero h1{font-size:39px}.grid,.filters{grid-template-columns:1fr}.why{grid-template-columns:1fr 1fr}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}[...]
-</style>
-</head>
-<body>
-
-<header><div class="nav">
-<div class="logo">BK <b>MOTORS</b></div>
-<nav><a href="#inventory">Inventory</a><a href="#about">About</a><a href="#enquiry">Enquiry</a><a href="#location">Location</a></nav>
-</div></header>
-
-<section class="hero"><div>
-<h1>Premium <b>Pre-Owned</b><br>Two Wheelers</h1>
-<p>Quality checked bikes and scooters at honest prices. Find your next two-wheeler with BK Motors.</p>
-<a class="btn red" href="#inventory">View Inventory</a>
-<a class="btn white" target="_blank" href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20enquire%20about%20a%20vehicle.">WhatsApp Us</a>
-</div></section>
-
-<div class="search"><div class="searchbox">
-<h2>Find Your Two-Wheeler</h2>
-<div class="filters">
-<input id="search" placeholder="Search bike or scooter...">
-<select id="type"><option value="">All Types</option><option>Bike</option><option>Scooter</option></select>
-<select id="brand"><option value="">All Brands</option><option>Bajaj</option><option>TVS</option><option>Honda</option></select>
-<select id="sort"><option value="">Sort By</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option></select>
-</div>
-<p id="count" style="margin-top:10px;color:#777"></p>
-</div></div>
-
-<main>
-<section id="inventory"><div class="wrap">
-<div class="title"><h2>Available Vehicles</h2><p>Our current pre-owned two-wheeler collection.</p></div>
-<div class="grid" id="grid">
-
-<article class="card" data-name="Bajaj Pulsar 150" data-brand="Bajaj" data-type="Bike" data-price="35000">
-<div class="photo"><img src="https://images.unsplash.com/photo-1558980664-10ea2b3a2c5f?auto=format&fit=crop&w=900&q=80" alt="Bajaj Pulsar 150"><span class="badge">1st Owner</span></div>
-<div class="info"><h3>Bajaj Pulsar 150</h3><div class="price">₹35,000</div><div class="specs"><div class="spec">2015 Model</div><div class="spec">35,000 km</div><div class="spec">1st Owner</div><div[...]
-</article>
-
-<article class="card" data-name="TVS Jupiter" data-brand="TVS" data-type="Scooter" data-price="52000">
-<div class="photo"><img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=80" alt="TVS Jupiter"><span class="badge">1st Owner</span></div>
-<div class="info"><h3>TVS Jupiter</h3><div class="price">₹52,000</div><div class="specs"><div class="spec">2019 Model</div><div class="spec">18,600 km</div><div class="spec">1st Owner</div><div clas[...]
-</article>
-
-<article class="card" data-name="Honda Activa 3G" data-brand="Honda" data-type="Scooter" data-price="28000">
-<div class="photo"><img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=900&q=80" alt="Honda Activa 3G"><span class="badge">1st Owner</span></div>
-<div class="info"><h3>Honda Activa 3G</h3><div class="price">₹28,000</div><div class="specs"><div class="spec">2014 Model</div><div class="spec">26,000 km</div><div class="spec">1st Owner</div><div [...]
-</article>
-
-</div>
-<p id="none" style="display:none;text-align:center;padding:35px;color:#777">No vehicles found.</p>
-</div></section>
-
-<section class="dark" id="about"><div class="wrap about">
-<div><h2>BK Motors</h2><p>We deal in quality pre-owned two wheelers with transparent vehicle details, fair pricing and an easy buying experience.</p></div>
-<div class="features"><div class="feature"><b>✓ Quality Checked</b><small>Vehicles inspected before listing.</small></div><div class="feature"><b>✓ 1st Owner Options</b><small>Owner details shown [...]
-</div></section>
-
-<section><div class="wrap"><div class="title"><h2>Why Choose BK Motors?</h2><p>Professional and straightforward pre-owned vehicle buying.</p></div><div class="why"><div>🔍<strong>Transparent</strong[...]
-
-<section id="enquiry" style="background:#eee"><div class="wrap"><div class="title"><h2>Send an Enquiry</h2><p>Your enquiry will open directly in WhatsApp.</p></div>
-<div class="form"><form onsubmit="sendForm(event)"><div class="formgrid">
-<input id="name" required placeholder="Your Name"><input id="phone" required type="tel" placeholder="Mobile Number">
-<select id="vehicle" class="full"><option value="">Select Vehicle</option><option>Bajaj Pulsar 150</option><option>TVS Jupiter</option><option>Honda Activa 3G</option></select>
-<textarea id="message" class="full" rows="5" placeholder="Your message"></textarea>
-</div><button class="submit" type="submit">Send Enquiry on WhatsApp</button></form></div></div></section>
-
-<section id="location"><div class="wrap"><div class="title"><h2>Find BK Motors</h2><p>Map currently set to Dehradun, Uttarakhand.</p></div><iframe class="map" src="https://www.google.com/maps?q=Dehrad[...]
-
-<section><div class="wrap"><div class="contact"><h2>Ready to Buy?</h2><p>Call or WhatsApp BK Motors for availability and more photos.</p><a class="btn call" href="tel:+918126525454">📞 8126525454</a[...]
-</main>
-
-<footer>© 2026 BK Motors • Premium Pre-Owned Two Wheelers</footer>
-
-<div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="modalbox"><span class="close" onclick="closeModal()">×</span><h2 id="mt"></h2><h3 id="mp" style="color:#e63946;[...]
-
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,sans-serif;background:#f5f6f8;color:#111}a{text-decoration:none}.wrap{width:min(1150px,92%);margin:auto}
+header{position:sticky;top:0;z-index:9;background:#08090b;color:#fff;border-bottom:1px solid #292b30}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:25px;font-weight:900}.logo span,.red{color:#e21d2f}.links{display:flex;gap:25px;font-size:14px;font-weight:700}.links a{color:#ddd}.links a:hover{color:#e21d2f}.wa{background:#25d366!important;color:#fff!important;padding:11px 16px;border-radius:8px}
+.hero{min-height:650px;background:radial-gradient(circle at 78% 50%,#4a0f17 0,#14161b 25%,#08090b 65%);color:#fff;display:flex;align-items:center;overflow:hidden}.heroGrid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px}.tag{color:#ff4050;font-size:12px;font-weight:900;letter-spacing:2px}.hero h1{font-size:clamp(48px,7vw,78px);line-height:.96;margin:15px 0 20px;letter-spacing:-3px}.hero p{color:#b9bdc5;font-size:18px;max-width:580px;line-height:1.6;margin-bottom:28px}.btn{display:inline-block;padding:14px 20px;border-radius:8px;font-weight:800;margin-right:8px}.btnRed{background:#e21d2f;color:#fff}.btnOutline{border:1px solid #555;color:#fff}.btnOutline:hover{background:#fff;color:#111}
+.bike{height:330px;position:relative;display:flex;align-items:center;justify-content:center}.bike:before{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:#e21d2f33;filter:blur(35px)}.motor{width:380px;height:190px;position:relative;z-index:2}.wheel{position:absolute;bottom:0;width:110px;height:110px;border:9px solid #25272b;border-radius:50%;background:radial-gradient(circle,#777 0 7%,#111 8% 25%,#444 26% 29%,#090a0b 30%)}.w1{left:25px}.w2{right:25px}.frame{position:absolute;left:100px;top:90px;width:190px;height:60px;border-left:11px solid #e21d2f;border-bottom:11px solid #e21d2f;transform:skew(-15deg) rotate(-8deg)}.tank{position:absolute;left:135px;top:52px;width:95px;height:58px;background:linear-gradient(135deg,#444,#101114);border-radius:45%;transform:skew(-12deg)}.seat{position:absolute;left:205px;top:43px;width:90px;height:17px;border-radius:15px;background:#18191c}.handle{position:absolute;right:50px;top:38px;width:70px;height:55px;border-top:7px solid #aaa;border-right:7px solid #aaa;border-radius:0 35px 0 0}.fork{position:absolute;right:82px;top:80px;width:11px;height:72px;background:#777;transform:rotate(-18deg)}.lamp{position:absolute;right:50px;top:69px;width:25px;height:19px;border-radius:50%;background:#fff;box-shadow:0 0 22px #fff}
+.search{margin-top:-45px;position:relative;z-index:4}.searchBox{background:#fff;border-radius:15px;padding:22px;box-shadow:0 15px 40px #0002}.filters{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:10px;margin-top:14px}.filters input,.filters select{width:100%;padding:14px;border:1px solid #ddd;border-radius:8px;background:#fff}
+section{padding:75px 0}.title{text-align:center;margin-bottom:38px}.title h2{font-size:38px;margin:8px 0}.title p{color:#777}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 7px 25px #00000012;border:1px solid #eee}.pic{height:210px;background:linear-gradient(135deg,#17191e,#070809);display:flex;align-items:center;justify-content:center;position:relative}.badge{position:absolute;top:13px;left:13px;background:#e21d2f;color:#fff;padding:6px 10px;border-radius:20px;font-size:11px;font-weight:900}.mini{transform:scale(.65)}.info{padding:19px}.info h3{font-size:21px}.price{font-size:23px;font-weight:900;color:#e21d2f;margin:5px 0 13px}.specs{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:16px}.spec{background:#f1f2f4;padding:8px;border-radius:6px;font-size:12px;color:#666}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions button,.actions a{border:0;border-radius:7px;padding:11px;text-align:center;font-weight:800;cursor:pointer}.dark{background:#111;color:#fff}.actions .redBtn{background:#e21d2f;color:#fff}
+.darkSection{background:#0d0e11;color:#fff}.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.about h2{font-size:43px;line-height:1.05;margin:10px 0 18px}.about p{color:#aeb2ba;line-height:1.7}.points{display:grid;grid-template-columns:1fr 1fr;gap:12px}.point{background:#16181c;border:1px solid #2b2e34;padding:18px;border-radius:10px}.point span{display:block;color:#8e939b;font-size:12px;margin-top:5px}.why{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.why div{background:#fff;padding:28px 18px;border-radius:12px;text-align:center;box-shadow:0 6px 20px #0000000d}.why b{display:block;font-size:18px;margin:8px}.why p{color:#777;font-size:13px}.formSec{background:#eceef1}.form{max-width:750px;margin:auto;background:#fff;padding:28px;border-radius:14px}.formGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form input,.form select,.form textarea{width:100%;padding:13px;border:1px solid #ddd;border-radius:7px;margin-bottom:12px}.form textarea{height:110px}.full{grid-column:1/-1}.submit{width:100%;background:#e21d2f;color:#fff;border:0;padding:14px;border-radius:8px;font-weight:900}.contact{background:#08090b;color:#fff;text-align:center}.contactBox{border:1px solid #292c32;border-radius:16px;padding:45px}.contactBox h2{font-size:38px;margin-bottom:10px}.contactBox p{color:#999;margin-bottom:20px}footer{background:#050608;color:#777;text-align:center;padding:23px;font-size:12px}
+@media(max-width:800px){.links{display:none}.hero{min-height:720px}.heroGrid,.about{grid-template-columns:1fr;text-align:center}.hero p{margin-left:auto;margin-right:auto}.bike{height:260px}.filters,.cards,.why{grid-template-columns:1fr 1fr}.points{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.filters,.cards,.why,.formGrid,.points{grid-template-columns:1fr}.full{grid-column:auto}.hero h1{letter-spacing:-2px}.about h2,.contactBox h2{font-size:31px}}
+</style></head><body>
+<header><div class="wrap nav"><a class="logo" href="#">BK <span>MOTORS</span></a><nav class="links"><a href="#inventory">Inventory</a><a href="#about">About</a><a href="#why">Why Us</a><a href="#contact">Contact</a></nav><a class="wa" href="https://wa.me/918126525454?text=Hello%20BK%20Motors">WhatsApp</a></div></header>
+<section class="hero"><div class="wrap heroGrid"><div><div class="tag">TRUSTED PRE-OWNED TWO WHEELERS</div><h1>Ride Better.<br><span>Pay Smarter.</span></h1><p>Quality checked bikes and scooters at honest prices. Find your next two-wheeler with BK Motors.</p><a class="btn btnRed" href="#inventory">View Inventory</a><a class="btn btnOutline" href="https://wa.me/918126525454?text=Hello%20BK%20Motors">Chat on WhatsApp</a></div><div class="bike"><div class="motor"><i class="wheel w1"></i><i class="wheel w2"></i><i class="frame"></i><i class="tank"></i><i class="seat"></i><i class="handle"></i><i class="fork"></i><i class="lamp"></i></div></div></div></section>
+<div class="wrap search"><div class="searchBox"><b>Find Your Two-Wheeler</b><div class="filters"><input id="q" placeholder="Search bike or scooter..."><select id="type"><option value="">All Types</option><option>Bike</option><option>Scooter</option></select><select id="brand"><option value="">All Brands</option><option>Bajaj</option><option>Honda</option><option>Royal Enfield</option></select><select id="sort"><option value="">Sort By</option><option value="low">Price Low → High</option><option value="high">Price High → Low</option></select></div></div></div>
+<section id="inventory"><div class="wrap"><div class="title"><div class="tag">OUR INVENTORY</div><h2>Available Vehicles</h2><p>Clean, checked and ready for their next owner.</p></div><div class="cards" id="cards">
+<article class="card" data-name="Bajaj Pulsar 150" data-type="Bike" data-brand="Bajaj" data-price="35000"><div class="pic"><span class="badge">FEATURED</span><div class="motor mini"><i class="wheel w1"></i><i class="wheel w2"></i><i class="frame"></i><i class="tank"></i><i class="seat"></i><i class="handle"></i><i class="fork"></i><i class="lamp"></i></div></div><div class="info"><h3>Bajaj Pulsar 150</h3><div class="price">₹35,000</div><div class="specs"><div class="spec">2015 Model</div><div class="spec">35,000 km</div><div class="spec">1st Owner</div><div class="spec">Petrol</div></div><div class="actions"><button class="dark" onclick="alert('Bajaj Pulsar 150 • ₹35,000 • 2015 • 35,000 km • 1st Owner')">Details</button><a class="redBtn" href="https://wa.me/918126525454?text=I%20am%20interested%20in%20Bajaj%20Pulsar%20150">Enquire</a></div></div></article>
+<article class="card" data-name="Honda Activa 6G" data-type="Scooter" data-brand="Honda" data-price="62000"><div class="pic"><span class="badge">POPULAR</span><div class="motor mini"><i class="wheel w1"></i><i class="wheel w2"></i><i class="frame"></i><i class="tank"></i><i class="seat"></i><i class="handle"></i><i class="fork"></i><i class="lamp"></i></div></div><div class="info"><h3>Honda Activa 6G</h3><div class="price">₹62,000</div><div class="specs"><div class="spec">2021 Model</div><div class="spec">18,000 km</div><div class="spec">1st Owner</div><div class="spec">Petrol</div></div><div class="actions"><button class="dark" onclick="alert('Honda Activa 6G • ₹62,000 • 2021 • 18,000 km • 1st Owner')">Details</button><a class="redBtn" href="https://wa.me/918126525454?text=I%20am%20interested%20in%20Honda%20Activa%206G">Enquire</a></div></div></article>
+<article class="card" data-name="Royal Enfield Classic 350" data-type="Bike" data-brand="Royal Enfield" data-price="145000"><div class="pic"><span class="badge">PREMIUM</span><div class="motor mini"><i class="wheel w1"></i><i class="wheel w2"></i><i class="frame"></i><i class="tank"></i><i class="seat"></i><i class="handle"></i><i class="fork"></i><i class="lamp"></i></div></div><div class="info"><h3>Classic 350</h3><div class="price">₹1,45,000</div><div class="specs"><div class="spec">2022 Model</div><div class="spec">12,500 km</div><div class="spec">1st Owner</div><div class="spec">Petrol</div></div><div class="actions"><button class="dark" onclick="alert('Royal Enfield Classic 350 • ₹1,45,000 • 2022 • 12,500 km • 1st Owner')">Details</button><a class="redBtn" href="https://wa.me/918126525454?text=I%20am%20interested%20in%20Royal%20Enfield%20Classic%20350">Enquire</a></div></div></article>
+</div></div></section>
+<section id="about" class="darkSection"><div class="wrap about"><div><div class="tag">ABOUT BK MOTORS</div><h2>A better way to buy pre-owned.</h2><p>Quality checked vehicles, transparent details and direct WhatsApp support. No unnecessary complications.</p></div><div class="points"><div class="point"><b>✓ Quality Checked</b><span>Vehicles inspected before listing.</span></div><div class="point"><b>✓ Fair Pricing</b><span>Clear and honest prices.</span></div><div class="point"><b>✓ Genuine Listings</b><span>Important vehicle details shown.</span></div><div class="point"><b>✓ Easy Enquiry</b><span>Talk directly on WhatsApp.</span></div></div></div></section>
+<section id="why"><div class="wrap"><div class="title"><div class="tag">WHY BK MOTORS</div><h2>Simple. Honest. Reliable.</h2></div><div class="why"><div><b>✓ Checked Vehicles</b><p>Important condition details.</p></div><div><b>₹ Fair Pricing</b><p>Clear prices on listings.</p></div><div><b>⚡ Quick Response</b><p>Direct WhatsApp support.</p></div><div><b>★ Personal Service</b><p>Easy buying experience.</p></div></div></div></section>
+<section class="formSec"><div class="wrap"><div class="title"><div class="tag">GET IN TOUCH</div><h2>Send an Enquiry</h2><p>Tell us what you are looking for.</p></div><form class="form" onsubmit="send(event)"><div class="formGrid"><input id="name" placeholder="Your name" required><input id="phone" placeholder="Phone number" required><select id="vehicle"><option>I'm interested in...</option><option>Bajaj Pulsar 150</option><option>Honda Activa 6G</option><option>Royal Enfield Classic 350</option><option>Other</option></select><input id="budget" placeholder="Budget"><textarea id="msg" class="full" placeholder="Message"></textarea><button class="submit full">Send Enquiry on WhatsApp</button></div></form></div></section>
+<section id="contact" class="contact"><div class="wrap"><div class="contactBox"><h2>Ready for your next ride?</h2><p>Call or WhatsApp BK Motors for availability and details.</p><a class="btn" style="background:#fff;color:#111" href="tel:+918126525454">Call 8126525454</a><a class="btn" style="background:#25d366;color:#fff" href="https://wa.me/918126525454?text=Hello%20BK%20Motors">WhatsApp Us</a></div></div></section><footer>© 2026 BK Motors • Premium Pre-Owned Two Wheelers</footer>
 <script>
-const NUMBER="918126525454";
-function wa(v){window.open("https://wa.me/"+NUMBER+"?text="+encodeURIComponent("Hello BK Motors, I am interested in "+v+". Please share availability and more photos."),"_blank")}
-function details(t,p,d){mt.textContent=t;mp.textContent=p;md.textContent=d;mw.onclick=()=>wa(t);modal.style.display="grid"}
-function closeModal(){modal.style.display="none"}
-function sendForm(e){e.preventDefault();let t="Hello BK Motors,\n\nName: "+name.value+"\nPhone: "+phone.value+"\nVehicle: "+(vehicle.value||"Any vehicle")+"\nMessage: "+(message.value||"I want more de[...]
-function filter(){
- let q=search.value.toLowerCase(),ty=type.value,br=brand.value,cards=[...grid.querySelectorAll(".card")];
- cards.forEach(c=>c.style.display=(!q||c.dataset.name.toLowerCase().includes(q))&&(!ty||c.dataset.type===ty)&&(!br||c.dataset.brand===br)?"":"none");
- let v=cards.filter(c=>c.style.display!=="none");
- if(sort.value)v.sort((a,b)=>sort.value==="low"?a.dataset.price-b.dataset.price:b.dataset.price-a.dataset.price).forEach(c=>grid.appendChild(c));
- count.textContent=v.length+" vehicle"+(v.length===1?"":"s")+" found";none.style.display=v.length?"none":"block";
-}
-search.oninput=filter;type.onchange=filter;brand.onchange=filter;sort.onchange=filter;filter();
-</script>
-</body>
-</html>
+const q=document.getElementById('q'),type=document.getElementById('type'),brand=document.getElementById('brand'),sort=document.getElementById('sort'),cards=document.getElementById('cards');
+function filter(){let a=[...cards.children];let s=q.value.toLowerCase();a.forEach(c=>c.style.display=(!s||c.dataset.name.toLowerCase().includes(s))&&(!type.value||c.dataset.type==type.value)&&(!brand.value||c.dataset.brand==brand.value)?'block':'none');if(sort.value)a.sort((x,y)=>sort.value==='low'?x.dataset.price-y.dataset.price:y.dataset.price-x.dataset.price).forEach(x=>cards.appendChild(x))}[q,type,brand,sort].forEach(x=>x.oninput=filter);
+function send(e){e.preventDefault();let t=`Hello BK Motors, my name is ${name.value}. Phone: ${phone.value}. Vehicle: ${vehicle.value}. Budget: ${budget.value}. ${msg.value}`;location.href='https://wa.me/918126525454?text='+encodeURIComponent(t)}
+</script></body></html>
