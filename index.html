@@ -3,313 +3,852 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BK Motors Dehradun - Used 2 Wheeler Sale & Purchase, Exchange, Buy Back, Loan and Vehicle Check-up. 82 Chakrata Road, Dehradun.">
-<meta name="theme-color" content="#0b0b0b">
-<title>BK Motors | Used 2 Wheeler Sale & Purchase | Dehradun</title>
+<title>BK Motors | Premium Two Wheeler Showroom</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#f4f5f7;color:#171717;line-height:1.5}
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:#111}
 a{text-decoration:none;color:inherit}
-button,input,select,textarea{font:inherit}
+button,input,select{font:inherit}
 
-header{position:sticky;top:0;z-index:1000;background:#080808;color:#fff;border-bottom:1px solid #242424}
-.nav{max-width:1180px;margin:auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-size:25px;font-weight:900;letter-spacing:.5px}.logo span{color:#e63946}
-nav{display:flex;gap:25px}nav a{font-size:14px;font-weight:700;color:#eee}nav a:hover{color:#e63946}
-.nav-wa{background:#25d366;padding:10px 15px;border-radius:8px;font-weight:800;font-size:13px}
-
-.hero{min-height:560px;background:linear-gradient(135deg,#090909 0%,#191919 55%,#3a1015 100%);color:#fff;display:flex;align-items:center;text-align:center;padding:75px 20px}
-.hero-inner{max-width:900px;margin:auto}
-.eyebrow{display:inline-block;border:1px solid #e63946;color:#ff6671;border-radius:30px;padding:7px 15px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:22px}
-.hero h1{font-size:clamp(38px,7vw,70px);line-height:1.05;margin-bottom:18px}
-.hero h1 span{color:#e63946}
-.hero p{max-width:720px;margin:0 auto 28px;color:#d0d0d0;font-size:18px}
-.btn{display:inline-block;border:0;border-radius:8px;padding:14px 22px;font-weight:800;cursor:pointer;margin:4px}
-.btn-red{background:#e63946;color:#fff}.btn-red:hover{background:#c92e3a}
-.btn-light{background:#fff;color:#111}.btn-light:hover{background:#e9e9e9}
-.btn-green{background:#25d366;color:#fff}.btn-green:hover{background:#1eae55}
-
-.offer-wrap{max-width:1120px;margin:-42px auto 0;padding:0 20px;position:relative;z-index:5}
-.offer{background:#fff;border-radius:16px;padding:25px;box-shadow:0 12px 35px rgba(0,0,0,.13);display:grid;grid-template-columns:1.4fr 1fr;gap:20px;align-items:center}
-.offer h2{font-size:28px}.offer h2 span{color:#e63946}.offer p{color:#666;margin-top:7px}
-.offer-box{background:#111;color:#fff;border-radius:12px;padding:22px;text-align:center}
-.offer-price{font-size:36px;font-weight:900;color:#ff4e5b}.offer-box small{color:#aaa}
-
-section{padding:72px 20px}.container{max-width:1120px;margin:auto}
-.title{text-align:center;margin-bottom:38px}.title h2{font-size:36px}.title p{color:#777;margin-top:6px}
-
-.search{background:#fff;border-radius:16px;padding:22px;box-shadow:0 6px 25px rgba(0,0,0,.08);margin-bottom:30px}
-.filters{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
-.filters input,.filters select,.form input,.form select,.form textarea{width:100%;border:1px solid #ddd;border-radius:8px;padding:13px;outline:none;background:#fff}
-.filters input:focus,.filters select:focus,.form input:focus,.form select:focus,.form textarea:focus{border-color:#e63946}
-.listings{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,.07);transition:.2s;border:1px solid #eee}
-.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
-.card-top{height:100px;background:linear-gradient(135deg,#101010,#2b2b2b);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
-.card-body{padding:18px}.card h3{font-size:20px;margin-bottom:5px}.price{font-size:23px;font-weight:900;color:#e63946;margin-bottom:13px}
-.specs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}.spec{background:#f3f4f5;border-radius:6px;padding:8px;font-size:12px;color:#555}
-.card-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.card-actions button{border:0;border-radius:7px;padding:11px;cursor:pointer;font-weight:800}
-.details{background:#111;color:#fff}.enquire{background:#e63946;color:#fff}
-
-.about{background:#111;color:#fff}.about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:45px;align-items:center}.about p{color:#bbb;line-height:1.8;margin-top:15px}
-.facilities{display:grid;grid-template-columns:1fr 1fr;gap:12px}.facility{background:#181818;border:1px solid #2d2d2d;padding:18px;border-radius:10px}.facility b{display:block;margin-bottom:4px}.facility span{font-size:13px;color:#aaa}
-
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.why{background:#fff;border-radius:12px;padding:25px 18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06)}.why .ico{font-size:30px;margin-bottom:10px}.why p{color:#777;font-size:13px;margin-top:6px}
-
-.brands{background:#fff}.brand-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}.brand{border:1px solid #ddd;background:#fafafa;border-radius:30px;padding:10px 15px;font-size:13px;font-weight:700}
-
-.enquiry{background:#eee}.form-box{max-width:760px;margin:auto;background:#fff;border-radius:15px;padding:28px;box-shadow:0 6px 25px rgba(0,0,0,.07)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.full{grid-column:1/-1}.form textarea{min-height:120px;resize:vertical}.submit{width:100%;border:0;border-radius:8px;background:#e63946;color:#fff;padding:14px;font-weight:900;cursor:pointer;margin-top:4px}
-
-.contact{background:#111;color:#fff}.contact-box{text-align:center}.contact-box p{color:#aaa;margin:8px 0 20px}.contact-info{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:22px}.contact-pill{border:1px solid #333;border-radius:9px;padding:11px 15px}.contact-pill b{color:#fff}.contact-pill span{color:#aaa}
-
-footer{background:#050505;color:#888;text-align:center;padding:24px 15px;font-size:13px}.footer-name{color:#fff;font-weight:900;margin-bottom:5px}
-
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:3000;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modal-box{background:#fff;max-width:520px;width:100%;border-radius:15px;padding:28px;position:relative}.close{position:absolute;right:15px;top:8px;font-size:28px;border:0;background:none;cursor:pointer}.modal-box h2{margin-bottom:8px}.modal-price{font-size:27px;font-weight:900;color:#e63946;margin:12px 0}.modal-box p{color:#666;margin-bottom:18px}
-
-.no-results{display:none;text-align:center;padding:25px;color:#777;background:#fff;border-radius:12px}
-
-@media(max-width:850px){
- nav{display:none}.offer{grid-template-columns:1fr}.listings{grid-template-columns:1fr 1fr}.why-grid{grid-template-columns:1fr 1fr}.about-grid{grid-template-columns:1fr}
+:root{
+ --red:#e21e2b;
+ --dark:#080808;
+ --dark2:#111;
+ --grey:#777;
+ --light:#f5f5f5;
 }
-@media(max-width:560px){
- .hero{min-height:500px}.hero p{font-size:16px}.filters,.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.listings{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr 1fr}.title h2{font-size:29px}.facilities{grid-template-columns:1fr}
+
+/* TOP BAR */
+.topbar{
+ background:#050505;color:#bbb;
+ padding:9px 5%;
+ font-size:12px;
+ display:flex;justify-content:space-between;
+}
+.topbar span:first-child{color:#fff}
+
+/* NAVBAR */
+header{
+ background:#090909;color:white;
+ position:sticky;top:0;z-index:1000;
+ border-bottom:1px solid #252525;
+}
+.nav{
+ max-width:1250px;margin:auto;
+ height:76px;padding:0 25px;
+ display:flex;align-items:center;justify-content:space-between;
+}
+.logo{font-size:27px;font-weight:900;letter-spacing:1px}
+.logo span{color:var(--red)}
+nav{display:flex;gap:28px;align-items:center}
+nav a{font-size:13px;font-weight:bold;color:#ddd}
+nav a:hover{color:var(--red)}
+.navbtn{
+ background:var(--red);padding:12px 18px;border-radius:5px;color:white!important
+}
+
+/* HERO */
+.hero{
+ min-height:650px;
+ background:
+ radial-gradient(circle at 80% 35%,rgba(226,30,43,.35),transparent 30%),
+ linear-gradient(110deg,#050505,#17191d);
+ color:white;
+ display:flex;align-items:center;
+}
+.hero-inner{max-width:1250px;width:100%;margin:auto;padding:80px 25px}
+.hero-small{
+ color:#ff5b64;font-size:12px;font-weight:bold;
+ letter-spacing:3px;text-transform:uppercase;margin-bottom:20px
+}
+.hero h1{
+ font-size:clamp(48px,7vw,88px);
+ line-height:.95;letter-spacing:-4px;
+ max-width:850px
+}
+.hero h1 span{color:var(--red)}
+.hero p{
+ max-width:650px;color:#aaa;font-size:18px;
+ line-height:1.7;margin:25px 0
+}
+.buttons{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+ display:inline-block;padding:15px 23px;
+ border-radius:5px;font-weight:bold;font-size:13px
+}
+.red{background:var(--red);color:white}
+.white{background:white;color:#111}
+.outline{border:1px solid #555;color:white}
+.btn:hover{transform:translateY(-2px)}
+
+.hero-info{
+ display:flex;gap:35px;margin-top:40px;
+ color:#aaa;font-size:12px;flex-wrap:wrap
+}
+.hero-info b{display:block;color:white;font-size:14px;margin-bottom:3px}
+
+/* QUICK FEATURES */
+.quick{
+ background:white;
+ box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.quick-inner{
+ max-width:1100px;margin:auto;
+ display:grid;grid-template-columns:repeat(4,1fr)
+}
+.quick-item{
+ padding:25px 20px;
+ border-right:1px solid #ddd
+}
+.quick-item:last-child{border:0}
+.quick-item b{display:block;font-size:14px}
+.quick-item span{font-size:12px;color:#777}
+
+/* GENERAL */
+section{padding:85px 20px}
+.container{max-width:1200px;margin:auto}
+.heading{text-align:center;margin-bottom:40px}
+.heading small{
+ color:var(--red);font-weight:bold;
+ letter-spacing:2px;text-transform:uppercase
+}
+.heading h2{font-size:42px;margin:8px 0}
+.heading p{color:#777}
+
+/* INVENTORY */
+.inventory{background:#f5f5f3}
+.filters{
+ display:grid;
+ grid-template-columns:2fr 1fr 1fr 1fr;
+ gap:10px;margin-bottom:30px
+}
+.filters input,.filters select{
+ height:48px;border:1px solid #ddd;
+ border-radius:6px;padding:0 13px;background:white
+}
+.inventory-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:22px
+}
+.vehicle{
+ background:white;border-radius:10px;
+ overflow:hidden;border:1px solid #e5e5e5;
+ transition:.25s
+}
+.vehicle:hover{
+ transform:translateY(-6px);
+ box-shadow:0 18px 40px rgba(0,0,0,.12)
+}
+.vehicle-top{
+ height:205px;
+ background:linear-gradient(135deg,#111,#303238);
+ display:flex;align-items:center;
+ justify-content:center;position:relative
+}
+.vehicle-icon{font-size:75px}
+.badge{
+ position:absolute;top:13px;left:13px;
+ background:var(--red);color:white;
+ padding:6px 10px;border-radius:20px;
+ font-size:10px;font-weight:bold
+}
+.vehicle-body{padding:20px}
+.vehicle-body h3{font-size:20px}
+.price{
+ color:var(--red);font-size:24px;
+ font-weight:900;margin:5px 0 15px
+}
+.specs{
+ display:grid;grid-template-columns:1fr 1fr;gap:7px
+}
+.spec{
+ background:#f2f2f2;padding:8px;
+ font-size:11px;color:#666;border-radius:5px
+}
+.vehicle-buttons{
+ display:grid;grid-template-columns:1fr 1fr;
+ gap:8px;margin-top:17px
+}
+.vehicle-buttons button{
+ border:0;padding:11px;border-radius:5px;
+ cursor:pointer;font-weight:bold
+}
+.details{background:#111;color:white}
+.whatsapp{background:var(--red);color:white}
+
+/* OFFER */
+.offer{background:#101010;color:white}
+.offer-box{
+ max-width:1100px;margin:auto;
+ border:1px solid #333;border-radius:12px;
+ padding:45px;
+ display:grid;grid-template-columns:1fr 1fr;
+ align-items:center;gap:30px
+}
+.offer-box h2{font-size:42px}
+.offer-box h2 span{color:var(--red)}
+.offer-box p{color:#999;margin-top:10px;line-height:1.7}
+.offer-right{text-align:center}
+.offer-right strong{
+ display:block;font-size:60px;color:var(--red)
+}
+.offer-right small{color:#888}
+
+/* FACILITIES */
+.facilities{background:white}
+.facility-grid{
+ display:grid;grid-template-columns:repeat(4,1fr);gap:15px
+}
+.facility{
+ border:1px solid #e1e1e1;
+ padding:25px;border-radius:10px
+}
+.facility-icon{font-size:30px;margin-bottom:13px}
+.facility h3{font-size:16px}
+.facility p{font-size:12px;color:#777;margin-top:6px;line-height:1.5}
+
+/* BRANDS */
+.brands{background:#0b0b0b;color:white}
+.brand-grid{
+ display:flex;flex-wrap:wrap;
+ justify-content:center;gap:10px
+}
+.brand{
+ border:1px solid #333;
+ padding:11px 17px;border-radius:30px;
+ color:#ddd;font-size:12px;font-weight:bold
+}
+
+/* ABOUT */
+.about{
+ background:#111;color:white
+}
+.about-grid{
+ display:grid;grid-template-columns:1fr 1fr;
+ gap:60px;align-items:center
+}
+.about h2{font-size:44px;line-height:1.05;margin:10px 0 20px}
+.about p{color:#aaa;line-height:1.8}
+.checks{margin-top:25px;display:grid;gap:10px}
+.checks div{font-size:13px;color:#ddd}
+.checks b{color:var(--red);margin-right:8px}
+.about-stats{
+ display:grid;grid-template-columns:1fr 1fr;gap:12px
+}
+.about-stat{
+ padding:28px;border:1px solid #303030;
+ border-radius:10px;background:#171717
+}
+.about-stat strong{font-size:28px;color:white}
+.about-stat span{display:block;color:#888;font-size:12px;margin-top:5px}
+
+/* ENQUIRY */
+.enquiry{background:#eee}
+.form-box{
+ max-width:800px;margin:auto;
+ background:white;padding:30px;border-radius:12px
+}
+.form-grid{
+ display:grid;grid-template-columns:1fr 1fr;gap:12px
+}
+.form-grid input,.form-grid select,.form-grid textarea{
+ width:100%;padding:14px;
+ border:1px solid #ddd;border-radius:6px
+}
+.full{grid-column:1/-1}
+.form-grid textarea{height:120px;resize:none}
+.submit{
+ width:100%;border:0;background:var(--red);
+ color:white;padding:15px;border-radius:6px;
+ font-weight:bold;cursor:pointer
+}
+
+/* LOCATION */
+.location{background:white}
+.location-grid{
+ display:grid;grid-template-columns:.8fr 1.2fr;gap:20px
+}
+.location-card{
+ background:#111;color:white;
+ border-radius:12px;padding:30px
+}
+.location-card h2{font-size:30px;margin-bottom:8px}
+.location-card p{color:#aaa;margin-bottom:20px}
+.location-info{display:grid;gap:10px}
+.location-info div{
+ border:1px solid #333;padding:13px;border-radius:6px
+}
+.location-info small{display:block;color:#777}
+.map{
+ width:100%;height:390px;border:0;border-radius:12px
+}
+
+/* FOOTER */
+footer{
+ background:#050505;color:#777;
+ padding:30px 20px;text-align:center
+}
+.footer-logo{font-size:22px;font-weight:900;color:white}
+.footer-logo span{color:var(--red)}
+footer p{font-size:12px;margin-top:10px}
+
+/* MOBILE */
+@media(max-width:850px){
+ nav{display:none}
+ .quick-inner{grid-template-columns:1fr 1fr}
+ .inventory-grid{grid-template-columns:1fr 1fr}
+ .facility-grid{grid-template-columns:1fr 1fr}
+ .about-grid,.location-grid,.offer-box{grid-template-columns:1fr}
+ .filters{grid-template-columns:1fr 1fr}
+}
+@media(max-width:550px){
+ section{padding:60px 15px}
+ .hero-inner{padding:65px 18px}
+ .hero h1{font-size:48px}
+ .hero p{font-size:16px}
+ .quick-inner,.inventory-grid,.facility-grid,.form-grid{grid-template-columns:1fr}
+ .quick-item{border-right:0;border-bottom:1px solid #ddd}
+ .filters{grid-template-columns:1fr}
+ .full{grid-column:auto}
+ .offer-box{padding:25px}
+ .offer-box h2{font-size:31px}
+ .about h2{font-size:35px}
 }
 </style>
 </head>
 
 <body>
 
+<div class="topbar">
+<span>BK MOTORS · DEHRADUN</span>
+<span>82 Chakrata Road · 8126525454</span>
+</div>
+
 <header>
-  <div class="nav">
-    <a class="logo" href="#home">BK <span>MOTORS</span></a>
-    <nav>
-      <a href="#inventory">Inventory</a>
-      <a href="#facilities">Facilities</a>
-      <a href="#brands">Brands</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="nav-wa" href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20enquire%20about%20a%20two-wheeler." target="_blank" rel="noopener">WhatsApp</a>
-  </div>
+<div class="nav">
+<a class="logo" href="#home">BK <span>MOTORS</span></a>
+<nav>
+<a href="#inventory">VEHICLES</a>
+<a href="#facilities">FACILITIES</a>
+<a href="#brands">BRANDS</a>
+<a href="#about">ABOUT</a>
+<a href="#location">LOCATION</a>
+<a class="navbtn" target="_blank"
+href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20enquire%20about%20a%20vehicle.">
+WHATSAPP
+</a>
+</nav>
+</div>
 </header>
 
-<main>
+<!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-inner">
-    <div class="eyebrow">Your Trusted 2 Wheeler Bazar</div>
-    <h1>Used 2 Wheeler <span>Sale & Purchase</span></h1>
-    <p>Quality-checked pre-owned bikes and scooters with exchange, buy-back, loan assistance and vehicle transfer support.</p>
-    <a class="btn btn-red" href="#inventory">View Inventory</a>
-    <a class="btn btn-green" href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20buy%20or%20sell%20a%20two-wheeler." target="_blank" rel="noopener">WhatsApp Us</a>
-  </div>
-</section>
+<div class="hero-inner">
+<div class="hero-small">Premium Two-Wheeler Showroom · Dehradun</div>
+<h1>Find your next<br><span>perfect ride.</span></h1>
+<p>
+Explore quality pre-owned bikes and scooters with purchase,
+sale, exchange, buy-back, finance and lease assistance —
+all under one roof.
+</p>
 
-<div class="offer-wrap">
-  <div class="offer">
-    <div>
-      <h2>Special <span>Lease Offer</span></h2>
-      <p>Vehicles available on lease basis at just ₹16 per day*</p>
-      <p style="font-size:12px;margin-top:8px">*Conditions apply. Final terms, eligibility and pricing are subject to the applicable vehicle/finance arrangement.</p>
-    </div>
-    <div class="offer-box">
-      <div class="offer-price">₹16/day*</div>
-      <small>Ask us about the current lease offer</small><br><br>
-      <a class="btn btn-green" href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20know%20about%20the%20%C2%B916%2Fday%20lease%20offer." target="_blank" rel="noopener">Ask on WhatsApp</a>
-    </div>
-  </div>
+<div class="buttons">
+<a class="btn red" href="#inventory">Explore Vehicles →</a>
+<a class="btn white" target="_blank"
+href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20know%20about%20available%20vehicles.">
+WhatsApp Us
+</a>
+<a class="btn outline" href="#location">Visit Showroom</a>
 </div>
 
-<section id="inventory">
+<div class="hero-info">
+<div><b>BUY · SELL · EXCHANGE</b>Complete assistance</div>
+<div><b>VEHICLE CHECK</b>Before delivery</div>
+<div><b>FINANCE & LEASE</b>Ask for current terms</div>
+</div>
+</div>
+</section>
+
+<!-- QUICK -->
+<div class="quick">
+<div class="quick-inner">
+<div class="quick-item"><b>First 2 Services Free</b><span>As per applicable terms</span></div>
+<div class="quick-item"><b>Buy Back Facility</b><span>Ask for current eligibility</span></div>
+<div class="quick-item"><b>Exchange Facility</b><span>Exchange your existing vehicle</span></div>
+<div class="quick-item"><b>Loan Facility</b><span>Subject to approval</span></div>
+</div>
+</div>
+
+<!-- INVENTORY -->
+<section class="inventory" id="inventory">
 <div class="container">
-  <div class="title"><h2>Find Your Two-Wheeler</h2><p>Sample/demo listings — confirm current availability and price with BK Motors.</p></div>
-  <div class="search">
-    <div class="filters">
-      <input id="searchInput" type="search" placeholder="Search bike or scooter...">
-      <select id="typeFilter"><option value="">All Types</option><option value="Bike">Bike</option><option value="Scooter">Scooter</option></select>
-      <select id="brandFilter"><option value="">All Brands</option></select>
-    </div>
-  </div>
 
-  <div class="listings" id="listingGrid"></div>
-  <div class="no-results" id="noResults">No matching listing found. Try another search.</div>
+<div class="heading">
+<small>Our Collection</small>
+<h2>Featured Vehicles</h2>
+<p>Demo inventory — confirm current availability and final price with BK Motors.</p>
+</div>
+
+<div class="filters">
+<input id="search" placeholder="Search bike or scooter...">
+<select id="type">
+<option value="">All Types</option>
+<option>Bike</option>
+<option>Scooter</option>
+</select>
+<select id="brand">
+<option value="">All Brands</option>
+</select>
+<select id="sort">
+<option value="">Sort By</option>
+<option value="low">Price: Low to High</option>
+<option value="high">Price: High to Low</option>
+</select>
+</div>
+
+<div class="inventory-grid" id="inventoryGrid"></div>
+
 </div>
 </section>
 
-<section class="about" id="facilities">
-<div class="container about-grid">
-  <div>
-    <div class="eyebrow">BK Motors</div>
-    <h2>Our Unique Facilities</h2>
-    <p>Used two-wheeler sale and purchase with customer-focused assistance from enquiry to delivery.</p>
-  </div>
-  <div class="facilities">
-    <div class="facility"><b>✓ First Two Services Free</b><span>Applicable terms may vary.</span></div>
-    <div class="facility"><b>✓ Buy Back Facility</b><span>Ask for applicable buy-back terms.</span></div>
-    <div class="facility"><b>✓ Exchange Facility</b><span>Exchange your existing two-wheeler.</span></div>
-    <div class="facility"><b>✓ Loan Facility</b><span>Finance assistance subject to approval.</span></div>
-    <div class="facility"><b>✓ Instant Transfer of Vehicle</b><span>Transfer assistance as applicable.</span></div>
-    <div class="facility"><b>✓ Comprehensive Check-up</b><span>Vehicle check before delivery.</span></div>
-    <div class="facility"><b>✓ Lease Basis from ₹16/day*</b><span>Conditions apply; enquire for current terms.</span></div>
-    <div class="facility"><b>✓ Used 2-Wheeler Sale & Purchase</b><span>Buy or sell your pre-owned vehicle.</span></div>
-  </div>
+<!-- OFFER -->
+<section class="offer">
+<div class="offer-box">
+<div>
+<div class="hero-small">Special Lease Facility</div>
+<h2>Ride from <span>₹16/day*</span></h2>
+<p>
+Lease vehicles from ₹16 per day as advertised.
+Contact BK Motors for the current vehicle, eligibility,
+down payment and applicable terms.
+</p>
+<br>
+<a class="btn red" target="_blank"
+href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20please%20tell%20me%20about%20the%20%C2%B916%2Fday%20lease%20offer.">
+Enquire About ₹16/day
+</a>
+</div>
+
+<div class="offer-right">
+<strong>₹16</strong>
+<span>PER DAY*</span><br>
+<small>*Conditions apply. Confirm current terms.</small>
+</div>
 </div>
 </section>
 
-<section>
+<!-- FACILITIES -->
+<section class="facilities" id="facilities">
 <div class="container">
-  <div class="title"><h2>Why Choose BK Motors?</h2><p>Simple, transparent assistance for pre-owned two-wheelers.</p></div>
-  <div class="why-grid">
-    <div class="why"><div class="ico">🔍</div><b>Vehicle Check</b><p>Pre-delivery check-up assistance.</p></div>
-    <div class="why"><div class="ico">🔄</div><b>Exchange</b><p>Ask about exchanging your existing vehicle.</p></div>
-    <div class="why"><div class="ico">💳</div><b>Loan Assistance</b><p>Finance support subject to approval.</p></div>
-    <div class="why"><div class="ico">📄</div><b>Transfer Support</b><p>Vehicle transfer assistance as applicable.</p></div>
-  </div>
+
+<div class="heading">
+<small>Why BK Motors</small>
+<h2>Everything Under One Roof</h2>
+<p>Professional assistance for your two-wheeler journey.</p>
+</div>
+
+<div class="facility-grid">
+
+<div class="facility">
+<div class="facility-icon">🔧</div>
+<h3>First 2 Services Free</h3>
+<p>Available as per applicable terms.</p>
+</div>
+
+<div class="facility">
+<div class="facility-icon">🔄</div>
+<h3>Buy Back Facility</h3>
+<p>Ask about our current buy-back options.</p>
+</div>
+
+<div class="facility">
+<div class="facility-icon">♻️</div>
+<h3>Exchange Facility</h3>
+<p>Exchange your existing two-wheeler.</p>
+</div>
+
+<div class="facility">
+<div class="facility-icon">💳</div>
+<h3>Loan Facility</h3>
+<p>Finance assistance subject to approval.</p>
+</div>
+
+<div class="facility">
+<div class="facility-icon">📄</div>
+<h3>Instant Vehicle Transfer</h3>
+<p>Documentation and transfer assistance.</p>
+</div>
+
+<div class="facility">
+<div class="facility-icon">✅</div>
+<h3>Comprehensive Check-up</h3>
+<p>Vehicle check-up before delivery.</p>
+</div>
+
+<div class="facility">
+<div class="facility-icon">🛵</div>
+<h3>Lease Facility</h3>
+<p>Lease offer starting from ₹16/day*.</p>
+</div>
+
+<div class="facility">
+<div class="facility-icon">🏍️</div>
+<h3>Sale & Purchase</h3>
+<p>Buy or sell pre-owned two-wheelers.</p>
+</div>
+
+</div>
 </div>
 </section>
 
+<!-- BRANDS -->
 <section class="brands" id="brands">
 <div class="container">
-  <div class="title"><h2>Two-Wheeler Brands</h2><p>Major brands commonly available in the Indian market.</p></div>
-  <div class="brand-grid" id="brandGrid"></div>
+
+<div class="heading">
+<small>Brands</small>
+<h2>Major Two-Wheeler Brands</h2>
+<p style="color:#888">Actual availability depends on current stock.</p>
+</div>
+
+<div class="brand-grid" id="brandGrid"></div>
+
 </div>
 </section>
 
+<!-- ABOUT -->
+<section class="about" id="about">
+<div class="container about-grid">
+
+<div>
+<div class="hero-small">About BK Motors</div>
+<h2>A better way to buy a pre-owned two-wheeler.</h2>
+<p>
+BK Motors is a Dehradun-based two-wheeler sale and purchase
+business focused on making vehicle discovery, exchange,
+documentation and enquiry simple for customers.
+</p>
+
+<div class="checks">
+<div><b>✓</b>Used two-wheeler sale & purchase</div>
+<div><b>✓</b>Buy-back and exchange assistance</div>
+<div><b>✓</b>Loan and lease assistance</div>
+<div><b>✓</b>Vehicle check-up before delivery</div>
+<div><b>✓</b>Vehicle transfer assistance</div>
+</div>
+</div>
+
+<div class="about-stats">
+<div class="about-stat">
+<strong>₹16/day*</strong>
+<span>Advertised lease starting offer</span>
+</div>
+<div class="about-stat">
+<strong>2</strong>
+<span>First services free, as applicable</span>
+</div>
+<div class="about-stat">
+<strong>30+</strong>
+<span>Brands showcased</span>
+</div>
+<div class="about-stat">
+<strong>Dehradun</strong>
+<span>82 Chakrata Road</span>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ENQUIRY -->
 <section class="enquiry" id="enquiry">
 <div class="container">
-  <div class="title"><h2>Send an Enquiry</h2><p>Tell us which vehicle you are looking for.</p></div>
-  <div class="form-box">
-    <form id="enquiryForm" class="form">
-      <div class="form-grid">
-        <input id="name" required placeholder="Your Name">
-        <input id="phone" required inputmode="tel" placeholder="Mobile Number">
-        <select id="vehicleSelect" class="full">
-          <option value="">Select a vehicle</option>
-        </select>
-        <textarea id="message" class="full" placeholder="Message / requirements"></textarea>
-        <button class="submit full" type="submit">Send Enquiry on WhatsApp</button>
-      </div>
-    </form>
-  </div>
+
+<div class="heading">
+<small>Get In Touch</small>
+<h2>Vehicle Enquiry</h2>
+<p>Fill the form and your enquiry will open directly in WhatsApp.</p>
+</div>
+
+<div class="form-box">
+<form id="enquiryForm">
+<div class="form-grid">
+
+<input id="customerName" required placeholder="Your Name">
+<input id="customerPhone" required placeholder="Mobile Number">
+
+<select id="vehicleSelect" class="full">
+<option value="">Select Vehicle</option>
+</select>
+
+<textarea id="customerMessage" class="full"
+placeholder="Tell us your budget, preferred model, exchange details etc."></textarea>
+
+<button class="submit full" type="submit">
+Send Enquiry on WhatsApp →
+</button>
+
+</div>
+</form>
+</div>
+
 </div>
 </section>
 
-<section class="contact" id="contact">
-<div class="container contact-box">
-  <div class="title" style="margin-bottom:15px"><h2 style="color:#fff">Visit BK Motors</h2><p>Dehradun, Uttarakhand</p></div>
-  <div class="contact-info">
-    <div class="contact-pill">📍 <b>82 Chakrata Road</b><br><span>Dehradun, Uttarakhand</span></div>
-    <div class="contact-pill">💬 <b>8126525454</b><br><span>WhatsApp</span></div>
-  </div>
-  <a class="btn btn-green" href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20visit%20your%20showroom." target="_blank" rel="noopener">Chat on WhatsApp</a>
+<!-- LOCATION -->
+<section class="location" id="location">
+<div class="container">
+
+<div class="heading">
+<small>Visit Us</small>
+<h2>Our Showroom</h2>
+<p>82 Chakrata Road, Dehradun, Uttarakhand</p>
+</div>
+
+<div class="location-grid">
+
+<div class="location-card">
+<h2>BK Motors</h2>
+<p>Your trusted 2 Wheeler Bazar</p>
+
+<div class="location-info">
+<div>
+<small>Address</small>
+<b>82 Chakrata Road, Dehradun, Uttarakhand</b>
+</div>
+
+<div>
+<small>WhatsApp / Contact</small>
+<b>8126525454</b>
+</div>
+
+<div>
+<small>Business</small>
+<b>Used 2 Wheeler Sale & Purchase</b>
+</div>
+</div>
+
+<br>
+
+<a class="btn red" target="_blank"
+href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20visit%20your%20showroom.">
+WhatsApp
+</a>
+
+<a class="btn white" href="tel:+918126525454">Call</a>
+
+</div>
+
+<iframe
+class="map"
+loading="lazy"
+src="https://www.google.com/maps?q=82%20Chakrata%20Road%2C%20Dehradun%2C%20Uttarakhand&output=embed">
+</iframe>
+
+</div>
 </div>
 </section>
-</main>
 
 <footer>
-  <div class="footer-name">BK MOTORS</div>
-  Used 2 Wheeler Sale & Purchase • 82 Chakrata Road, Dehradun<br>
-  <span>© <span id="year"></span> BK Motors. All rights reserved.</span>
+<div class="footer-logo">BK <span>MOTORS</span></div>
+<p>82 Chakrata Road, Dehradun · 8126525454</p>
+<p>© 2026 BK Motors. All rights reserved.</p>
 </footer>
 
-<div class="modal" id="modal">
-  <div class="modal-box">
-    <button class="close" onclick="closeModal()" aria-label="Close">×</button>
-    <h2 id="modalTitle"></h2>
-    <div class="modal-price" id="modalPrice"></div>
-    <p id="modalText"></p>
-    <a id="modalWhatsApp" class="btn btn-green" target="_blank" rel="noopener">Enquire on WhatsApp</a>
-  </div>
-</div>
-
 <script>
-const vehicles = [
- {name:"Suzuki Access 125",brand:"Suzuki",type:"Scooter",price:55000,year:"2021",km:"28,000 km",owner:"1st Owner"},
- {name:"TVS Jupiter 125",brand:"TVS",type:"Scooter",price:65000,year:"2022",km:"22,000 km",owner:"1st Owner"},
- {name:"Hero Splendor Plus",brand:"Hero",type:"Bike",price:45000,year:"2020",km:"31,000 km",owner:"1st Owner"},
- {name:"Honda CBR",brand:"Honda",type:"Bike",price:110000,year:"2018",km:"24,000 km",owner:"2nd Owner"},
- {name:"Bajaj Pulsar 150",brand:"Bajaj",type:"Bike",price:35000,year:"2015",km:"35,000 km",owner:"1st Owner"},
- {name:"Honda Activa",brand:"Honda",type:"Scooter",price:55000,year:"2021",km:"25,000 km",owner:"1st Owner"},
- {name:"Yamaha FZ",brand:"Yamaha",type:"Bike",price:75000,year:"2020",km:"20,000 km",owner:"1st Owner"},
- {name:"Royal Enfield Classic 350",brand:"Royal Enfield",type:"Bike",price:125000,year:"2019",km:"29,000 km",owner:"1st Owner"}
+const whatsapp="918126525454";
+
+const vehicles=[
+{name:"Suzuki Access 125",brand:"Suzuki",type:"Scooter",price:55000,year:"2021",km:"28,000 km",owner:"1st Owner"},
+{name:"TVS Jupiter 125",brand:"TVS",type:"Scooter",price:65000,year:"2022",km:"22,000 km",owner:"1st Owner"},
+{name:"Hero Splendor Plus",brand:"Hero",type:"Bike",price:45000,year:"2020",km:"31,000 km",owner:"1st Owner"},
+{name:"Honda CBR",brand:"Honda",type:"Bike",price:110000,year:"2018",km:"24,000 km",owner:"2nd Owner"},
+{name:"Bajaj Pulsar 150",brand:"Bajaj",type:"Bike",price:35000,year:"2015",km:"35,000 km",owner:"1st Owner"},
+{name:"Honda Activa",brand:"Honda",type:"Scooter",price:55000,year:"2021",km:"25,000 km",owner:"1st Owner"},
+{name:"Yamaha FZ",brand:"Yamaha",type:"Bike",price:75000,year:"2020",km:"20,000 km",owner:"1st Owner"},
+{name:"Royal Enfield Classic 350",brand:"Royal Enfield",type:"Bike",price:125000,year:"2019",km:"29,000 km",owner:"1st Owner"}
 ];
 
-const brands = [
-"Hero","Honda","TVS","Bajaj","Yamaha","Suzuki","Royal Enfield","KTM","Husqvarna",
-"Jawa","Yezdi","Harley-Davidson","Triumph","BMW Motorrad","Kawasaki","Aprilia",
-"Vespa","Piaggio","Ather Energy","Ola Electric","Revolt Motors","Ultraviolette",
-"Oben Electric","Matter","Okinawa","Ampere","Komaki","PURE EV","Joy e-bike","Lectrix EV"
+const brands=[
+"Hero","Honda","TVS","Bajaj","Yamaha","Suzuki",
+"Royal Enfield","KTM","Husqvarna","Jawa","Yezdi",
+"Harley-Davidson","Triumph","BMW Motorrad","Kawasaki",
+"Aprilia","Vespa","Piaggio","Ather Energy","Ola Electric",
+"Revolt Motors","Ultraviolette","Oben Electric","Matter",
+"Okinawa","Ampere","Komaki","PURE EV","Joy e-bike",
+"Lectrix EV","Tork Motors","River"
 ];
 
-const grid=document.getElementById("listingGrid");
-const brandFilter=document.getElementById("brandFilter");
+const brandSelect=document.getElementById("brand");
 const brandGrid=document.getElementById("brandGrid");
 const vehicleSelect=document.getElementById("vehicleSelect");
 
+// populate brand select and brand pills
 brands.forEach(b=>{
-  brandFilter.insertAdjacentHTML("beforeend",`<option value="${b}">${b}</option>`);
-  brandGrid.insertAdjacentHTML("beforeend",`<span class="brand">${b}</span>`);
-});
-vehicles.forEach(v=>vehicleSelect.insertAdjacentHTML("beforeend",`<option>${v.name}</option>`));
+ let option=document.createElement("option");
+ option.textContent=b;
+ option.value=b;
+ brandSelect.appendChild(option);
 
-function money(n){return "₹"+n.toLocaleString("en-IN")}
+ let pill=document.createElement("span");
+ pill.className="brand";
+ pill.textContent=b;
+ brandGrid.appendChild(pill);
+});
+
+// populate vehicle select in enquiry form
+vehicles.forEach(v=>{
+ let option=document.createElement("option");
+ option.textContent=v.name;
+ option.value=v.name;
+ vehicleSelect.appendChild(option);
+});
+
+function money(n){
+ return "₹"+n.toLocaleString("en-IN");
+}
+
 function render(){
-  const q=document.getElementById("searchInput").value.toLowerCase().trim();
-  const type=document.getElementById("typeFilter").value;
-  const brand=brandFilter.value;
-  const result=vehicles.filter(v=>
-    (!q || (v.name+" "+v.brand).toLowerCase().includes(q)) &&
-    (!type || v.type===type) &&
-    (!brand || v.brand===brand)
-  );
-  grid.innerHTML=result.map((v,i)=>`
-    <article class="card">
-      <div class="card-top">BK Motors • ${v.type}</div>
-      <div class="card-body">
-        <h3>${v.name}</h3>
-        <div class="price">${money(v.price)}</div>
-        <div class="specs">
-          <div class="spec">${v.year} Model</div>
-          <div class="spec">${v.km}</div>
-          <div class="spec">${v.owner}</div>
-          <div class="spec">${v.brand}</div>
-        </div>
-        <div class="card-actions">
-          <button class="details" onclick="showDetails(${vehicles.indexOf(v)})">Details</button>
-          <button class="enquire" onclick="quickWhatsApp('${v.name.replace(/'/g,"\\'")}')">WhatsApp</button>
-        </div>
-      </div>
-    </article>`).join("");
-  document.getElementById("noResults").style.display=result.length?"none":"block";
-}
-document.getElementById("searchInput").addEventListener("input",render);
-document.getElementById("typeFilter").addEventListener("change",render);
-brandFilter.addEventListener("change",render);
 
-function showDetails(i){
-  const v=vehicles[i];
-  document.getElementById("modalTitle").textContent=v.name;
-  document.getElementById("modalPrice").textContent=money(v.price);
-  document.getElementById("modalText").textContent=`${v.year} model • ${v.km} • ${v.owner}. This is a sample/demo listing; please confirm current availability, condition and final price with BK Motors.`;
-  document.getElementById("modalWhatsApp").href=`https://wa.me/918126525454?text=${encodeURIComponent("Hello BK Motors, I want to enquire about "+v.name+".")}`;
-  document.getElementById("modal").classList.add("show");
+ let search=(document.getElementById("search").value||"").toLowerCase();
+ let type=document.getElementById("type").value;
+ let brand=document.getElementById("brand").value;
+ let sort=document.getElementById("sort").value;
+
+ let list=vehicles.filter(v=>
+  (!search || (v.name+" "+v.brand).toLowerCase().includes(search)) &&
+  (!type || v.type===type) &&
+  (!brand || v.brand===brand)
+ );
+
+ if(sort==="low") list.sort((a,b)=>a.price-b.price);
+ if(sort==="high") list.sort((a,b)=>b.price-a.price);
+
+ const grid=document.getElementById("inventoryGrid");
+ grid.innerHTML=list.map(v=>`
+
+ <div class="vehicle">
+
+  <div class="vehicle-top">
+   <div class="vehicle-icon">
+    ${v.type==="Scooter"?"🛵":"🏍️"}
+   </div>
+   <div class="badge">${v.owner}</div>
+  </div>
+
+  <div class="vehicle-body">
+
+   <h3>${v.name}</h3>
+
+   <div class="price">${money(v.price)}</div>
+
+   <div class="specs">
+    <div class="spec">${v.year} Model</div>
+    <div class="spec">${v.km}</div>
+    <div class="spec">${v.owner}</div>
+    <div class="spec">${v.brand}</div>
+   </div>
+
+   <div class="vehicle-buttons">
+
+    <button class="details"
+    onclick="details('${escapeForOnclick(v.name)}')">
+    View Details
+    </button>
+
+    <button class="whatsapp"
+    onclick="sendWhatsApp('${escapeForOnclick(v.name)}')">
+    WhatsApp
+    </button>
+
+   </div>
+
+  </div>
+ </div>
+
+ `).join("");
+
+ if(!list.length){
+  grid.innerHTML=
+  "<p style='grid-column:1/-1;text-align:center;color:#777;padding:40px'>No vehicle found.</p>";
+ }
 }
-function closeModal(){document.getElementById("modal").classList.remove("show")}
-document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
-function quickWhatsApp(name){
-  window.open("https://wa.me/918126525454?text="+encodeURIComponent("Hello BK Motors, I want to enquire about "+name+"."),"_blank");
+
+// helper to safely place names in onclick strings
+function escapeForOnclick(s){
+ return s.replace(/'/g,"\\'");
 }
-document.getElementById("enquiryForm").addEventListener("submit",e=>{
-  e.preventDefault();
-  const name=document.getElementById("name").value.trim();
-  const phone=document.getElementById("phone").value.trim();
-  const vehicle=document.getElementById("vehicleSelect").value || "a two-wheeler";
-  const msg=document.getElementById("message").value.trim();
-  const text=`Hello BK Motors,%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0AInterested in: ${encodeURIComponent(vehicle)}%0AMessage: ${encodeURIComponent(msg||"Please share details.")}`;
-  window.open("https://wa.me/918126525454?text="+text,"_blank");
+
+function sendWhatsApp(name){
+ let url="https://wa.me/"+whatsapp+
+ "?text="+encodeURIComponent(
+ "Hello BK Motors, I am interested in "+name+
+ ". Please share details and availability."
+ );
+ window.open(url,"_blank");
+}
+
+function details(name){
+ const v=vehicles.find(x=>x.name===name);
+ if(!v){
+  alert("Vehicle not found.");
+  return;
+ }
+
+ const info=
+  `${v.name}\n\n`+
+  `Price: ${money(v.price)}\n`+
+  `Year: ${v.year}\n`+
+  `Kilometers: ${v.km}\n`+
+  `Owner: ${v.owner}\n`+
+  `Brand: ${v.brand}\n\n`+
+  `Contact BK Motors on WhatsApp for availability and more details.`;
+
+ if(confirm(info+"\n\nSend a WhatsApp enquiry now?")){
+  sendWhatsApp(v.name);
+ }
+}
+
+// wire controls: search, type, brand, sort
+["search","type","brand","sort"].forEach(id=>{
+ const el=document.getElementById(id);
+ if(!el) return;
+ el.addEventListener("input",render);
+ el.addEventListener("change",render);
 });
-document.getElementById("year").textContent=new Date().getFullYear();
-render();
+
+// enquiry form handler
+const enquiryForm=document.getElementById("enquiryForm");
+if(enquiryForm){
+ enquiryForm.addEventListener("submit",function(e){
+  e.preventDefault();
+  const cname=(document.getElementById("customerName").value||"").trim();
+  const cphone=(document.getElementById("customerPhone").value||"").trim();
+  const vehicle=(document.getElementById("vehicleSelect").value||"").trim();
+  const userMsg=(document.getElementById("customerMessage").value||"").trim();
+
+  if(!cname||!cphone){
+   alert("Please enter your name and mobile number.");
+   return;
+  }
+
+  const text=
+   `Hello BK Motors, I am ${cname} (${cphone}). `+
+   (vehicle?`I am interested in ${vehicle}. `:"I am interested in your vehicles. ")+
+   (userMsg?`\n\nDetails: ${userMsg}`:"");
+
+  const url="https://wa.me/"+whatsapp+"?text="+encodeURIComponent(text);
+  window.open(url,"_blank");
+ });
+}
+
+window.addEventListener("load",function(){
+ render();
+});
 </script>
+
 </body>
 </html>
