@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BK Motors | Premium Two Wheeler Showroom</title>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -47,6 +48,13 @@ nav a{font-size:13px;font-weight:bold;color:#ddd}
 nav a:hover{color:var(--red)}
 .navbtn{
  background:var(--red);padding:12px 18px;border-radius:5px;color:white!important
+}
+/* mobile nav */
+.nav-toggle{display:none;background:transparent;border:0;color:#fff;font-size:22px;cursor:pointer}
+@media(max-width:850px){
+ .nav-toggle{display:block}
+ nav{display:none;position:absolute;left:0;right:0;top:76px;background:#090909;flex-direction:column;padding:16px;gap:12px}
+ nav.show{display:flex}
 }
 
 /* HERO */
@@ -295,6 +303,20 @@ footer{
 .footer-logo span{color:var(--red)}
 footer p{font-size:12px;margin-top:10px}
 
+/* MODAL (accessible) */
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-box{background:#fff;border-radius:10px;max-width:720px;width:100%;padding:22px;box-shadow:0 12px 40px rgba(0,0,0,.24)}
+.modal h3{margin-bottom:6px}
+.modal .meta{color:#666;font-size:14px;margin-bottom:12px}
+.modal .specs{display:flex;gap:10px;flex-wrap:wrap}
+.modal .spec{background:#f5f5f7;padding:8px;border-radius:6px;font-size:13px}
+.modal .actions{display:flex;gap:10px;margin-top:16px}
+.modal .close{margin-left:auto;background:transparent;border:0;font-size:22px;cursor:pointer}
+
+/* focus styles */
+:focus{outline:3px solid rgba(226,30,43,.18);outline-offset:3px}
+
 /* MOBILE */
 @media(max-width:850px){
  nav{display:none}
@@ -330,13 +352,14 @@ footer p{font-size:12px;margin-top:10px}
 <header>
 <div class="nav">
 <a class="logo" href="#home">BK <span>MOTORS</span></a>
-<nav>
+<button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+<nav id="primaryNav" aria-label="Primary navigation">
 <a href="#inventory">VEHICLES</a>
 <a href="#facilities">FACILITIES</a>
 <a href="#brands">BRANDS</a>
 <a href="#about">ABOUT</a>
 <a href="#location">LOCATION</a>
-<a class="navbtn" target="_blank"
+<a class="navbtn" target="_blank" rel="noopener"
 href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20enquire%20about%20a%20vehicle.">
 WHATSAPP
 </a>
@@ -357,7 +380,7 @@ all under one roof.
 
 <div class="buttons">
 <a class="btn red" href="#inventory">Explore Vehicles →</a>
-<a class="btn white" target="_blank"
+<a class="btn white" target="_blank" rel="noopener"
 href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20know%20about%20available%20vehicles.">
 WhatsApp Us
 </a>
@@ -393,23 +416,23 @@ WhatsApp Us
 </div>
 
 <div class="filters">
-<input id="search" placeholder="Search bike or scooter...">
-<select id="type">
+<input id="search" placeholder="Search bike or scooter..." aria-label="Search vehicles">
+<select id="type" aria-label="Filter by type">
 <option value="">All Types</option>
 <option>Bike</option>
 <option>Scooter</option>
 </select>
-<select id="brand">
+<select id="brand" aria-label="Filter by brand">
 <option value="">All Brands</option>
 </select>
-<select id="sort">
+<select id="sort" aria-label="Sort results">
 <option value="">Sort By</option>
 <option value="low">Price: Low to High</option>
 <option value="high">Price: High to Low</option>
 </select>
 </div>
 
-<div class="inventory-grid" id="inventoryGrid"></div>
+<div class="inventory-grid" id="inventoryGrid" role="list"></div>
 
 </div>
 </section>
@@ -426,7 +449,7 @@ Contact BK Motors for the current vehicle, eligibility,
 down payment and applicable terms.
 </p>
 <br>
-<a class="btn red" target="_blank"
+<a class="btn red" target="_blank" rel="noopener"
 href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20please%20tell%20me%20about%20the%20%C2%B916%2Fday%20lease%20offer.">
 Enquire About ₹16/day
 </a>
@@ -514,7 +537,7 @@ Enquire About ₹16/day
 <p style="color:#888">Actual availability depends on current stock.</p>
 </div>
 
-<div class="brand-grid" id="brandGrid"></div>
+<div class="brand-grid" id="brandGrid" aria-hidden="false"></div>
 
 </div>
 </section>
@@ -534,7 +557,7 @@ documentation and enquiry simple for customers.
 
 <div class="checks">
 <div><b>✓</b>Used two-wheeler sale & purchase</div>
-<div><b>✓</b>Buy-back and exchange assistance</div>
+<div><b>✓</b>Buy-back and exchange assistance</b></div>
 <div><b>✓</b>Loan and lease assistance</div>
 <div><b>✓</b>Vehicle check-up before delivery</div>
 <div><b>✓</b>Vehicle transfer assistance</div>
@@ -577,14 +600,14 @@ documentation and enquiry simple for customers.
 <form id="enquiryForm">
 <div class="form-grid">
 
-<input id="customerName" required placeholder="Your Name">
-<input id="customerPhone" required placeholder="Mobile Number">
+<input id="customerName" required placeholder="Your Name" aria-label="Your name">
+<input id="customerPhone" required placeholder="Mobile Number" aria-label="Mobile number">
 
-<select id="vehicleSelect" class="full">
+<select id="vehicleSelect" class="full" aria-label="Select vehicle">
 <option value="">Select Vehicle</option>
 </select>
 
-<textarea id="customerMessage" class="full"
+<textarea id="customerMessage" class="full" aria-label="Message"
 placeholder="Tell us your budget, preferred model, exchange details etc."></textarea>
 
 <button class="submit full" type="submit">
@@ -633,7 +656,7 @@ Send Enquiry on WhatsApp →
 
 <br>
 
-<a class="btn red" target="_blank"
+<a class="btn red" target="_blank" rel="noopener"
 href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20visit%20your%20showroom.">
 WhatsApp
 </a>
@@ -658,197 +681,20 @@ src="https://www.google.com/maps?q=82%20Chakrata%20Road%2C%20Dehradun%2C%20Uttar
 <p>© 2026 BK Motors. All rights reserved.</p>
 </footer>
 
-<script>
-const whatsapp="918126525454";
-
-const vehicles=[
-{name:"Suzuki Access 125",brand:"Suzuki",type:"Scooter",price:55000,year:"2021",km:"28,000 km",owner:"1st Owner"},
-{name:"TVS Jupiter 125",brand:"TVS",type:"Scooter",price:65000,year:"2022",km:"22,000 km",owner:"1st Owner"},
-{name:"Hero Splendor Plus",brand:"Hero",type:"Bike",price:45000,year:"2020",km:"31,000 km",owner:"1st Owner"},
-{name:"Honda CBR",brand:"Honda",type:"Bike",price:110000,year:"2018",km:"24,000 km",owner:"2nd Owner"},
-{name:"Bajaj Pulsar 150",brand:"Bajaj",type:"Bike",price:35000,year:"2015",km:"35,000 km",owner:"1st Owner"},
-{name:"Honda Activa",brand:"Honda",type:"Scooter",price:55000,year:"2021",km:"25,000 km",owner:"1st Owner"},
-{name:"Yamaha FZ",brand:"Yamaha",type:"Bike",price:75000,year:"2020",km:"20,000 km",owner:"1st Owner"},
-{name:"Royal Enfield Classic 350",brand:"Royal Enfield",type:"Bike",price:125000,year:"2019",km:"29,000 km",owner:"1st Owner"}
-];
-
-const brands=[
-"Hero","Honda","TVS","Bajaj","Yamaha","Suzuki",
-"Royal Enfield","KTM","Husqvarna","Jawa","Yezdi",
-"Harley-Davidson","Triumph","BMW Motorrad","Kawasaki",
-"Aprilia","Vespa","Piaggio","Ather Energy","Ola Electric",
-"Revolt Motors","Ultraviolette","Oben Electric","Matter",
-"Okinawa","Ampere","Komaki","PURE EV","Joy e-bike",
-"Lectrix EV","Tork Motors","River"
-];
-
-const brandSelect=document.getElementById("brand");
-const brandGrid=document.getElementById("brandGrid");
-const vehicleSelect=document.getElementById("vehicleSelect");
-
-// populate brand select and brand pills
-brands.forEach(b=>{
- let option=document.createElement("option");
- option.textContent=b;
- option.value=b;
- brandSelect.appendChild(option);
-
- let pill=document.createElement("span");
- pill.className="brand";
- pill.textContent=b;
- brandGrid.appendChild(pill);
-});
-
-// populate vehicle select in enquiry form
-vehicles.forEach(v=>{
- let option=document.createElement("option");
- option.textContent=v.name;
- option.value=v.name;
- vehicleSelect.appendChild(option);
-});
-
-function money(n){
- return "₹"+n.toLocaleString("en-IN");
-}
-
-function render(){
-
- let search=(document.getElementById("search").value||"").toLowerCase();
- let type=document.getElementById("type").value;
- let brand=document.getElementById("brand").value;
- let sort=document.getElementById("sort").value;
-
- let list=vehicles.filter(v=>
-  (!search || (v.name+" "+v.brand).toLowerCase().includes(search)) &&
-  (!type || v.type===type) &&
-  (!brand || v.brand===brand)
- );
-
- if(sort==="low") list.sort((a,b)=>a.price-b.price);
- if(sort==="high") list.sort((a,b)=>b.price-a.price);
-
- const grid=document.getElementById("inventoryGrid");
- grid.innerHTML=list.map(v=>`
-
- <div class="vehicle">
-
-  <div class="vehicle-top">
-   <div class="vehicle-icon">
-    ${v.type==="Scooter"?"🛵":"🏍️"}
-   </div>
-   <div class="badge">${v.owner}</div>
-  </div>
-
-  <div class="vehicle-body">
-
-   <h3>${v.name}</h3>
-
-   <div class="price">${money(v.price)}</div>
-
-   <div class="specs">
-    <div class="spec">${v.year} Model</div>
-    <div class="spec">${v.km}</div>
-    <div class="spec">${v.owner}</div>
-    <div class="spec">${v.brand}</div>
-   </div>
-
-   <div class="vehicle-buttons">
-
-    <button class="details"
-    onclick="details('${escapeForOnclick(v.name)}')">
-    View Details
-    </button>
-
-    <button class="whatsapp"
-    onclick="sendWhatsApp('${escapeForOnclick(v.name)}')">
-    WhatsApp
-    </button>
-
-   </div>
-
+<!-- Accessible modal (populated by JS) -->
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+ <div class="modal-box" role="document">
+  <button class="close" id="modalClose" aria-label="Close details">×</button>
+  <h3 id="modalTitle">Title</h3>
+  <div class="meta" id="modalMeta"></div>
+  <div class="specs" id="modalSpecs"></div>
+  <p id="modalNote" style="color:#666;margin-top:12px;font-size:14px"></p>
+  <div class="actions">
+   <a id="modalWhatsApp" class="btn red" target="_blank" rel="noopener">Enquire on WhatsApp</a>
   </div>
  </div>
+</div>
 
- `).join("");
-
- if(!list.length){
-  grid.innerHTML=
-  "<p style='grid-column:1/-1;text-align:center;color:#777;padding:40px'>No vehicle found.</p>";
- }
-}
-
-// helper to safely place names in onclick strings
-function escapeForOnclick(s){
- return s.replace(/'/g,"\\'");
-}
-
-function sendWhatsApp(name){
- let url="https://wa.me/"+whatsapp+
- "?text="+encodeURIComponent(
- "Hello BK Motors, I am interested in "+name+
- ". Please share details and availability."
- );
- window.open(url,"_blank");
-}
-
-function details(name){
- const v=vehicles.find(x=>x.name===name);
- if(!v){
-  alert("Vehicle not found.");
-  return;
- }
-
- const info=
-  `${v.name}\n\n`+
-  `Price: ${money(v.price)}\n`+
-  `Year: ${v.year}\n`+
-  `Kilometers: ${v.km}\n`+
-  `Owner: ${v.owner}\n`+
-  `Brand: ${v.brand}\n\n`+
-  `Contact BK Motors on WhatsApp for availability and more details.`;
-
- if(confirm(info+"\n\nSend a WhatsApp enquiry now?")){
-  sendWhatsApp(v.name);
- }
-}
-
-// wire controls: search, type, brand, sort
-["search","type","brand","sort"].forEach(id=>{
- const el=document.getElementById(id);
- if(!el) return;
- el.addEventListener("input",render);
- el.addEventListener("change",render);
-});
-
-// enquiry form handler
-const enquiryForm=document.getElementById("enquiryForm");
-if(enquiryForm){
- enquiryForm.addEventListener("submit",function(e){
-  e.preventDefault();
-  const cname=(document.getElementById("customerName").value||"").trim();
-  const cphone=(document.getElementById("customerPhone").value||"").trim();
-  const vehicle=(document.getElementById("vehicleSelect").value||"").trim();
-  const userMsg=(document.getElementById("customerMessage").value||"").trim();
-
-  if(!cname||!cphone){
-   alert("Please enter your name and mobile number.");
-   return;
-  }
-
-  const text=
-   `Hello BK Motors, I am ${cname} (${cphone}). `+
-   (vehicle?`I am interested in ${vehicle}. `:"I am interested in your vehicles. ")+
-   (userMsg?`\n\nDetails: ${userMsg}`:"");
-
-  const url="https://wa.me/"+whatsapp+"?text="+encodeURIComponent(text);
-  window.open(url,"_blank");
- });
-}
-
-window.addEventListener("load",function(){
- render();
-});
-</script>
-
+<script src="/assets/script.js" defer></script>
 </body>
 </html>
