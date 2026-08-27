@@ -1,700 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BK Motors | Premium Two Wheeler Showroom</title>
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BK Motors — Dehradun | Trusted 2‑Wheeler Bazar</title>
+  <meta name="description" content="BK Motors Dehradun — quality second‑hand two‑wheelers, buyback, exchange, finance & ₹16/day lease offers. Visit our showroom at 82 Chakrata Road.">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:#111}
-a{text-decoration:none;color:inherit}
-button,input,select{font:inherit}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-:root{
- --red:#e21e2b;
- --dark:#080808;
- --dark2:#111;
- --grey:#777;
- --light:#f5f5f5;
-}
+  <!-- Open Graph -->
+  <meta property="og:title" content="BK Motors — Dehradun | Trusted 2‑Wheeler Bazar">
+  <meta property="og:description" content="Quality second‑hand two‑wheelers at the best price. Visit BK Motors, Dehradun — Buyback, Exchange, Finance, ₹16/day lease offers.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:type" content="website">
 
-/* TOP BAR */
-.topbar{
- background:#050505;color:#bbb;
- padding:9px 5%;
- font-size:12px;
- display:flex;justify-content:space-between;
-}
-.topbar span:first-child{color:#fff}
-
-/* NAVBAR */
-header{
- background:#090909;color:white;
- position:sticky;top:0;z-index:1000;
- border-bottom:1px solid #252525;
-}
-.nav{
- max-width:1250px;margin:auto;
- height:76px;padding:0 25px;
- display:flex;align-items:center;justify-content:space-between;
-}
-.logo{font-size:27px;font-weight:900;letter-spacing:1px}
-.logo span{color:var(--red)}
-nav{display:flex;gap:28px;align-items:center}
-nav a{font-size:13px;font-weight:bold;color:#ddd}
-nav a:hover{color:var(--red)}
-.navbtn{
- background:var(--red);padding:12px 18px;border-radius:5px;color:white!important
-}
-/* mobile nav */
-.nav-toggle{display:none;background:transparent;border:0;color:#fff;font-size:22px;cursor:pointer}
-@media(max-width:850px){
- .nav-toggle{display:block}
- nav{display:none;position:absolute;left:0;right:0;top:76px;background:#090909;flex-direction:column;padding:16px;gap:12px}
- nav.show{display:flex}
-}
-
-/* HERO */
-.hero{
- min-height:650px;
- background:
- radial-gradient(circle at 80% 35%,rgba(226,30,43,.35),transparent 30%),
- linear-gradient(110deg,#050505,#17191d);
- color:white;
- display:flex;align-items:center;
-}
-.hero-inner{max-width:1250px;width:100%;margin:auto;padding:80px 25px}
-.hero-small{
- color:#ff5b64;font-size:12px;font-weight:bold;
- letter-spacing:3px;text-transform:uppercase;margin-bottom:20px
-}
-.hero h1{
- font-size:clamp(48px,7vw,88px);
- line-height:.95;letter-spacing:-4px;
- max-width:850px
-}
-.hero h1 span{color:var(--red)}
-.hero p{
- max-width:650px;color:#aaa;font-size:18px;
- line-height:1.7;margin:25px 0
-}
-.buttons{display:flex;gap:10px;flex-wrap:wrap}
-.btn{
- display:inline-block;padding:15px 23px;
- border-radius:5px;font-weight:bold;font-size:13px
-}
-.red{background:var(--red);color:white}
-.white{background:white;color:#111}
-.outline{border:1px solid #555;color:white}
-.btn:hover{transform:translateY(-2px)}
-
-.hero-info{
- display:flex;gap:35px;margin-top:40px;
- color:#aaa;font-size:12px;flex-wrap:wrap
-}
-.hero-info b{display:block;color:white;font-size:14px;margin-bottom:3px}
-
-/* QUICK FEATURES */
-.quick{
- background:white;
- box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-.quick-inner{
- max-width:1100px;margin:auto;
- display:grid;grid-template-columns:repeat(4,1fr)
-}
-.quick-item{
- padding:25px 20px;
- border-right:1px solid #ddd
-}
-.quick-item:last-child{border:0}
-.quick-item b{display:block;font-size:14px}
-.quick-item span{font-size:12px;color:#777}
-
-/* GENERAL */
-section{padding:85px 20px}
-.container{max-width:1200px;margin:auto}
-.heading{text-align:center;margin-bottom:40px}
-.heading small{
- color:var(--red);font-weight:bold;
- letter-spacing:2px;text-transform:uppercase
-}
-.heading h2{font-size:42px;margin:8px 0}
-.heading p{color:#777}
-
-/* INVENTORY */
-.inventory{background:#f5f5f3}
-.filters{
- display:grid;
- grid-template-columns:2fr 1fr 1fr 1fr;
- gap:10px;margin-bottom:30px
-}
-.filters input,.filters select{
- height:48px;border:1px solid #ddd;
- border-radius:6px;padding:0 13px;background:white
-}
-.inventory-grid{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:22px
-}
-.vehicle{
- background:white;border-radius:10px;
- overflow:hidden;border:1px solid #e5e5e5;
- transition:.25s
-}
-.vehicle:hover{
- transform:translateY(-6px);
- box-shadow:0 18px 40px rgba(0,0,0,.12)
-}
-.vehicle-top{
- height:205px;
- background:linear-gradient(135deg,#111,#303238);
- display:flex;align-items:center;
- justify-content:center;position:relative
-}
-.vehicle-icon{font-size:75px}
-.badge{
- position:absolute;top:13px;left:13px;
- background:var(--red);color:white;
- padding:6px 10px;border-radius:20px;
- font-size:10px;font-weight:bold
-}
-.vehicle-body{padding:20px}
-.vehicle-body h3{font-size:20px}
-.price{
- color:var(--red);font-size:24px;
- font-weight:900;margin:5px 0 15px
-}
-.specs{
- display:grid;grid-template-columns:1fr 1fr;gap:7px
-}
-.spec{
- background:#f2f2f2;padding:8px;
- font-size:11px;color:#666;border-radius:5px
-}
-.vehicle-buttons{
- display:grid;grid-template-columns:1fr 1fr;
- gap:8px;margin-top:17px
-}
-.vehicle-buttons button{
- border:0;padding:11px;border-radius:5px;
- cursor:pointer;font-weight:bold
-}
-.details{background:#111;color:white}
-.whatsapp{background:var(--red);color:white}
-
-/* OFFER */
-.offer{background:#101010;color:white}
-.offer-box{
- max-width:1100px;margin:auto;
- border:1px solid #333;border-radius:12px;
- padding:45px;
- display:grid;grid-template-columns:1fr 1fr;
- align-items:center;gap:30px
-}
-.offer-box h2{font-size:42px}
-.offer-box h2 span{color:var(--red)}
-.offer-box p{color:#999;margin-top:10px;line-height:1.7}
-.offer-right{text-align:center}
-.offer-right strong{
- display:block;font-size:60px;color:var(--red)
-}
-.offer-right small{color:#888}
-
-/* FACILITIES */
-.facilities{background:white}
-.facility-grid{
- display:grid;grid-template-columns:repeat(4,1fr);gap:15px
-}
-.facility{
- border:1px solid #e1e1e1;
- padding:25px;border-radius:10px
-}
-.facility-icon{font-size:30px;margin-bottom:13px}
-.facility h3{font-size:16px}
-.facility p{font-size:12px;color:#777;margin-top:6px;line-height:1.5}
-
-/* BRANDS */
-.brands{background:#0b0b0b;color:white}
-.brand-grid{
- display:flex;flex-wrap:wrap;
- justify-content:center;gap:10px
-}
-.brand{
- border:1px solid #333;
- padding:11px 17px;border-radius:30px;
- color:#ddd;font-size:12px;font-weight:bold
-}
-
-/* ABOUT */
-.about{
- background:#111;color:white
-}
-.about-grid{
- display:grid;grid-template-columns:1fr 1fr;
- gap:60px;align-items:center
-}
-.about h2{font-size:44px;line-height:1.05;margin:10px 0 20px}
-.about p{color:#aaa;line-height:1.8}
-.checks{margin-top:25px;display:grid;gap:10px}
-.checks div{font-size:13px;color:#ddd}
-.checks b{color:var(--red);margin-right:8px}
-.about-stats{
- display:grid;grid-template-columns:1fr 1fr;gap:12px
-}
-.about-stat{
- padding:28px;border:1px solid #303030;
- border-radius:10px;background:#171717
-}
-.about-stat strong{font-size:28px;color:white}
-.about-stat span{display:block;color:#888;font-size:12px;margin-top:5px}
-
-/* ENQUIRY */
-.enquiry{background:#eee}
-.form-box{
- max-width:800px;margin:auto;
- background:white;padding:30px;border-radius:12px
-}
-.form-grid{
- display:grid;grid-template-columns:1fr 1fr;gap:12px
-}
-.form-grid input,.form-grid select,.form-grid textarea{
- width:100%;padding:14px;
- border:1px solid #ddd;border-radius:6px
-}
-.full{grid-column:1/-1}
-.form-grid textarea{height:120px;resize:none}
-.submit{
- width:100%;border:0;background:var(--red);
- color:white;padding:15px;border-radius:6px;
- font-weight:bold;cursor:pointer
-}
-
-/* LOCATION */
-.location{background:white}
-.location-grid{
- display:grid;grid-template-columns:.8fr 1.2fr;gap:20px
-}
-.location-card{
- background:#111;color:white;
- border-radius:12px;padding:30px
-}
-.location-card h2{font-size:30px;margin-bottom:8px}
-.location-card p{color:#aaa;margin-bottom:20px}
-.location-info{display:grid;gap:10px}
-.location-info div{
- border:1px solid #333;padding:13px;border-radius:6px
-}
-.location-info small{display:block;color:#777}
-.map{
- width:100%;height:390px;border:0;border-radius:12px
-}
-
-/* FOOTER */
-footer{
- background:#050505;color:#777;
- padding:30px 20px;text-align:center
-}
-.footer-logo{font-size:22px;font-weight:900;color:white}
-.footer-logo span{color:var(--red)}
-footer p{font-size:12px;margin-top:10px}
-
-/* MODAL (accessible) */
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;align-items:center;justify-content:center;padding:20px}
-.modal.show{display:flex}
-.modal-box{background:#fff;border-radius:10px;max-width:720px;width:100%;padding:22px;box-shadow:0 12px 40px rgba(0,0,0,.24)}
-.modal h3{margin-bottom:6px}
-.modal .meta{color:#666;font-size:14px;margin-bottom:12px}
-.modal .specs{display:flex;gap:10px;flex-wrap:wrap}
-.modal .spec{background:#f5f5f7;padding:8px;border-radius:6px;font-size:13px}
-.modal .actions{display:flex;gap:10px;margin-top:16px}
-.modal .close{margin-left:auto;background:transparent;border:0;font-size:22px;cursor:pointer}
-
-/* focus styles */
-:focus{outline:3px solid rgba(226,30,43,.18);outline-offset:3px}
-
-/* MOBILE */
-@media(max-width:850px){
- nav{display:none}
- .quick-inner{grid-template-columns:1fr 1fr}
- .inventory-grid{grid-template-columns:1fr 1fr}
- .facility-grid{grid-template-columns:1fr 1fr}
- .about-grid,.location-grid,.offer-box{grid-template-columns:1fr}
- .filters{grid-template-columns:1fr 1fr}
-}
-@media(max-width:550px){
- section{padding:60px 15px}
- .hero-inner{padding:65px 18px}
- .hero h1{font-size:48px}
- .hero p{font-size:16px}
- .quick-inner,.inventory-grid,.facility-grid,.form-grid{grid-template-columns:1fr}
- .quick-item{border-right:0;border-bottom:1px solid #ddd}
- .filters{grid-template-columns:1fr}
- .full{grid-column:auto}
- .offer-box{padding:25px}
- .offer-box h2{font-size:31px}
- .about h2{font-size:35px}
-}
-</style>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 
 <body>
+  <header class="site-header">
+    <div class="topbar">BK MOTORS · 82 Chakrata Road, Dehradun · <a href="tel:+918126525454">8126525454</a></div>
+    <div class="navwrap">
+      <a class="brand" href="#home">BK <span>MOTORS</span></a>
+      <button id="navToggle" class="nav-toggle" aria-label="Open navigation">☰</button>
+      <nav id="primaryNav" class="primary-nav" aria-label="Primary navigation">
+        <a href="#inventory">Vehicles</a>
+        <a href="#why">Why Us</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20enquire%20about%20a%20vehicle." target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="topbar">
-<span>BK MOTORS · DEHRADUN</span>
-<span>82 Chakrata Road · 8126525454</span>
-</div>
+  <!-- HERO -->
+  <section id="home" class="hero" style="background-image:url('https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1600&q=80')">
+    <div class="hero-inner">
+      <div class="eyebrow">Dehradun · Your trusted 2 wheeler bazar</div>
+      <h1 class="hero-title"><span class="big">2nd Hand Two‑Wheelers</span><br>Best Price & Quality</h1>
+      <p class="lead">Buy · Sell · Exchange · Buy‑Back · Finance · Lease from ₹16/day*</p>
 
-<header>
-<div class="nav">
-<a class="logo" href="#home">BK <span>MOTORS</span></a>
-<button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
-<nav id="primaryNav" aria-label="Primary navigation">
-<a href="#inventory">VEHICLES</a>
-<a href="#facilities">FACILITIES</a>
-<a href="#brands">BRANDS</a>
-<a href="#about">ABOUT</a>
-<a href="#location">LOCATION</a>
-<a class="navbtn" target="_blank" rel="noopener"
-href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20enquire%20about%20a%20vehicle.">
-WHATSAPP
-</a>
-</nav>
-</div>
-</header>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20am%20interested%20in%20your%20vehicles." target="_blank" rel="noopener">WhatsApp Now</a>
+        <a class="btn btn-outline" href="#contact">Book Visit</a>
+      </div>
 
-<!-- HERO -->
-<section class="hero" id="home">
-<div class="hero-inner">
-<div class="hero-small">Premium Two-Wheeler Showroom · Dehradun</div>
-<h1>Find your next<br><span>perfect ride.</span></h1>
-<p>
-Explore quality pre-owned bikes and scooters with purchase,
-sale, exchange, buy-back, finance and lease assistance —
-all under one roof.
-</p>
+      <div class="address-ribbon">Address: 182, Chakrata Rd, Seyad Mohalla, Khurbura Mohalla, Dehradun</div>
+    </div>
+  </section>
 
-<div class="buttons">
-<a class="btn red" href="#inventory">Explore Vehicles →</a>
-<a class="btn white" target="_blank" rel="noopener"
-href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20know%20about%20available%20vehicles.">
-WhatsApp Us
-</a>
-<a class="btn outline" href="#location">Visit Showroom</a>
-</div>
+  <!-- TRUST + OFFER -->
+  <section class="trust">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">⭐ Verified Checks</div>
+        <div class="trust-item">🔧 First 2 Services Free</div>
+        <div class="trust-item">🔁 Buy‑Back & Exchange</div>
+        <div class="trust-cta">Lease from <strong>₹16/day</strong> — <a href="#contact">Enquire</a></div>
+      </div>
+    </div>
+  </section>
 
-<div class="hero-info">
-<div><b>BUY · SELL · EXCHANGE</b>Complete assistance</div>
-<div><b>VEHICLE CHECK</b>Before delivery</div>
-<div><b>FINANCE & LEASE</b>Ask for current terms</div>
-</div>
-</div>
-</section>
+  <!-- INVENTORY (cards) -->
+  <section id="inventory" class="inventory">
+    <div class="container">
+      <h2>Featured Vehicles</h2>
+      <p class="muted">Demo listings — confirm availability & price with BK Motors.</p>
 
-<!-- QUICK -->
-<div class="quick">
-<div class="quick-inner">
-<div class="quick-item"><b>First 2 Services Free</b><span>As per applicable terms</span></div>
-<div class="quick-item"><b>Buy Back Facility</b><span>Ask for current eligibility</span></div>
-<div class="quick-item"><b>Exchange Facility</b><span>Exchange your existing vehicle</span></div>
-<div class="quick-item"><b>Loan Facility</b><span>Subject to approval</span></div>
-</div>
-</div>
+      <div class="filters">
+        <input id="search" placeholder="Search model or brand" aria-label="Search vehicles">
+        <select id="type"><option value="">All Types</option><option>Bike</option><option>Scooter</option></select>
+        <select id="brand"><option value="">All Brands</option></select>
+        <select id="sort"><option value="">Sort</option><option value="low">Price: Low → High</option><option value="high">Price: High → Low</option></select>
+      </div>
 
-<!-- INVENTORY -->
-<section class="inventory" id="inventory">
-<div class="container">
+      <div id="inventoryGrid" class="inventory-grid"></div>
+    </div>
+  </section>
 
-<div class="heading">
-<small>Our Collection</small>
-<h2>Featured Vehicles</h2>
-<p>Demo inventory — confirm current availability and final price with BK Motors.</p>
-</div>
+  <!-- GALLERY + TESTIMONIALS -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2>Showroom Gallery</h2>
+      <div class="carousel" id="carousel">
+        <div class="slide"><img loading="lazy" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80" alt="showroom"></div>
+        <div class="slide"><img loading="lazy" src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1200&q=80" alt="vehicles"></div>
+        <div class="slide"><img loading="lazy" src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=80" alt="shop front"></div>
+      </div>
+    </div>
+  </section>
 
-<div class="filters">
-<input id="search" placeholder="Search bike or scooter..." aria-label="Search vehicles">
-<select id="type" aria-label="Filter by type">
-<option value="">All Types</option>
-<option>Bike</option>
-<option>Scooter</option>
-</select>
-<select id="brand" aria-label="Filter by brand">
-<option value="">All Brands</option>
-</select>
-<select id="sort" aria-label="Sort results">
-<option value="">Sort By</option>
-<option value="low">Price: Low to High</option>
-<option value="high">Price: High to Low</option>
-</select>
-</div>
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>What Customers Say</h2>
+      <div class="test-grid">
+        <blockquote>"Great prices, trustworthy check‑ups — highly recommended."<cite>— A. Sharma</cite></blockquote>
+        <blockquote>"Smooth exchange & buyback process. Staff very helpful."<cite>— P. Verma</cite></blockquote>
+        <blockquote>"Booked a test ride; excellent support and documentation."<cite>— S. Kaur</cite></blockquote>
+      </div>
+    </div>
+  </section>
 
-<div class="inventory-grid" id="inventoryGrid" role="list"></div>
+  <!-- CONTACT / ENQUIRY -->
+  <section id="contact" class="contact">
+    <div class="container contact-grid">
+      <div>
+        <h2>Visit or Enquire</h2>
+        <p>82 Chakrata Road, Dehradun · Open 10:00 — 19:00</p>
+        <p><strong>Call / WhatsApp:</strong> <a href="tel:+918126525454">8126525454</a></p>
+        <p><a class="btn btn-primary" href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20visit%20the%20showroom." target="_blank" rel="noopener">Message on WhatsApp</a></p>
+      </div>
 
-</div>
-</section>
+      <form id="enquiryForm" class="enquiry-form" onsubmit="return false;">
+        <input id="customerName" placeholder="Your name" required>
+        <input id="customerPhone" placeholder="Mobile number" required>
+        <select id="vehicleSelect"><option value="">Select vehicle (optional)</option></select>
+        <textarea id="customerMessage" placeholder="Message (optional)" rows="4"></textarea>
+        <button id="sendEnquiry" class="btn btn-primary">Send via WhatsApp</button>
+      </form>
+    </div>
+  </section>
 
-<!-- OFFER -->
-<section class="offer">
-<div class="offer-box">
-<div>
-<div class="hero-small">Special Lease Facility</div>
-<h2>Ride from <span>₹16/day*</span></h2>
-<p>
-Lease vehicles from ₹16 per day as advertised.
-Contact BK Motors for the current vehicle, eligibility,
-down payment and applicable terms.
-</p>
-<br>
-<a class="btn red" target="_blank" rel="noopener"
-href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20please%20tell%20me%20about%20the%20%C2%B916%2Fday%20lease%20offer.">
-Enquire About ₹16/day
-</a>
-</div>
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> BK Motors — Dehradun · 82 Chakrata Road</div>
+  </footer>
 
-<div class="offer-right">
-<strong>₹16</strong>
-<span>PER DAY*</span><br>
-<small>*Conditions apply. Confirm current terms.</small>
-</div>
-</div>
-</section>
+  <!-- sticky WhatsApp button -->
+  <a class="whatsapp-float" href="https://wa.me/918126525454?text=Hello%20BK%20Motors" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
 
-<!-- FACILITIES -->
-<section class="facilities" id="facilities">
-<div class="container">
-
-<div class="heading">
-<small>Why BK Motors</small>
-<h2>Everything Under One Roof</h2>
-<p>Professional assistance for your two-wheeler journey.</p>
-</div>
-
-<div class="facility-grid">
-
-<div class="facility">
-<div class="facility-icon">🔧</div>
-<h3>First 2 Services Free</h3>
-<p>Available as per applicable terms.</p>
-</div>
-
-<div class="facility">
-<div class="facility-icon">🔄</div>
-<h3>Buy Back Facility</h3>
-<p>Ask about our current buy-back options.</p>
-</div>
-
-<div class="facility">
-<div class="facility-icon">♻️</div>
-<h3>Exchange Facility</h3>
-<p>Exchange your existing two-wheeler.</p>
-</div>
-
-<div class="facility">
-<div class="facility-icon">💳</div>
-<h3>Loan Facility</h3>
-<p>Finance assistance subject to approval.</p>
-</div>
-
-<div class="facility">
-<div class="facility-icon">📄</div>
-<h3>Instant Vehicle Transfer</h3>
-<p>Documentation and transfer assistance.</p>
-</div>
-
-<div class="facility">
-<div class="facility-icon">✅</div>
-<h3>Comprehensive Check-up</h3>
-<p>Vehicle check-up before delivery.</p>
-</div>
-
-<div class="facility">
-<div class="facility-icon">🛵</div>
-<h3>Lease Facility</h3>
-<p>Lease offer starting from ₹16/day*.</p>
-</div>
-
-<div class="facility">
-<div class="facility-icon">🏍️</div>
-<h3>Sale & Purchase</h3>
-<p>Buy or sell pre-owned two-wheelers.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- BRANDS -->
-<section class="brands" id="brands">
-<div class="container">
-
-<div class="heading">
-<small>Brands</small>
-<h2>Major Two-Wheeler Brands</h2>
-<p style="color:#888">Actual availability depends on current stock.</p>
-</div>
-
-<div class="brand-grid" id="brandGrid" aria-hidden="false"></div>
-
-</div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-<div class="container about-grid">
-
-<div>
-<div class="hero-small">About BK Motors</div>
-<h2>A better way to buy a pre-owned two-wheeler.</h2>
-<p>
-BK Motors is a Dehradun-based two-wheeler sale and purchase
-business focused on making vehicle discovery, exchange,
-documentation and enquiry simple for customers.
-</p>
-
-<div class="checks">
-<div><b>✓</b>Used two-wheeler sale & purchase</div>
-<div><b>✓</b>Buy-back and exchange assistance</b></div>
-<div><b>✓</b>Loan and lease assistance</div>
-<div><b>✓</b>Vehicle check-up before delivery</div>
-<div><b>✓</b>Vehicle transfer assistance</div>
-</div>
-</div>
-
-<div class="about-stats">
-<div class="about-stat">
-<strong>₹16/day*</strong>
-<span>Advertised lease starting offer</span>
-</div>
-<div class="about-stat">
-<strong>2</strong>
-<span>First services free, as applicable</span>
-</div>
-<div class="about-stat">
-<strong>30+</strong>
-<span>Brands showcased</span>
-</div>
-<div class="about-stat">
-<strong>Dehradun</strong>
-<span>82 Chakrata Road</span>
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- ENQUIRY -->
-<section class="enquiry" id="enquiry">
-<div class="container">
-
-<div class="heading">
-<small>Get In Touch</small>
-<h2>Vehicle Enquiry</h2>
-<p>Fill the form and your enquiry will open directly in WhatsApp.</p>
-</div>
-
-<div class="form-box">
-<form id="enquiryForm">
-<div class="form-grid">
-
-<input id="customerName" required placeholder="Your Name" aria-label="Your name">
-<input id="customerPhone" required placeholder="Mobile Number" aria-label="Mobile number">
-
-<select id="vehicleSelect" class="full" aria-label="Select vehicle">
-<option value="">Select Vehicle</option>
-</select>
-
-<textarea id="customerMessage" class="full" aria-label="Message"
-placeholder="Tell us your budget, preferred model, exchange details etc."></textarea>
-
-<button class="submit full" type="submit">
-Send Enquiry on WhatsApp →
-</button>
-
-</div>
-</form>
-</div>
-
-</div>
-</section>
-
-<!-- LOCATION -->
-<section class="location" id="location">
-<div class="container">
-
-<div class="heading">
-<small>Visit Us</small>
-<h2>Our Showroom</h2>
-<p>82 Chakrata Road, Dehradun, Uttarakhand</p>
-</div>
-
-<div class="location-grid">
-
-<div class="location-card">
-<h2>BK Motors</h2>
-<p>Your trusted 2 Wheeler Bazar</p>
-
-<div class="location-info">
-<div>
-<small>Address</small>
-<b>82 Chakrata Road, Dehradun, Uttarakhand</b>
-</div>
-
-<div>
-<small>WhatsApp / Contact</small>
-<b>8126525454</b>
-</div>
-
-<div>
-<small>Business</small>
-<b>Used 2 Wheeler Sale & Purchase</b>
-</div>
-</div>
-
-<br>
-
-<a class="btn red" target="_blank" rel="noopener"
-href="https://wa.me/918126525454?text=Hello%20BK%20Motors%2C%20I%20want%20to%20visit%20your%20showroom.">
-WhatsApp
-</a>
-
-<a class="btn white" href="tel:+918126525454">Call</a>
-
-</div>
-
-<iframe
-class="map"
-loading="lazy"
-src="https://www.google.com/maps?q=82%20Chakrata%20Road%2C%20Dehradun%2C%20Uttarakhand&output=embed">
-</iframe>
-
-</div>
-</div>
-</section>
-
-<footer>
-<div class="footer-logo">BK <span>MOTORS</span></div>
-<p>82 Chakrata Road, Dehradun · 8126525454</p>
-<p>© 2026 BK Motors. All rights reserved.</p>
-</footer>
-
-<!-- Accessible modal (populated by JS) -->
-<div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
- <div class="modal-box" role="document">
-  <button class="close" id="modalClose" aria-label="Close details">×</button>
-  <h3 id="modalTitle">Title</h3>
-  <div class="meta" id="modalMeta"></div>
-  <div class="specs" id="modalSpecs"></div>
-  <p id="modalNote" style="color:#666;margin-top:12px;font-size:14px"></p>
-  <div class="actions">
-   <a id="modalWhatsApp" class="btn red" target="_blank" rel="noopener">Enquire on WhatsApp</a>
-  </div>
- </div>
-</div>
-
-<script src="/assets/script.js" defer></script>
+  <script src="/assets/script.js" defer></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
