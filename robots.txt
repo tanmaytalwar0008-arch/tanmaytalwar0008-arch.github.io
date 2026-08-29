@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://tanmaytalwar0008-arch.github.io/sitemap.xml
