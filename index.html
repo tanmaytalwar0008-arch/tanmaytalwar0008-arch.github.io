@@ -6,6 +6,8 @@
 
 <title>B.K. Motors | Premium Used 2-Wheeler Showroom</title>
 
+<meta name="description" content="B.K. Motors Dehradun - Premium pre-owned two wheelers. Quality checked used bikes and scooters at attractive prices.">
+
 <style>
 *{
   box-sizing:border-box;
@@ -20,85 +22,118 @@ html{
 body{
   font-family:Arial,Helvetica,sans-serif;
   background:#f7f7f5;
-  color:#111827;
+  color:#17202a;
   line-height:1.6;
 }
 
 a{
   text-decoration:none;
-  color:inherit;
 }
+
+:root{
+  --navy:#0b1f33;
+  --navy2:#132d47;
+  --gold:#b08a3e;
+  --gold2:#d2ad62;
+  --white:#ffffff;
+  --light:#f7f7f5;
+  --text:#17202a;
+  --muted:#66717d;
+  --border:#e5e1d8;
+}
+
+/* HEADER */
 
 header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:#ffffff;
-  border-bottom:1px solid #e5e7eb;
-  box-shadow:0 3px 18px rgba(0,0,0,.06);
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--border);
+  box-shadow:0 3px 20px rgba(0,0,0,.06);
 }
 
 .nav{
-  max-width:1180px;
+  max-width:1200px;
   margin:auto;
-  padding:18px 20px;
+  padding:15px 20px;
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
 .logo{
-  font-size:24px;
+  font-size:22px;
   font-weight:800;
+  color:var(--navy);
   letter-spacing:.5px;
-  color:#102a43;
 }
 
 .logo span{
-  color:#b18a3a;
+  color:var(--gold);
 }
 
 nav{
   display:flex;
   gap:22px;
-  align-items:center;
 }
 
 nav a{
+  color:var(--navy);
   font-size:14px;
   font-weight:600;
-  color:#334155;
 }
 
 nav a:hover{
-  color:#b18a3a;
+  color:var(--gold);
 }
 
+/* HERO */
+
 .hero{
-  max-width:1180px;
-  margin:auto;
-  padding:80px 20px 65px;
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:50px;
+  min-height:650px;
+  background:
+    linear-gradient(90deg,rgba(7,25,42,.94),rgba(7,25,42,.72),rgba(7,25,42,.35)),
+    url("https://bd.gaadicdn.com/processedimages/honda/activa-125-2019/source/activa-125-201963218c5a4b8d4.jpg")
+    center/cover no-repeat;
+  display:flex;
   align-items:center;
 }
 
+.hero-inner{
+  width:100%;
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
+  color:white;
+}
+
+.badge{
+  display:inline-block;
+  border:1px solid rgba(255,255,255,.35);
+  padding:7px 14px;
+  border-radius:30px;
+  font-size:13px;
+  letter-spacing:1px;
+  margin-bottom:20px;
+}
+
 .hero h1{
-  font-size:52px;
-  line-height:1.05;
-  color:#102a43;
+  font-size:clamp(42px,7vw,76px);
+  line-height:1;
+  max-width:760px;
   margin-bottom:20px;
 }
 
 .hero h1 span{
-  color:#b18a3a;
+  color:var(--gold2);
 }
 
 .hero p{
-  font-size:18px;
-  color:#64748b;
   max-width:620px;
+  font-size:18px;
+  color:#eef2f5;
   margin-bottom:30px;
 }
 
@@ -109,370 +144,409 @@ nav a:hover{
 }
 
 .btn{
-  padding:14px 21px;
+  display:inline-block;
+  padding:13px 20px;
   border-radius:8px;
   font-weight:700;
-  display:inline-block;
-  border:1px solid #102a43;
-}
-
-.btn-primary{
-  background:#102a43;
-  color:#fff;
-}
-
-.btn-primary:hover{
-  background:#173b5c;
+  font-size:14px;
+  transition:.2s;
 }
 
 .btn-gold{
-  border-color:#b18a3a;
-  color:#8a6827;
-  background:#fff;
-}
-
-.hero-card{
-  background:#102a43;
+  background:var(--gold);
   color:white;
-  border-radius:18px;
-  padding:35px;
-  box-shadow:0 20px 45px rgba(16,42,67,.18);
 }
 
-.hero-card .rating{
-  font-size:38px;
-  color:#d6ad55;
-  font-weight:800;
+.btn-gold:hover{
+  background:#98752f;
 }
 
-.hero-card h2{
-  font-size:25px;
-  margin:10px 0;
+.btn-white{
+  background:white;
+  color:var(--navy);
 }
 
-.hero-card p{
-  color:#dbe5ee;
-  font-size:15px;
-  margin:0;
+.btn-outline{
+  border:1px solid rgba(255,255,255,.6);
+  color:white;
 }
+
+.btn-outline:hover{
+  background:white;
+  color:var(--navy);
+}
+
+/* COMMON */
 
 section{
-  max-width:1180px;
+  padding:75px 20px;
+}
+
+.container{
+  max-width:1200px;
   margin:auto;
-  padding:70px 20px;
 }
 
-.section-title{
-  text-align:center;
-  margin-bottom:40px;
+.section-head{
+  margin-bottom:35px;
 }
 
-.section-title h2{
-  font-size:34px;
-  color:#102a43;
+.section-head small{
+  color:var(--gold);
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:2px;
 }
 
-.section-title p{
-  color:#64748b;
-  margin-top:8px;
+.section-head h2{
+  color:var(--navy);
+  font-size:38px;
+  margin-top:7px;
 }
+
+.section-head p{
+  color:var(--muted);
+  max-width:650px;
+}
+
+/* FEATURES */
 
 .features{
+  background:white;
+}
+
+.feature-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:18px;
 }
 
 .feature{
-  background:white;
-  border:1px solid #e5e7eb;
-  border-radius:12px;
+  border:1px solid var(--border);
+  border-radius:14px;
   padding:25px;
-  text-align:center;
+  background:white;
 }
 
 .feature-icon{
-  font-size:30px;
-  margin-bottom:12px;
-}
-
-.feature h3{
-  color:#102a43;
-  margin-bottom:6px;
-  font-size:18px;
-}
-
-.feature p{
-  color:#64748b;
-  font-size:14px;
-}
-
-.inventory{
-  background:#fff;
-  max-width:none;
-}
-
-.inventory-inner{
-  max-width:1180px;
-  margin:auto;
-  padding:70px 20px;
-}
-
-.bikes{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:22px;
-}
-
-.bike{
-  background:#fff;
-  border:1px solid #e5e7eb;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 8px 25px rgba(0,0,0,.06);
-  transition:.2s;
-}
-
-.bike:hover{
-  transform:translateY(-4px);
-  box-shadow:0 14px 35px rgba(0,0,0,.1);
-}
-
-.bike img{
-  width:100%;
-  height:240px;
-  object-fit:cover;
-  display:block;
-  background:#eee;
-}
-
-.bike-info{
-  padding:20px;
-}
-
-.bike-info h3{
-  color:#102a43;
-  font-size:20px;
+  font-size:28px;
   margin-bottom:10px;
 }
 
-.price{
-  font-size:25px;
-  font-weight:800;
-  color:#b18a3a;
-  margin-bottom:14px;
+.feature h3{
+  color:var(--navy);
+  margin-bottom:7px;
+  font-size:17px;
 }
 
-.details{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
-  font-size:13px;
-  color:#64748b;
-  margin-bottom:18px;
-}
-
-.details strong{
-  color:#1e293b;
-}
-
-.chat-btn{
-  display:block;
-  text-align:center;
-  background:#102a43;
-  color:#fff;
-  padding:11px;
-  border-radius:7px;
-  font-weight:700;
-}
-
-.chat-btn:hover{
-  background:#173b5c;
-}
-
-.services{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.service{
-  background:#fff;
-  border:1px solid #e5e7eb;
-  padding:25px;
-  border-radius:12px;
-}
-
-.service h3{
-  color:#102a43;
-  margin-bottom:8px;
-}
-
-.service p{
-  color:#64748b;
+.feature p{
+  color:var(--muted);
   font-size:14px;
 }
 
-.video-box{
-  background:#102a43;
-  padding:15px;
-  border-radius:15px;
-  max-width:900px;
-  margin:auto;
+/* OFFERS */
+
+.offers{
+  background:var(--navy);
+  color:white;
 }
 
-video{
+.offer-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.offer{
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.05);
+  border-radius:14px;
+  padding:28px;
+}
+
+.offer h3{
+  color:var(--gold2);
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.offer p{
+  color:#dce4ea;
+}
+
+/* VEHICLES */
+
+.vehicle-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+}
+
+.vehicle{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+
+.vehicle img{
   width:100%;
-  border-radius:10px;
+  height:310px;
+  object-fit:cover;
   display:block;
 }
 
+.vehicle-body{
+  padding:24px;
+}
+
+.vehicle-title{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  align-items:flex-start;
+}
+
+.vehicle h3{
+  color:var(--navy);
+  font-size:24px;
+}
+
+.price{
+  color:var(--gold);
+  font-size:22px;
+  font-weight:800;
+  white-space:nowrap;
+}
+
+.specs{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:9px;
+  margin:20px 0;
+}
+
+.spec{
+  background:#f7f7f5;
+  padding:10px;
+  border-radius:8px;
+  font-size:13px;
+}
+
+.spec strong{
+  display:block;
+  color:var(--navy);
+}
+
+.vehicle-buttons{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+/* VIDEO */
+
+.video-section{
+  background:white;
+}
+
+.video-box{
+  max-width:900px;
+  margin:auto;
+  background:#000;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.video-box video{
+  width:100%;
+  display:block;
+}
+
+/* LOCATION */
+
 .location{
+  background:#f7f7f5;
+}
+
+.location-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:25px;
   align-items:stretch;
 }
 
+.map{
+  min-height:400px;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:white;
+}
+
+.map iframe{
+  width:100%;
+  height:100%;
+  min-height:400px;
+  border:0;
+}
+
 .address{
-  background:#102a43;
-  color:#fff;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:16px;
   padding:35px;
-  border-radius:14px;
 }
 
 .address h3{
+  color:var(--navy);
   font-size:26px;
   margin-bottom:15px;
 }
 
 .address p{
-  color:#dbe5ee;
+  color:var(--muted);
   margin-bottom:20px;
 }
 
-.map{
-  width:100%;
-  min-height:350px;
-  border:0;
-  border-radius:14px;
+.rating{
+  display:inline-block;
+  background:#fff8e8;
+  border:1px solid #ead8a8;
+  color:#795b17;
+  padding:9px 13px;
+  border-radius:8px;
+  font-weight:800;
+  margin-bottom:20px;
 }
 
-.instagram{
-  background:#fff;
-  border:1px solid #e5e7eb;
-  border-radius:14px;
-  padding:35px;
+/* INSTAGRAM */
+
+.social{
   text-align:center;
+  background:white;
 }
 
-.instagram h2{
-  color:#102a43;
+.social-card{
+  max-width:700px;
+  margin:auto;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:40px 25px;
+}
+
+.social-card h2{
+  color:var(--navy);
   margin-bottom:10px;
 }
 
-.instagram p{
-  color:#64748b;
-  margin-bottom:20px;
+.social-card p{
+  color:var(--muted);
+  margin-bottom:22px;
 }
 
-.insta-btn{
-  display:inline-block;
-  padding:13px 24px;
-  border-radius:8px;
-  background:#102a43;
+.instagram{
+  background:#111;
   color:white;
-  font-weight:700;
 }
 
-.rating-box{
-  text-align:center;
-  background:#fff;
-  border:1px solid #e5e7eb;
-  border-radius:14px;
-  padding:35px;
-}
-
-.rating-number{
-  font-size:55px;
-  font-weight:800;
-  color:#b18a3a;
-}
-
-.stars{
-  font-size:28px;
-  letter-spacing:4px;
-}
+/* FOOTER */
 
 footer{
-  background:#102a43;
-  color:#fff;
-  text-align:center;
+  background:#071a2b;
+  color:#d7e0e8;
   padding:35px 20px;
 }
 
+.footer-inner{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+footer strong{
+  color:white;
+}
+
 footer p{
-  color:#dbe5ee;
-  font-size:14px;
-  margin-top:7px;
+  font-size:13px;
+  color:#aebdca;
 }
 
-@media(max-width:900px){
-  .hero{
-    grid-template-columns:1fr;
-    padding-top:55px;
-  }
+/* MOBILE */
 
-  .hero h1{
-    font-size:40px;
-  }
+@media(max-width:850px){
 
-  .features{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .bikes{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .services{
-    grid-template-columns:1fr;
-  }
-
-  .location{
-    grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:600px){
   nav{
     display:none;
   }
 
-  .nav{
-    padding:15px;
-  }
-
   .hero{
-    padding:45px 18px;
+    min-height:590px;
   }
 
-  .hero h1{
-    font-size:36px;
+  .feature-grid{
+    grid-template-columns:1fr 1fr;
   }
 
-  section,
-  .inventory-inner{
-    padding:55px 18px;
-  }
-
-  .features,
-  .bikes{
+  .offer-grid{
     grid-template-columns:1fr;
   }
 
-  .bike img{
-    height:260px;
+  .vehicle-grid{
+    grid-template-columns:1fr;
+  }
+
+  .location-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:550px){
+
+  section{
+    padding:55px 15px;
+  }
+
+  .hero-inner{
+    padding:70px 15px;
+  }
+
+  .hero h1{
+    font-size:46px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .vehicle img{
+    height:270px;
+  }
+
+  .vehicle-title{
+    flex-direction:column;
+  }
+
+  .price{
+    font-size:20px;
+  }
+
+  .specs{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .section-head h2{
+    font-size:31px;
   }
 }
 </style>
@@ -480,338 +554,565 @@ footer p{
 
 <body>
 
+<!-- HEADER -->
+
 <header>
   <div class="nav">
-    <div class="logo">B.K. <span>MOTORS</span></div>
+
+    <a href="#home" class="logo">
+      B.K. <span>MOTORS</span>
+    </a>
 
     <nav>
-      <a href="#inventory">Inventory</a>
-      <a href="#services">Services</a>
+      <a href="#vehicles">Vehicles</a>
+      <a href="#offers">Offers</a>
+      <a href="#video">Video</a>
       <a href="#location">Location</a>
       <a href="#instagram">Instagram</a>
     </nav>
+
   </div>
 </header>
 
-<main>
 
-<section class="hero">
-  <div>
-    <h1>Premium Used<br><span>Two-Wheelers</span></h1>
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+  <div class="hero-inner">
+
+    <div class="badge">
+      PREMIUM PRE-OWNED 2-WHEELERS • DEHRADUN
+    </div>
+
+    <h1>
+      Find Your Next
+      <span>Ride.</span>
+    </h1>
 
     <p>
-      Trusted pre-owned scooters and motorcycles at B.K. Motors.
-      Carefully selected vehicles, transparent pricing and customer-first service.
+      Carefully selected pre-owned scooters and motorcycles,
+      transparent pricing and customer-focused service at
+      B.K. Motors.
     </p>
 
     <div class="buttons">
-      <a class="btn btn-primary" href="#inventory">View Inventory</a>
-      <a class="btn btn-gold" href="#location">Visit Showroom</a>
+
+      <a class="btn btn-gold" href="#vehicles">
+        View Available Vehicles
+      </a>
+
+      <a class="btn btn-white"
+         href="https://www.google.com/maps/search/?api=1&query=182+Chakrata+Road+Dehradun"
+         target="_blank">
+        📍 Get Directions
+      </a>
+
     </div>
+
   </div>
 
-  <div class="hero-card">
-    <div class="rating">4.7 ★</div>
-    <h2>Trusted Local Showroom</h2>
-    <p>
-      Premium used two-wheelers with support, service benefits,
-      warranty and flexible buy-back options.
-    </p>
-  </div>
 </section>
 
-<section>
-  <div class="section-title">
-    <h2>Why Choose B.K. Motors?</h2>
-    <p>More than just buying a used vehicle.</p>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="container">
+
+  <div class="section-head">
+    <small>Why B.K. Motors</small>
+    <h2>More Than Just A Used Vehicle</h2>
+    <p>
+      We focus on making the buying experience simple,
+      transparent and convenient.
+    </p>
   </div>
 
-  <div class="features">
+  <div class="feature-grid">
+
+    <div class="feature">
+      <div class="feature-icon">🛠️</div>
+      <h3>Quality Checked</h3>
+      <p>
+        Vehicles are inspected before being offered to customers.
+      </p>
+    </div>
 
     <div class="feature">
       <div class="feature-icon">🛡️</div>
-      <h3>6 Months Warranty</h3>
-      <p>Engine warranty support for 6 months.</p>
+      <h3>6 Months Engine Warranty</h3>
+      <p>
+        6 months engine warranty on eligible vehicles.
+      </p>
     </div>
 
     <div class="feature">
       <div class="feature-icon">🔧</div>
-      <h3>2 Free Services</h3>
-      <p>Get two free services after purchase.</p>
-    </div>
-
-    <div class="feature">
-      <div class="feature-icon">₹</div>
-      <h3>Easy Ownership</h3>
-      <p>Ownership plans starting around ₹16/day on eligible vehicles.</p>
-    </div>
-
-    <div class="feature">
-      <div class="feature-icon">↩️</div>
-      <h3>Buy-Back Option</h3>
-      <p>Sell the vehicle back whenever you want, subject to terms.</p>
-    </div>
-
-  </div>
-</section>
-
-<div class="inventory" id="inventory">
-  <div class="inventory-inner">
-
-    <div class="section-title">
-      <h2>Available Vehicles</h2>
-      <p>Our current pre-owned inventory</p>
-    </div>
-
-    <div class="bikes">
-
-      <!-- ACCESS -->
-      <div class="bike">
-        <img src="access.jpg" alt="Suzuki Access 125 Red">
-
-        <div class="bike-info">
-          <h3>Suzuki Access 125</h3>
-
-          <div class="price">₹24,000</div>
-
-          <div class="details">
-            <div>Model: <strong>2016</strong></div>
-            <div>Colour: <strong>Red</strong></div>
-            <div>Driven: <strong>16,000 km</strong></div>
-            <div>Owner: <strong>1st</strong></div>
-          </div>
-
-          <a class="chat-btn"
-             href="https://wa.me/?text=Hello%20B.K.%20Motors%2C%20I%20am%20interested%20in%20the%202016%20Suzuki%20Access%20125%20priced%20at%20Rs.%2024%2C000."
-             target="_blank">
-             Chat About This Vehicle
-          </a>
-        </div>
-      </div>
-
-
-      <!-- NTORQ -->
-      <div class="bike">
-        <img src="ntorq.jpg" alt="TVS Ntorq 125 Blue">
-
-        <div class="bike-info">
-          <h3>TVS Ntorq 125</h3>
-
-          <div class="price">₹48,000</div>
-
-          <div class="details">
-            <div>Model: <strong>2019</strong></div>
-            <div>Colour: <strong>Blue</strong></div>
-            <div>Driven: <strong>24,000 km</strong></div>
-            <div>Owner: <strong>1st</strong></div>
-          </div>
-
-          <a class="chat-btn"
-             href="https://wa.me/?text=Hello%20B.K.%20Motors%2C%20I%20am%20interested%20in%20the%202019%20TVS%20Ntorq%20125%20priced%20at%20Rs.%2048%2C000."
-             target="_blank">
-             Chat About This Vehicle
-          </a>
-        </div>
-      </div>
-
-
-      <!-- DUKE -->
-      <div class="bike">
-        <img src="duke.jpg" alt="KTM Duke 200">
-
-        <div class="bike-info">
-          <h3>KTM Duke 200</h3>
-
-          <div class="price">₹70,000</div>
-
-          <div class="details">
-            <div>Model: <strong>2019</strong></div>
-            <div>Colour: <strong>White/Orange</strong></div>
-            <div>Driven: <strong>7,800 km</strong></div>
-            <div>Owner: <strong>1st</strong></div>
-          </div>
-
-          <a class="chat-btn"
-             href="https://wa.me/?text=Hello%20B.K.%20Motors%2C%20I%20am%20interested%20in%20the%202019%20KTM%20Duke%20200%20priced%20at%20Rs.%2070%2C000."
-             target="_blank">
-             Chat About This Vehicle
-          </a>
-        </div>
-      </div>
-
-
-      <!-- BULLET -->
-      <div class="bike">
-        <img src="bullet.jpg" alt="Royal Enfield Bullet Black">
-
-        <div class="bike-info">
-          <h3>Royal Enfield Bullet</h3>
-
-          <div class="price">₹1,20,000</div>
-
-          <div class="details">
-            <div>Model: <strong>2021</strong></div>
-            <div>Colour: <strong>Black</strong></div>
-            <div>Driven: <strong>Enquire</strong></div>
-            <div>Owner: <strong>Enquire</strong></div>
-          </div>
-
-          <a class="chat-btn"
-             href="https://wa.me/?text=Hello%20B.K.%20Motors%2C%20I%20am%20interested%20in%20the%202021%20Royal%20Enfield%20Bullet%20priced%20at%20Rs.%201%2C20%2C000."
-             target="_blank">
-             Chat About This Vehicle
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-<section id="services">
-
-  <div class="section-title">
-    <h2>Customer Benefits</h2>
-    <p>Extra value with your purchase</p>
-  </div>
-
-  <div class="services">
-
-    <div class="service">
-      <h3>6 Months Engine Warranty</h3>
-      <p>
-        Eligible purchases include engine warranty support for six months.
-      </p>
-    </div>
-
-    <div class="service">
       <h3>2 Services Free</h3>
       <p>
-        Customers receive two free services as part of the showroom benefits.
+        Get two free services with the applicable purchase offer.
       </p>
     </div>
 
-    <div class="service">
-      <h3>Buy-Back Facility</h3>
+    <div class="feature">
+      <div class="feature-icon">⭐</div>
+      <h3>4.7 ★ Rating</h3>
       <p>
-        When you decide to sell your vehicle back, B.K. Motors can buy it back
-        subject to inspection and applicable terms.
+        Trusted by customers for a better pre-owned experience.
       </p>
     </div>
 
   </div>
+
+</div>
+
 </section>
 
 
-<section>
+<!-- OFFERS -->
 
-  <div class="section-title">
-    <h2>Showroom Video</h2>
-    <p>Take a look at our vehicles and showroom.</p>
+<section class="offers" id="offers">
+
+<div class="container">
+
+  <div class="section-head">
+    <small style="color:#d2ad62;">B.K. Motors Advantage</small>
+    <h2 style="color:white;">Smart Buying Benefits</h2>
+  </div>
+
+  <div class="offer-grid">
+
+    <div class="offer">
+      <h3>₹16 / Day</h3>
+      <p>
+        Attractive ownership offer designed around an easy
+        daily-cost concept.
+      </p>
+    </div>
+
+    <div class="offer">
+      <h3>Buy-Back Anytime</h3>
+      <p>
+        When you decide to sell your vehicle, B.K. Motors
+        can buy it back subject to applicable terms.
+      </p>
+    </div>
+
+    <div class="offer">
+      <h3>₹6,000 Deduction</h3>
+      <p>
+        Approx. ₹6,000 deduction applies under the buy-back
+        arrangement, subject to vehicle evaluation and terms.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- VEHICLES -->
+
+<section id="vehicles">
+
+<div class="container">
+
+  <div class="section-head">
+    <small>Available Now</small>
+    <h2>Featured Vehicles</h2>
+    <p>
+      Actual vehicles available at B.K. Motors.
+      Contact us for availability and inspection.
+    </p>
+  </div>
+
+
+  <div class="vehicle-grid">
+
+
+    <!-- ACCESS -->
+
+    <article class="vehicle">
+
+      <img src="access.jpg"
+           alt="Suzuki Access 125 2016 red">
+
+      <div class="vehicle-body">
+
+        <div class="vehicle-title">
+
+          <h3>Suzuki Access 125</h3>
+
+          <div class="price">
+            ₹24,000
+          </div>
+
+        </div>
+
+        <div class="specs">
+
+          <div class="spec">
+            <strong>Model</strong>
+            2016
+          </div>
+
+          <div class="spec">
+            <strong>Colour</strong>
+            Red
+          </div>
+
+          <div class="spec">
+            <strong>Driven</strong>
+            16,000 km
+          </div>
+
+          <div class="spec">
+            <strong>Owner</strong>
+            1st Owner
+          </div>
+
+        </div>
+
+        <div class="vehicle-buttons">
+
+          <a class="btn btn-gold"
+             href="https://wa.me/?text=Hi%20B.K.%20Motors%2C%20I%20am%20interested%20in%20the%20Suzuki%20Access%20125."
+             target="_blank">
+            💬 Chat About Vehicle
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- NTORQ -->
+
+    <article class="vehicle">
+
+      <img src="ntorq.jpg"
+           alt="TVS Ntorq 2019 blue">
+
+      <div class="vehicle-body">
+
+        <div class="vehicle-title">
+
+          <h3>TVS Ntorq</h3>
+
+          <div class="price">
+            ₹48,000
+          </div>
+
+        </div>
+
+        <div class="specs">
+
+          <div class="spec">
+            <strong>Model</strong>
+            2019
+          </div>
+
+          <div class="spec">
+            <strong>Colour</strong>
+            Blue
+          </div>
+
+          <div class="spec">
+            <strong>Driven</strong>
+            24,000 km
+          </div>
+
+          <div class="spec">
+            <strong>Owner</strong>
+            1st Owner
+          </div>
+
+        </div>
+
+        <div class="vehicle-buttons">
+
+          <a class="btn btn-gold"
+             href="https://wa.me/?text=Hi%20B.K.%20Motors%2C%20I%20am%20interested%20in%20the%20TVS%20Ntorq."
+             target="_blank">
+            💬 Chat About Vehicle
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- KTM -->
+
+    <article class="vehicle">
+
+      <img src="ktm.jpg"
+           alt="KTM Duke 2019">
+
+      <div class="vehicle-body">
+
+        <div class="vehicle-title">
+
+          <h3>KTM Duke</h3>
+
+          <div class="price">
+            ₹70,000
+          </div>
+
+        </div>
+
+        <div class="specs">
+
+          <div class="spec">
+            <strong>Model</strong>
+            2019
+          </div>
+
+          <div class="spec">
+            <strong>Driven</strong>
+            7,800 km
+          </div>
+
+          <div class="spec">
+            <strong>Owner</strong>
+            1st Owner
+          </div>
+
+          <div class="spec">
+            <strong>Status</strong>
+            Available
+          </div>
+
+        </div>
+
+        <div class="vehicle-buttons">
+
+          <a class="btn btn-gold"
+             href="https://wa.me/?text=Hi%20B.K.%20Motors%2C%20I%20am%20interested%20in%20the%20KTM%20Duke."
+             target="_blank">
+            💬 Chat About Vehicle
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- BULLET -->
+
+    <article class="vehicle">
+
+      <img src="bullet.jpg"
+           alt="Royal Enfield Bullet 2021 black">
+
+      <div class="vehicle-body">
+
+        <div class="vehicle-title">
+
+          <h3>Royal Enfield Bullet</h3>
+
+          <div class="price">
+            ₹1,20,000
+          </div>
+
+        </div>
+
+        <div class="specs">
+
+          <div class="spec">
+            <strong>Model</strong>
+            2021
+          </div>
+
+          <div class="spec">
+            <strong>Colour</strong>
+            Black
+          </div>
+
+          <div class="spec">
+            <strong>Demand</strong>
+            ₹1,20,000
+          </div>
+
+          <div class="spec">
+            <strong>Status</strong>
+            Available
+          </div>
+
+        </div>
+
+        <div class="vehicle-buttons">
+
+          <a class="btn btn-gold"
+             href="https://wa.me/?text=Hi%20B.K.%20Motors%2C%20I%20am%20interested%20in%20the%20Royal%20Enfield%20Bullet."
+             target="_blank">
+            💬 Chat About Vehicle
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- VIDEO -->
+
+<section class="video-section" id="video">
+
+<div class="container">
+
+  <div class="section-head">
+    <small>Inside B.K. Motors</small>
+    <h2>Our Showroom Video</h2>
+    <p>
+      Take a quick look at our showroom and available vehicles.
+    </p>
   </div>
 
   <div class="video-box">
-    <video controls preload="metadata">
+
+    <video controls playsinline preload="metadata">
+
       <source src="showroom.mp4" type="video/mp4">
-      Your browser does not support video playback.
+
+      Your browser does not support the video tag.
+
     </video>
+
   </div>
+
+</div>
 
 </section>
 
 
-<section id="instagram">
+<!-- LOCATION -->
 
-  <div class="instagram">
+<section class="location" id="location">
 
-    <h2>Follow B.K. Motors</h2>
+<div class="container">
 
-    <p>
-      See our latest vehicles, offers and showroom updates on Instagram.
-    </p>
-
-    <!-- Replace YOUR_INSTAGRAM_USERNAME with the actual B.K. Motors username -->
-    <a class="insta-btn"
-       href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/"
-       target="_blank">
-       📸 Open Instagram
-    </a>
-
+  <div class="section-head">
+    <small>Visit Us</small>
+    <h2>Find B.K. Motors</h2>
   </div>
 
-</section>
+  <div class="location-grid">
 
+    <div class="map">
 
-<section id="location">
+      <iframe
+        src="https://www.google.com/maps?q=182+Chakrata+Road,+Dehradun&output=embed"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
 
-  <div class="section-title">
-    <h2>Visit Our Showroom</h2>
-    <p>Find B.K. Motors on Chakrata Road, Dehradun.</p>
-  </div>
+    </div>
 
-  <div class="location">
 
     <div class="address">
 
+      <div class="rating">
+        ⭐ 4.7 / 5
+      </div>
+
       <h3>B.K. Motors</h3>
+
+      <p>
+        Premium Pre-Owned 2-Wheeler Showroom
+      </p>
 
       <p>
         📍 182 Chakrata Road,<br>
         Dehradun, Uttarakhand
       </p>
 
-      <a class="btn btn-gold"
-         href="https://www.google.com/maps/search/?api=1&query=182+Chakrata+Road+Dehradun"
-         target="_blank">
-         Open in Google Maps
-      </a>
+      <div class="buttons">
+
+        <a class="btn btn-gold"
+           href="https://www.google.com/maps/search/?api=1&query=182+Chakrata+Road+Dehradun"
+           target="_blank">
+          📍 Open Google Maps
+        </a>
+
+      </div>
 
     </div>
 
-    <iframe
-      class="map"
-      src="https://www.google.com/maps?q=182%20Chakrata%20Road%20Dehradun&output=embed"
-      loading="lazy">
-    </iframe>
-
   </div>
+
+</div>
 
 </section>
 
 
-<section>
+<!-- INSTAGRAM -->
 
-  <div class="rating-box">
+<section class="social" id="instagram">
 
-    <div class="rating-number">4.7</div>
+<div class="container">
 
-    <div class="stars">★★★★★</div>
+  <div class="social-card">
+
+    <h2>Follow B.K. Motors</h2>
 
     <p>
-      Customer Rating
+      See new arrivals, vehicle videos and latest offers on Instagram.
     </p>
+
+    <!-- IMPORTANT: put your exact Instagram profile link below -->
+
+    <a class="btn instagram"
+       href="https://www.instagram.com/"
+       target="_blank"
+       rel="noopener noreferrer">
+      📸 Open Instagram
+    </a>
 
   </div>
 
+</div>
+
 </section>
 
-</main>
 
+<!-- FOOTER -->
 
 <footer>
 
-  <h2>B.K. Motors</h2>
+<div class="footer-inner">
 
-  <p>
-    Premium Used 2-Wheeler Showroom • Dehradun
-  </p>
+  <div>
+    <strong>B.K. Motors</strong>
+    <p>Premium Used 2-Wheeler Showroom</p>
+  </div>
 
-  <p>
-    © 2026 B.K. Motors. All rights reserved.
-  </p>
+  <div>
+    <p>182 Chakrata Road, Dehradun</p>
+    <p>© 2026 B.K. Motors. All rights reserved.</p>
+  </div>
+
+</div>
 
 </footer>
 
 </body>
-    </html>
+  </html>
