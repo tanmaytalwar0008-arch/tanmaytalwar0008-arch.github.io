@@ -2,283 +2,242 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>B.K. Motors | Premium Pre-Owned 2-Wheelers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>B.K. Motors | Dehradun</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f7f7f5;
-color:#111;
-line-height:1.5
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f6f6f4;
+  color:#111820;
 }
 a{text-decoration:none;color:inherit}
-.container{width:92%;max-width:1180px;margin:auto}
+
+:root{
+  --navy:#101b2d;
+  --gold:#b08a50;
+  --light:#f6f6f4;
+  --grey:#69717d;
+  --border:#e4e6e8;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
 
 /* HEADER */
 header{
-position:fixed;top:0;left:0;width:100%;z-index:1000;
-background:rgba(255,255,255,.94);
-backdrop-filter:blur(15px);
-border-bottom:1px solid #e7e7e7
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
 }
+
 .nav{
-height:76px;display:flex;align-items:center;
-justify-content:space-between
+  height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
+
 .logo{
-font-size:24px;font-weight:900;letter-spacing:-1px
+  font-size:24px;
+  font-weight:900;
+  letter-spacing:-1px;
 }
-.logo span{color:#a98245}
-.navlinks{display:flex;gap:28px;align-items:center}
-.navlinks a{font-size:13px;font-weight:bold;color:#444}
-.navlinks a:hover{color:#a98245}
+
+.logo span{color:var(--gold)}
+
+.links{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.links a{
+  font-size:13px;
+  font-weight:700;
+  color:#3f4650;
+}
+
 .chat{
-background:#111;color:white!important;
-padding:12px 19px;border-radius:30px
+  background:var(--navy)!important;
+  color:white!important;
+  padding:12px 19px;
+  border-radius:30px;
 }
 
 /* HERO */
 .hero{
-min-height:100vh;padding-top:76px;
-display:flex;align-items:center;
-background:
-linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.90) 43%,rgba(255,255,255,.18) 100%),
-url("shop.jpg") center/cover;
+  min-height:760px;
+  padding-top:74px;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(circle at 85% 35%,rgba(176,138,80,.16),transparent 30%),
+    linear-gradient(135deg,#fff 0%,#f6f6f4 55%,#e9edf1 100%);
+  position:relative;
+  overflow:hidden;
 }
-.hero-content{padding:80px 0;max-width:650px}
-.eyebrow{
-color:#a98245;font-size:12px;font-weight:bold;
-letter-spacing:3px;margin-bottom:18px
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  border:1px solid rgba(176,138,80,.25);
+  right:-120px;
+  top:160px;
 }
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:720px;
+}
+
+.tag{
+  color:var(--gold);
+  font-weight:800;
+  font-size:12px;
+  letter-spacing:3px;
+  margin-bottom:18px;
+}
+
 .hero h1{
-font-size:clamp(48px,7vw,82px);
-line-height:.94;letter-spacing:-4px
+  font-size:clamp(48px,8vw,88px);
+  line-height:.94;
+  letter-spacing:-5px;
 }
-.hero h1 span{color:#a98245}
+
+.hero h1 span{color:var(--gold)}
+
 .hero p{
-font-size:17px;color:#666;max-width:570px;
-margin:25px 0;line-height:1.8
+  color:var(--grey);
+  max-width:600px;
+  font-size:17px;
+  line-height:1.8;
+  margin:25px 0;
 }
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
 .btn{
-padding:15px 24px;border-radius:5px;
-font-weight:bold;font-size:13px;display:inline-block
+  display:inline-block;
+  padding:15px 23px;
+  border-radius:6px;
+  font-size:13px;
+  font-weight:800;
 }
-.dark{background:#111;color:white}
-.gold{background:#a98245;color:white}
-.outline{border:1px solid #bbb;background:white}
 
-/* STATS */
-.stats{margin-top:-45px;position:relative;z-index:5}
-.statsbox{
-display:grid;grid-template-columns:repeat(4,1fr);
-background:#111;color:white;border-radius:14px;
-overflow:hidden;box-shadow:0 15px 40px rgba(0,0,0,.15)
+.dark{
+  background:var(--navy);
+  color:white;
 }
-.stat{text-align:center;padding:25px;border-right:1px solid #333}
-.stat:last-child{border:0}
-.stat b{font-size:26px;color:#d4b37a}
-.stat small{display:block;color:#aaa;margin-top:5px}
 
-/* SECTIONS */
-section{padding:95px 0}
-.heading{margin-bottom:42px}
+.gold{
+  background:var(--gold);
+  color:white;
+}
+
+.outline{
+  border:1px solid #cfd2d5;
+  background:white;
+}
+
+/* HERO BIKE */
+.hero-bike{
+  position:absolute;
+  right:5%;
+  bottom:0;
+  width:45%;
+  max-width:600px;
+  font-size:180px;
+  text-align:center;
+  filter:drop-shadow(0 30px 30px rgba(0,0,0,.15));
+}
+
+/* STRIP */
+.strip{
+  background:var(--navy);
+  color:white;
+  padding:25px 0;
+}
+
+.strip-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  text-align:center;
+}
+
+.strip-item{
+  border-right:1px solid rgba(255,255,255,.15);
+}
+
+.strip-item:last-child{border:0}
+
+.strip b{
+  display:block;
+  color:#d4b47e;
+  font-size:25px;
+}
+
+.strip small{color:#aeb5bf}
+
+/* SECTION */
+section{padding:90px 0}
+
+.heading{
+  margin-bottom:38px;
+}
+
 .heading small{
-color:#a98245;font-weight:bold;letter-spacing:3px
+  color:var(--gold);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:3px;
 }
+
 .heading h2{
-font-size:44px;letter-spacing:-1.5px;margin-top:7px
+  font-size:43px;
+  margin-top:7px;
+  letter-spacing:-1.5px;
 }
-.heading p{color:#777;margin-top:10px}
+
+.heading p{
+  color:var(--grey);
+  margin-top:9px;
+}
 
 /* VEHICLES */
 .vehicles{background:white}
-.vehiclegrid{
-display:grid;grid-template-columns:repeat(3,1fr);gap:22px
+
+.vehicle-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
+
 .vehicle{
-border:1px solid #e6e6e6;border-radius:14px;
-overflow:hidden;background:#fff;
-transition:.3s
+  background:white;
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  transition:.25s;
 }
+
 .vehicle:hover{
-transform:translateY(-7px);
-box-shadow:0 18px 45px rgba(0,0,0,.1)
-}
-.vehiclephoto{height:230px;background:#eee;overflow:hidden}
-.vehiclephoto img{
-width:100%;height:100%;object-fit:cover;transition:.4s
-}
-.vehicle:hover img{transform:scale(1.04)}
-.vehiclebody{padding:22px}
-.vehiclebody h3{font-size:22px}
-.specs{
-display:grid;grid-template-columns:1fr 1fr;
-gap:8px;margin:15px 0
-}
-.spec{
-background:#f5f5f3;padding:9px;
-border-radius:5px;font-size:12px;color:#555
-}
-.price{
-display:flex;align-items:center;
-justify-content:space-between;margin-top:18px
-}
-.price strong{font-size:23px}
-.whatsapp{
-background:#25d366;color:white;
-padding:11px 14px;border-radius:5px;
-font-size:11px;font-weight:bold
-}
-
-/* OFFER */
-.offer{
-background:#111;color:white
-}
-.offerbox{
-border-radius:18px;
-padding:50px;
-background:
-linear-gradient(110deg,#111 45%,#211b12);
-border:1px solid #332c21;
-display:flex;justify-content:space-between;
-align-items:center;gap:30px
-}
-.offerbox small{color:#d4b37a;letter-spacing:3px;font-weight:bold}
-.offerbox h2{font-size:48px;margin:8px 0}
-.offerbox p{color:#aaa}
-
-/* FEATURES */
-.features{
-display:grid;grid-template-columns:repeat(3,1fr);gap:18px
-}
-.feature{
-padding:28px;border:1px solid #e3e3e3;
-border-radius:12px;background:white
-}
-.icon{
-font-size:25px;margin-bottom:15px
-}
-.feature h3{margin-bottom:8px}
-.feature p{color:#777;font-size:14px}
-
-/* VIDEO */
-.video{
-background:#f0f0ed
-}
-.videobox{
-border-radius:16px;overflow:hidden;
-background:#111;box-shadow:0 20px 50px rgba(0,0,0,.15)
-}
-.videobox video{
-display:block;width:100%;max-height:620px;
-object-fit:cover
-}
-.video-note{
-text-align:center;color:#888;
-margin-top:12px;font-size:12px
-}
-
-/* SHOWROOM */
-.showroom{
-display:grid;grid-template-columns:1.1fr .9fr;
-gap:50px;align-items:center
-}
-.showroomphoto{
-height:480px;border-radius:16px;overflow:hidden
-}
-.showroomphoto img{
-width:100%;height:100%;object-fit:cover
-}
-.showroom h2{font-size:45px}
-.showroom p{color:#777;margin:18px 0;line-height:1.8}
-.checks{list-style:none}
-.checks li{
-padding:8px 0;font-weight:bold
-}
-.checks li:before{
-content:"✓";color:#a98245;margin-right:10px
-}
-
-/* INSTAGRAM */
-.instagram{
-background:white;text-align:center
-}
-.insta{
-display:inline-block;margin-top:25px;
-padding:15px 25px;border-radius:30px;
-color:white;font-weight:bold;
-background:linear-gradient(90deg,#833ab4,#e1306c,#f77737)
-}
-
-/* LOCATION */
-.location{
-background:#f0f0ed
-}
-.locationgrid{
-display:grid;grid-template-columns:1fr 1fr;gap:25px
-}
-.locationcard{
-background:white;padding:35px;border-radius:15px;
-border:1px solid #e3e3e3
-}
-.locationcard h3{font-size:24px;margin-bottom:15px}
-.locationcard p{color:#666;line-height:1.9}
-.map{
-width:100%;height:300px;border:0;border-radius:12px
-}
-
-/* FOOTER */
-footer{
-background:#111;color:#aaa;padding:35px 0
-}
-.footer{
-display:flex;justify-content:space-between;gap:20px
-}
-.footer b{color:white}
-.footer small{color:#777}
-
-/* MOBILE */
-@media(max-width:800px){
-.navlinks{display:none}
-.hero{
-background:
-linear-gradient(rgba(255,255,255,.94),rgba(255,255,255,.88)),
-url("shop.jpg") center/cover
-}
-.hero h1{letter-spacing:-2px}
-.statsbox{grid-template-columns:1fr 1fr}
-.stat:nth-child(2){border-right:0}
-.vehiclegrid,.features,.showroom,.locationgrid{
-grid-template-columns:1fr
-}
-.offerbox{
-display:block;padding:35px
-}
-.offerbox h2{font-size:38px}
-.showroomphoto{height:350px}
-.heading h2{font-size:34px}
-section{padding:70px 0}
-.footer{display:block}
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<div class="container nav">
-
-<a href="#home" class="logo">
-B.K. <span>MOTORS</span>
-</a>
-
-<div class="navlinks">
-<a href="#home">HOME</a>
-<a href="#vehicles">VEHICLES</a>
-<a href="#services">SERVICES</a>
-<a href="#showroom">SHOWROOM</a>
-<a href="#location
+  transform:translateY(-6px);
+  box-shadow:0 18
