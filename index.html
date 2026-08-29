@@ -2,365 +2,639 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>B.K. Motors | Dehradun</title>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-font-family:Arial,sans-serif;
-background:#f7f7f5;
-color:#172033;
-line-height:1.5
-}
+body{font-family:Arial,Helvetica,sans-serif;background:#f7f7f5;color:#172033}
 a{text-decoration:none}
+
+:root{
+--navy:#071a33;
+--gold:#c8a04a;
+--white:#fff;
+--grey:#687386;
+--border:#e5e7eb;
+}
+
+.top{
+background:var(--navy);
+color:#fff;
+text-align:center;
+padding:8px;
+font-size:12px;
+letter-spacing:1px
+}
+
 header{
 background:#fff;
-border-bottom:1px solid #ddd;
+border-bottom:1px solid var(--border);
 position:sticky;
 top:0;
-z-index:99
+z-index:100
 }
+
 .nav{
 max-width:1150px;
-margin:auto;
 height:72px;
+margin:auto;
 padding:0 18px;
 display:flex;
 align-items:center;
 justify-content:space-between
 }
+
 .logo{
 display:flex;
 align-items:center;
 gap:10px;
-color:#071a33
+color:var(--navy)
 }
-.logoBox{
+
+.logoIcon{
 width:45px;
 height:45px;
-background:#071a33;
-border:2px solid #c5a052;
-border-radius:9px;
+border-radius:50%;
+background:var(--navy);
+border:2px solid var(--gold);
 display:flex;
 align-items:center;
 justify-content:center;
-color:#e2c477;
-font-weight:bold
+color:var(--gold);
+font-weight:900
 }
+
 .logo b{font-size:19px}
 .logo small{
 display:block;
 font-size:9px;
 letter-spacing:1px;
-color:#a17b32
+color:var(--grey)
 }
-nav{display:flex;gap:22px}
+
+nav{
+display:flex;
+gap:22px;
+align-items:center
+}
+
 nav a{
-color:#071a33;
 font-size:13px;
-font-weight:bold
+font-weight:bold;
+color:var(--navy)
 }
-nav a:hover{color:#b58a3a}
+
+nav a:hover{color:var(--gold)}
+
+.chatNav{
+background:var(--navy);
+color:#fff!important;
+padding:11px 15px;
+border-radius:5px
+}
 
 .hero{
-background:linear-gradient(100deg,#071a33,#102e50);
-color:#fff;
-padding:90px 20px
+background:
+linear-gradient(90deg,rgba(7,26,51,.96),rgba(7,26,51,.65)),
+url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1400&q=70")
+center/cover;
+min-height:570px;
+display:flex;
+align-items:center
 }
+
 .heroIn{
 max-width:1150px;
-margin:auto
+width:100%;
+margin:auto;
+padding:60px 18px;
+color:#fff
 }
+
 .tag{
-color:#e1c476;
+color:#e0c16e;
 font-size:12px;
 font-weight:bold;
 letter-spacing:2px
 }
-h1{
-font-size:52px;
-max-width:680px;
-line-height:1.05;
-margin:15px 0
+
+.hero h1{
+font-size:clamp(42px,6vw,68px);
+line-height:1.03;
+max-width:720px;
+margin:16px 0
 }
-h1 span{color:#e1c476}
+
+.hero h1 span{color:#e0c16e}
+
 .hero p{
-max-width:620px;
-color:#dce3eb;
-margin-bottom:25px
+max-width:600px;
+color:#dce3ec;
+font-size:17px;
+line-height:1.7
 }
+
+.buttons{
+margin-top:25px
+}
+
 .btn{
 display:inline-block;
 padding:13px 20px;
-border-radius:7px;
+border-radius:6px;
 font-weight:bold;
 font-size:13px;
 margin:4px
 }
-.gold{background:#c39a4b;color:#fff}
-.white{background:#fff;color:#071a33}
+
+.gold{
+background:var(--gold);
+color:#111
+}
+
+.white{
+background:#fff;
+color:var(--navy)
+}
 
 .stats{
+max-width:1050px;
+margin:auto;
 background:#fff;
 display:grid;
 grid-template-columns:repeat(4,1fr);
-max-width:1100px;
-margin:auto
+box-shadow:0 8px 25px rgba(0,0,0,.06)
 }
+
 .stat{
 text-align:center;
-padding:23px 10px;
-border-right:1px solid #eee
+padding:22px 8px;
+border-right:1px solid var(--border)
 }
+
+.stat:last-child{border:0}
 .stat b{
 display:block;
 font-size:23px;
-color:#071a33
+color:var(--navy)
 }
-.stat small{color:#777}
+.stat span{
+font-size:12px;
+color:var(--grey)
+}
 
-section{padding:75px 18px}
-.wrap{max-width:1150px;margin:auto}
-.title{text-align:center;margin-bottom:38px}
-.title small{
-color:#b08438;
+section{
+padding:70px 18px
+}
+
+.wrap{
+max-width:1150px;
+margin:auto
+}
+
+.heading{
+text-align:center;
+margin-bottom:35px
+}
+
+.heading small{
+color:var(--gold);
 font-weight:bold;
 letter-spacing:2px
 }
-.title h2{
-font-size:35px;
-color:#071a33;
+
+.heading h2{
+color:var(--navy);
+font-size:34px;
 margin:7px 0
 }
-.title p{color:#777}
+
+.heading p{color:var(--grey)}
+
+.search{
+background:#fff;
+border:1px solid var(--border);
+padding:15px;
+border-radius:8px;
+margin-bottom:22px;
+display:flex;
+gap:10px
+}
+
+.search input,.search select{
+padding:12px;
+border:1px solid #ddd;
+border-radius:5px;
+font-size:13px;
+outline:none;
+flex:1
+}
 
 .cars{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:22px
+gap:20px
 }
+
 .card{
 background:#fff;
-border:1px solid #e1e1e1;
-border-radius:12px;
+border:1px solid var(--border);
+border-radius:10px;
 overflow:hidden
 }
+
 .carImg{
-height:230px;
+height:220px;
 background:#e9ecef;
 display:flex;
 align-items:center;
-justify-content:center;
-overflow:hidden
+justify-content:center
 }
+
 .carImg img{
 width:100%;
 height:100%;
 object-fit:cover
 }
+
 .cardBody{padding:20px}
+
 .card h3{
-font-size:20px;
-color:#071a33
+color:var(--navy);
+font-size:20px
 }
+
+.sub{
+font-size:12px;
+color:var(--grey);
+margin:5px 0 12px
+}
+
 .price{
-color:#b08438;
-font-size:22px;
-font-weight:bold;
-margin:5px 0 15px
+font-size:23px;
+font-weight:900;
+color:var(--gold);
+margin-bottom:15px
 }
-.details{
+
+.specs{
+border-top:1px solid var(--border);
+padding-top:13px;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:9px;
-border-top:1px solid #eee;
-padding-top:14px
+gap:10px
 }
-.details span{
-font-size:11px;
-color:#777
+
+.spec{
+font-size:10px;
+color:var(--grey)
 }
-.details b{
+
+.spec b{
 display:block;
 font-size:13px;
-color:#172033
+color:#172033;
+margin-top:2px
 }
-.chat{
+
+.cardBtn{
 display:block;
-background:#071a33;
-color:#fff;
 text-align:center;
-padding:11px;
+background:var(--navy);
+color:#fff;
+padding:12px;
 margin-top:17px;
-border-radius:6px;
+border-radius:5px;
 font-size:12px;
 font-weight:bold
+}
+
+.features{
+background:var(--navy);
+color:#fff
+}
+
+.features h2{color:#fff!important}
+
+.featureGrid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:30px
+}
+
+.feature{
+border:1px solid rgba(255,255,255,.15);
+padding:22px;
+border-radius:8px;
+background:rgba(255,255,255,.04)
+}
+
+.feature b{
+display:block;
+margin-bottom:7px;
+font-size:16px
+}
+
+.feature p{
+font-size:12px;
+color:#c6cfdb;
+line-height:1.5
+}
+
+.rating{
+text-align:center;
+background:#fff
+}
+
+.stars{
+font-size:30px;
+color:#c8a04a;
+letter-spacing:4px
+}
+
+.rating strong{
+display:block;
+font-size:38px;
+color:var(--navy);
+margin:5px
 }
 
 .about{
 background:#fff
 }
+
 .aboutGrid{
 max-width:1100px;
 margin:auto;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:45px;
+gap:40px;
 align-items:center
 }
+
 .aboutImg{
-height:390px;
+height:360px;
 background:#ddd;
-border-radius:12px;
+border-radius:10px;
 overflow:hidden
 }
+
 .aboutImg img{
 width:100%;
 height:100%;
 object-fit:cover
 }
+
 .about h2{
 font-size:36px;
-color:#071a33;
-margin:8px 0 15px
+color:var(--navy);
+margin:10px 0 15px
 }
-.about p{color:#666;margin-bottom:18px}
-.features{
+
+.about p{
+color:var(--grey);
+line-height:1.7;
+margin-bottom:15px
+}
+
+.aboutList{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:10px
+gap:8px
 }
-.feature{
-padding:12px;
-background:#f5f3ee;
-border-left:3px solid #c39a4b;
-font-size:13px;
-font-weight:bold
+
+.aboutList div{
+background:#f4f1e8;
+padding:11px;
+font-size:12px;
+font-weight:bold;
+border-left:3px solid var(--gold)
 }
 
 .video{
-background:#071a33;
-color:#fff
+background:#f0f2f5
 }
-.video .title h2{color:#fff}
+
 .videoBox{
+background:#071a33;
 max-width:900px;
+height:430px;
 margin:auto;
-background:#000;
-border-radius:12px;
+border-radius:10px;
 overflow:hidden
 }
-video{
+
+.videoBox video{
 width:100%;
-display:block
+height:100%;
+object-fit:cover
 }
 
-.services{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px
-}
-.service{
-background:#fff;
-padding:25px;
-border:1px solid #e2e2e2;
-border-radius:10px
-}
-.service strong{
-font-size:18px;
-color:#071a33
-}
-.service p{
-color:#777;
-font-size:13px;
-margin-top:8px
-}
-
-.location{
-background:#f0f2f4
-}
-.locationBox{
-background:#fff;
-max-width:800px;
-margin:auto;
-padding:35px;
-border-radius:12px;
-text-align:center;
-border:1px solid #ddd
-}
-.locationBox h2{
-color:#071a33;
-margin-bottom:12px
-}
-.locationBox p{
-color:#666;
-margin-bottom:20px
-}
-
-.social{
-text-align:center;
-background:#fff
-}
-.social h2{
-font-size:34px;
-color:#071a33
-}
-.social p{color:#777;margin:8px 0 20px}
-
-footer{
-background:#071a33;
+.videoPlaceholder{
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
 color:#fff;
 text-align:center;
-padding:35px 18px
+padding:20px
 }
-footer b{color:#e1c476}
+
+.videoPlaceholder b{
+font-size:22px;
+color:#e0c16e;
+margin-bottom:8px
+}
+
+.gallery{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+grid-template-rows:200px 200px;
+gap:9px
+}
+
+.gallery img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:7px
+}
+
+.gallery img:first-child{grid-row:span 2}
+
+.location{
+background:#fff
+}
+
+.locationGrid{
+display:grid;
+grid-template-columns:1fr 1.3fr;
+gap:20px
+}
+
+.locationCard{
+border:1px solid var(--border);
+border-radius:10px;
+padding:30px
+}
+
+.locationCard h2{
+color:var(--navy);
+margin-bottom:12px
+}
+
+.locationCard p{
+color:var(--grey);
+line-height:1.8;
+margin-bottom:18px
+}
+
+.map{
+width:100%;
+height:400px;
+border:0;
+border-radius:10px
+}
+
+.insta{
+background:#f7f7f5
+}
+
+.instaBox{
+background:#fff;
+border:1px solid var(--border);
+border-radius:10px;
+padding:35px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px
+}
+
+.instaBox h2{
+color:var(--navy);
+margin-bottom:7px
+}
+
+.instaBox p{color:var(--grey)}
+
+.instaBtn{
+background:var(--navy);
+color:#fff;
+padding:14px 20px;
+border-radius:6px;
+font-weight:bold;
+white-space:nowrap
+}
+
+footer{
+background:#061426;
+color:#fff;
+text-align:center;
+padding:40px 18px
+}
+
+footer h2{margin-bottom:8px}
 footer p{
+color:#aeb8c6;
 font-size:12px;
-color:#bcc7d4;
-margin-top:6px
+margin:5px
 }
 
-@media(max-width:800px){
+footer b{color:#e0c16e}
+
+.whatsapp{
+position:fixed;
+right:18px;
+bottom:18px;
+width:56px;
+height:56px;
+border-radius:50%;
+background:#168a45;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:25px;
+z-index:500
+}
+
+@media(max-width:850px){
 nav{display:none}
-h1{font-size:39px}
-.stats{grid-template-columns:1fr 1fr}
-.stat:nth-child(2){border-right:0}
-.cars,.services{grid-template-columns:1fr}
+.cars{grid-template-columns:1fr 1fr}
+.featureGrid{grid-template-columns:1fr 1fr}
+.locationGrid{grid-template-columns:1fr}
 .aboutGrid{grid-template-columns:1fr}
-.aboutImg{height:280px}
-.title h2{font-size:29px}
 }
 
-@media(max-width:450px){
-.hero{padding:70px 18px}
-h1{font-size:34px}
+@media(max-width:550px){
 .stats{grid-template-columns:1fr 1fr}
+.cars,.featureGrid{grid-template-columns:1fr}
+.hero{min-height:540px}
+.hero h1{font-size:42px}
+.search{display:block}
+.search input,.search select{
+width:100%;
+margin-bottom:8px
+}
+.gallery{
+grid-template-columns:1fr 1fr;
+grid-template-rows:170px 170px
+}
+.instaBox{
+display:block
+}
+.instaBtn{
+display:inline-block;
+margin-top:18px
+}
+.videoBox{
+height:300px
+}
 }
 </style>
 </head>
 
 <body>
 
+<div class="top">
+B.K. MOTORS • DEHRADUN • PREMIUM PRE-OWNED TWO-WHEELERS
+</div>
+
 <header>
 <div class="nav">
 
 <a class="logo" href="#home">
-<div class="logoBox">BK</div>
+<div class="logoIcon">BK</div>
 <div>
 <b>B.K. MOTORS</b>
-<small>PRE-OWNED TWO WHEELERS</small>
+<small>PRE-OWNED TWO-WHEELERS</small>
 </div>
 </a>
 
 <nav>
-<a href="#home">HOME</a>
-<a href="#vehicles">VEHICLES</a>
-<a href="#about">ABOUT</a>
-<a href="#services">SERVICES</a>
+<a href="#inventory">VEHICLES</a>
+<a href="#features">FEATURES</a>
+<a href="#gallery">GALLERY</a>
 <a href="#location">LOCATION</a>
-<a href="#instagram">INSTAGRAM</a>
+
+<a
+href="https://www.instagram.com/bkmotorsdehradun/"
+target="_blank"
+rel="noopener noreferrer">
+INSTAGRAM
+</a>
+
+<a
+class="chatNav"
+href="https://wa.me/918126525454?text=Hello%20B.K.%20Motors%2C%20I%20want%20to%20enquire%20about%20a%20vehicle."
+target="_blank">
+CHAT
+</a>
 </nav>
 
 </div>
@@ -370,27 +644,32 @@ h1{font-size:34px}
 <section class="hero" id="home">
 <div class="heroIn">
 
-<div class="tag">DEHRADUN'S TRUSTED 2-WHEELER SHOWROOM</div>
+<div class="tag">TRUSTED 2-WHEELER SHOWROOM</div>
 
 <h1>
-QUALITY USED
-<span>TWO-WHEELERS</span>
+Find Your Next
+<span>Perfect Ride.</span>
 </h1>
 
 <p>
-Buy, sell and exchange quality pre-owned motorcycles
-and scooters at B.K. Motors, Dehradun.
+Quality pre-owned motorcycles and scooters with
+transparent vehicle details, inspection and customer support.
 </p>
 
-<a class="btn gold"
-href="https://wa.me/918126525454?text=Hello%20B.K.%20Motors%2C%20I%20want%20to%20know%20about%20available%20vehicles."
-target="_blank">
-💬 CHAT WITH US
+<div class="buttons">
+
+<a class="btn gold" href="#inventory">
+VIEW INVENTORY
 </a>
 
-<a class="btn white" href="#vehicles">
-VIEW VEHICLES
+<a
+class="btn white"
+href="https://wa.me/918126525454?text=Hello%20B.K.%20Motors%2C%20I%20want%20to%20know%20about%20available%20vehicles."
+target="_blank">
+💬 CHAT ON WHATSAPP
 </a>
+
+</div>
 
 </div>
 </section>
@@ -400,110 +679,144 @@ VIEW VEHICLES
 
 <div class="stat">
 <b>500+</b>
-<small>Vehicles Dealt</small>
+<span>Vehicles Dealt</span>
 </div>
 
 <div class="stat">
-<b>10+</b>
-<small>Years of Trust</small>
+<b>6 Months</b>
+<span>Engine Warranty</span>
 </div>
 
 <div class="stat">
-<b>100%</b>
-<small>Vehicle Check</small>
+<b>2 FREE</b>
+<span>Services</span>
 </div>
 
 <div class="stat">
-<b>Dehradun</b>
-<small>Our Showroom</small>
+<b>4.7 ★</b>
+<span>Customer Rating</span>
 </div>
 
 </div>
 
 
-<section id="vehicles">
+<section id="inventory">
 <div class="wrap">
 
-<div class="title">
+<div class="heading">
 <small>OUR INVENTORY</small>
 <h2>Featured Vehicles</h2>
-<p>Some vehicles available at B.K. Motors</p>
+<p>Check price, model, kilometres and ownership details.</p>
 </div>
 
-<div class="cars">
+<div class="search">
+<input id="search" type="text" placeholder="Search vehicle...">
+
+<select id="filter">
+<option value="all">All Vehicles</option>
+<option value="scooter">Scooters</option>
+<option value="bike">Bikes</option>
+</select>
+
+<select id="sort">
+<option value="default">Sort Vehicles</option>
+<option value="low">Price Low → High</option>
+<option value="high">Price High → Low</option>
+</select>
+</div>
 
 
-<div class="card">
+<div class="cars" id="cars">
+
+
+<div class="card car" data-name="Suzuki Access 125" data-type="scooter" data-price="55000">
+
 <div class="carImg">
 <img src="bike1.jpg" alt="Suzuki Access 125">
 </div>
 
 <div class="cardBody">
+
 <h3>Suzuki Access 125</h3>
+<div class="sub">Pre-Owned • Excellent Condition</div>
 <div class="price">₹55,000</div>
 
-<div class="details">
-<div><span>MODEL</span><b>2021</b></div>
-<div><span>DRIVEN</span><b>18,500 KM</b></div>
-<div><span>OWNER</span><b>1st Owner</b></div>
-<div><span>FUEL</span><b>Petrol</b></div>
+<div class="specs">
+<div class="spec">MODEL<b>2021</b></div>
+<div class="spec">OWNER<b>1st Owner</b></div>
+<div class="spec">DRIVEN<b>18,500 KM</b></div>
+<div class="spec">FUEL<b>PETROL</b></div>
 </div>
 
-<a class="chat"
+<a
+class="cardBtn"
 href="https://wa.me/918126525454?text=Hello%20B.K.%20Motors%2C%20I%20am%20interested%20in%20Suzuki%20Access%20125."
 target="_blank">
-💬 CHAT ABOUT THIS VEHICLE
+💬 ENQUIRE ON WHATSAPP
 </a>
+
 </div>
 </div>
 
 
-<div class="card">
+
+<div class="card car" data-name="TVS Jupiter 125" data-type="scooter" data-price="65000">
+
 <div class="carImg">
 <img src="bike2.jpg" alt="TVS Jupiter 125">
 </div>
 
 <div class="cardBody">
+
 <h3>TVS Jupiter 125</h3>
+<div class="sub">2024 Model • Pre-Owned</div>
 <div class="price">₹65,000</div>
 
-<div class="details">
-<div><span>MODEL</span><b>2019</b></div>
-<div><span>DRIVEN</span><b>18,600 KM</b></div>
-<div><span>OWNER</span><b>1st Owner</b></div>
-<div><span>FUEL</span><b>Petrol</b></div>
+<div class="specs">
+<div class="spec">MODEL<b>2024</b></div>
+<div class="spec">OWNER<b>1st Owner</b></div>
+<div class="spec">DRIVEN<b>18,600 KM</b></div>
+<div class="spec">FUEL<b>PETROL</b></div>
 </div>
 
-<a class="chat"
-href="https://wa.me/918126525454?text=Hello%20B.K.%20Motors%2C%20I%20am%20interested%20in%20TVS%20Jupiter%20125."
+<a
+class="cardBtn"
+href="https://wa.me/918126525454?text=Hello%20B.K.%20Motors%2C%20I%20am%20interested%20in%20TVS%20Jupiter%20125%202024%20model."
 target="_blank">
-💬 CHAT ABOUT THIS VEHICLE
+💬 ENQUIRE ON WHATSAPP
 </a>
+
 </div>
 </div>
 
 
-<div class="card">
+
+<div class="card car" data-name="Hero Splendor" data-type="bike" data-price="45000">
+
 <div class="carImg">
 <img src="bike3.jpg" alt="Hero Splendor">
 </div>
 
 <div class="cardBody">
+
 <h3>Hero Splendor</h3>
+<div class="sub">Pre-Owned • Well Maintained</div>
 <div class="price">₹45,000</div>
 
-<div class="details">
-<div><span>MODEL</span><b>2020</b></div>
-<div><span>DRIVEN</span><b>25,000 KM</b></div>
-<div><span>OWNER</span><b>1st Owner</b></div>
-<div><span>FUEL</span><b>Petrol</b></div>
+<div class="specs">
+<div class="spec">MODEL<b>2021</b></div>
+<div class="spec">OWNER<b>1st Owner</b></div>
+<div class="spec">DRIVEN<b>22,000 KM</b></div>
+<div class="spec">FUEL<b>PETROL</b></div>
 </div>
 
-<a class="chat"
+<a
+class="cardBtn"
 href="https://wa.me/918126525454?text=Hello%20B.K.%20Motors%2C%20I%20am%20interested%20in%20Hero%20Splendor."
 target="_blank">
-💬 CHAT ABOUT THIS VEHICLE
+💬 ENQUIRE ON WHATSAPP
 </a>
+
 </div>
 </div>
 
@@ -513,7 +826,84 @@ target="_blank">
 </section>
 
 
-<section class="about" id="about">
+<section class="features" id="features">
+
+<div class="wrap">
+
+<div class="heading">
+<small>WHY CHOOSE US</small>
+<h2>More Value With Every Vehicle</h2>
+<p style="color:#c6cfdb">Our customer-focused facilities.</p>
+</div>
+
+<div class="featureGrid">
+
+<div class="feature">
+<b>🛡️ 6 Months Engine Warranty</b>
+<p>Engine warranty included as per applicable B.K. Motors terms.</p>
+</div>
+
+<div class="feature">
+<b>🔧 2 Services FREE</b>
+<p>Get two free services with eligible vehicle purchases.</p>
+</div>
+
+<div class="feature">
+<b>₹16 Per Day Plan</b>
+<p>Special ₹16/day plan available as per applicable terms.</p>
+</div>
+
+<div class="feature">
+<b>🔄 Buy-Back Anytime</b>
+<p>Vehicle can be offered back to B.K. Motors whenever you want, subject to applicable valuation and terms.</p>
+</div>
+
+<div class="feature">
+<b>🤝 Exchange Facility</b>
+<p>Exchange your existing two-wheeler for another vehicle.</p>
+</div>
+
+<div class="feature">
+<b>💳 Finance Facility</b>
+<p>Finance assistance available for eligible customers.</p>
+</div>
+
+<div class="feature">
+<b>📄 RC Transfer</b>
+<p>Documentation and transfer assistance available.</p>
+</div>
+
+<div class="feature">
+<b>✅ Vehicle Inspection</b>
+<p>Vehicles are checked before delivery.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section class="rating">
+
+<div class="wrap">
+
+<div class="heading">
+<small>CUSTOMER EXPERIENCE</small>
+<h2>Trusted By Customers</h2>
+</div>
+
+<div class="stars">★★★★★</div>
+<strong>4.7 ★</strong>
+<p style="color:#687386">
+Customer Rating
+</p>
+
+</div>
+</section>
+
+
+<section class="about">
+
 <div class="aboutGrid">
 
 <div class="aboutImg">
@@ -521,27 +911,27 @@ target="_blank">
 </div>
 
 <div>
-<small style="color:#b08438;font-weight:bold;letter-spacing:2px">
-ABOUT B.K. MOTORS
-</small>
 
+<div class="heading" style="text-align:left;margin-bottom:15px">
+<small>ABOUT B.K. MOTORS</small>
 <h2>Your Trusted 2-Wheeler Bazaar</h2>
+</div>
 
 <p>
 B.K. Motors is a pre-owned two-wheeler showroom
-located at 182 Chakrata Road, Dehradun.
-We deal in motorcycles and scooters and provide
+in Dehradun offering motorcycles and scooters with
 buy, sell and exchange facilities.
 </p>
 
-<div class="features">
-<div class="feature">✓ Vehicle Check-up</div>
-<div class="feature">✓ Buy Back Facility</div>
-<div class="feature">✓ Exchange Facility</div>
-<div class="feature">✓ Loan Facility</div>
-<div class="feature">✓ Transfer Assistance</div>
-<div class="feature">✓ Service Support</div>
+<div class="aboutList">
+<div>✓ Vehicle Inspection</div>
+<div>✓ Engine Warranty</div>
+<div>✓ Free Services</div>
+<div>✓ Buy-Back Facility</div>
+<div>✓ Exchange</div>
+<div>✓ Finance</div>
 </div>
+
 </div>
 
 </div>
@@ -549,130 +939,193 @@ buy, sell and exchange facilities.
 
 
 <section class="video">
+
 <div class="wrap">
 
-<div class="title">
-<small style="color:#e1c476">SHOWROOM VIDEO</small>
-<h2>Experience B.K. Motors</h2>
-<p style="color:#bfc8d3">
-Watch our showroom and latest vehicles.
-</p>
+<div class="heading">
+<small>SHOWROOM EXPERIENCE</small>
+<h2>Inside B.K. Motors</h2>
+<p>Add your real showroom video as <b>showroom.mp4</b>.</p>
 </div>
 
 <div class="videoBox">
-<video controls poster="showroom.jpg">
+
+<video controls preload="metadata" poster="showroom.jpg">
 <source src="showroom.mp4" type="video/mp4">
-Your browser does not support video.
 </video>
+
 </div>
 
 </div>
 </section>
 
 
-<section id="services">
+<section id="gallery">
+
 <div class="wrap">
 
-<div class="title">
-<small>OUR SERVICES</small>
-<h2>Everything You Need</h2>
-<p>Simple and trusted two-wheeler services.</p>
+<div class="heading">
+<small>OUR SHOWROOM</small>
+<h2>Gallery</h2>
+<p>Replace these files with your real showroom photos.</p>
 </div>
 
-<div class="services">
+<div class="gallery">
 
-<div class="service">
-<strong>🏍 Buy & Sell</strong>
-<p>Buy or sell pre-owned motorcycles and scooters.</p>
-</div>
-
-<div class="service">
-<strong>↔ Exchange</strong>
-<p>Exchange your existing two-wheeler with another vehicle.</p>
-</div>
-
-<div class="service">
-<strong>✓ Vehicle Inspection</strong>
-<p>Comprehensive vehicle checking before delivery.</p>
-</div>
-
-<div class="service">
-<strong>₹ Loan Facility</strong>
-<p>Financing assistance for eligible customers.</p>
-</div>
-
-<div class="service">
-<strong>⚙ Service Support</strong>
-<p>Support for your pre-owned vehicle after purchase.</p>
-</div>
-
-<div class="service">
-<strong>📄 Transfer Assistance</strong>
-<p>Assistance with vehicle transfer and documentation.</p>
-</div>
+<img src="photo1.jpg" alt="B.K. Motors">
+<img src="photo2.jpg" alt="B.K. Motors">
+<img src="photo3.jpg" alt="B.K. Motors">
 
 </div>
+
 </div>
 </section>
 
 
 <section class="location" id="location">
-<div class="locationBox">
 
-<h2>📍 Visit Our Showroom</h2>
+<div class="wrap">
+
+<div class="heading">
+<small>FIND US</small>
+<h2>Visit B.K. Motors</h2>
+</div>
+
+<div class="locationGrid">
+
+<div class="locationCard">
+
+<h2>📍 Our Showroom</h2>
 
 <p>
-<b>182 Chakrata Road</b><br>
-Seyad Mohalla, Khurbura Mohalla<br>
-Dehradun, Uttarakhand
+<b>Shop No. 182, Chakrata Road</b><br>
+Near Krishan Nagar Chowk<br>
+Seyad Mohalla, Dehradun<br>
+Uttarakhand
 </p>
 
-<a class="btn gold"
-href="https://www.google.com/maps/search/?api=1&query=BK%20Motors%20182%20Chakrata%20Road%20Dehradun"
-target="_blank">
-📍 OPEN LOCATION IN GOOGLE MAPS
+<a
+class="btn gold"
+href="https://www.google.com/maps/search/?api=1&query=B.K.%20Motors%20182%20Chakrata%20Road%20Dehradun"
+target="_blank"
+rel="noopener">
+📍 GET DIRECTIONS
 </a>
+
+</div>
+
+
+<div class="map">
+
+<iframe
+src="https://www.google.com/maps?q=B.K.%20Motors%20182%20Chakrata%20Road%20Dehradun&output=embed"
+loading="lazy"
+title="B.K. Motors Location">
+</iframe>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section class="insta" id="instagram">
+
+<div class="wrap">
+
+<div class="instaBox">
+
+<div>
+<h2>Follow B.K. Motors</h2>
+<p>@bkmotorsdehradun</p>
+</div>
+
+<a
+class="instaBtn"
+href="https://www.instagram.com/bkmotorsdehradun/"
+target="_blank"
+rel="noopener noreferrer">
+📸 OPEN INSTAGRAM
+</a>
+
+</div>
 
 </div>
 </section>
 
 
-<section class="social" id="instagram">
-
-<h2>Follow B.K. Motors</h2>
-
-<p>
-Latest bikes, scooters, offers and showroom updates.
-</p>
-
-<a
-class="btn gold"
-href="https://www.instagram.com/bkmotorsdehradun/"
-target="_blank"
-rel="noopener">
-📸 OPEN INSTAGRAM
-</a>
-
-</section>
-
-
 <footer>
 
-<h3>B.K. MOTORS</h3>
+<h2>B.K. MOTORS</h2>
 
 <p>Your Trusted 2-Wheeler Bazaar</p>
 
-<p>
-182 Chakrata Road, Dehradun, Uttarakhand
-</p>
+<p>182 Chakrata Road, Dehradun, Uttarakhand</p>
 
-<p>
-📱 8126525454 &nbsp; | &nbsp; 6398060310
-</p>
+<p>8126525454 • 6398060310</p>
 
 <p><b>© 2026 B.K. Motors</b></p>
 
 </footer>
+
+
+<a
+class="whatsapp"
+href="https://wa.me/918126525454?text=Hello%20B.K.%20Motors%2C%20I%20want%20to%20enquire%20about%20a%20vehicle."
+target="_blank"
+aria-label="Chat on WhatsApp">
+💬
+</a>
+
+
+<script>
+const search=document.getElementById("search");
+const filter=document.getElementById("filter");
+const sort=document.getElementById("sort");
+const cars=document.getElementById("cars");
+
+function update(){
+
+let items=[...document.querySelectorAll(".car")];
+
+let text=search.value.toLowerCase();
+let type=filter.value;
+
+items.forEach(card=>{
+
+let name=card.dataset.name.toLowerCase();
+let cardType=card.dataset.type;
+
+let matchName=name.includes(text);
+let matchType=type==="all" || cardType===type;
+
+card.style.display=(matchName && matchType)?"block":"none";
+
+});
+
+if(sort.value!=="default"){
+
+let visible=items.filter(x=>x.style.display!=="none");
+
+visible.sort((a,b)=>{
+
+let A=Number(a.dataset.price);
+let B=Number(b.dataset.price);
+
+return sort.value==="low"?A-B:B-A;
+
+});
+
+visible.forEach(x=>cars.appendChild(x));
+
+}
+}
+
+search.addEventListener("input",update);
+filter.addEventListener("change",update);
+sort.addEventListener("change",update);
+</script>
 
 </body>
   </html>
