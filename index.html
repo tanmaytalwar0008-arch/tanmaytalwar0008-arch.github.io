@@ -2,524 +2,267 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>B.K. Motors | Dehradun</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>B.K. Motors | Premium Pre-Owned 2-Wheelers</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#08090d;
-    color:white;
+font-family:Arial,Helvetica,sans-serif;
+background:#f7f7f5;
+color:#111;
+line-height:1.5
 }
-
-:root{
-    --red:#e51d2a;
-    --blue:#1559c7;
-    --purple:#673de6;
-    --white:#ffffff;
-    --dark:#08090d;
-    --card:#11141b;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
+a{text-decoration:none;color:inherit}
+.container{width:92%;max-width:1180px;margin:auto}
 
 /* HEADER */
-
 header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    background:rgba(5,6,10,.92);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid rgba(255,255,255,.1);
+position:fixed;top:0;left:0;width:100%;z-index:1000;
+background:rgba(255,255,255,.94);
+backdrop-filter:blur(15px);
+border-bottom:1px solid #e7e7e7
 }
-
 .nav{
-    max-width:1250px;
-    margin:auto;
-    height:78px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 22px;
+height:76px;display:flex;align-items:center;
+justify-content:space-between
 }
-
 .logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
+font-size:24px;font-weight:900;letter-spacing:-1px
 }
-
-.logo-box{
-    width:48px;
-    height:48px;
-    border-radius:50%;
-    background:linear-gradient(135deg,var(--purple),var(--blue));
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:900;
-    font-size:19px;
-    border:2px solid #fff;
-}
-
-.logo-text b{
-    display:block;
-    font-size:21px;
-}
-
-.logo-text span{
-    font-size:10px;
-    color:#bbb;
-    letter-spacing:2px;
-}
-
-nav{
-    display:flex;
-    gap:28px;
-}
-
-nav a{
-    font-size:14px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:var(--red);
-}
-
-.nav-btn{
-    background:linear-gradient(135deg,var(--red),#ff3945);
-    padding:12px 18px;
-    border-radius:30px;
-    font-weight:bold;
+.logo span{color:#a98245}
+.navlinks{display:flex;gap:28px;align-items:center}
+.navlinks a{font-size:13px;font-weight:bold;color:#444}
+.navlinks a:hover{color:#a98245}
+.chat{
+background:#111;color:white!important;
+padding:12px 19px;border-radius:30px
 }
 
 /* HERO */
-
 .hero{
-    min-height:100vh;
-    padding-top:78px;
-    display:flex;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
-    background:
-    radial-gradient(circle at 80% 35%,rgba(103,61,230,.28),transparent 30%),
-    radial-gradient(circle at 20% 80%,rgba(229,29,42,.18),transparent 30%),
-    #08090d;
+min-height:100vh;padding-top:76px;
+display:flex;align-items:center;
+background:
+linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.90) 43%,rgba(255,255,255,.18) 100%),
+url("shop.jpg") center/cover;
 }
-
-.hero-content{
-    max-width:1250px;
-    width:100%;
-    margin:auto;
-    padding:70px 22px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    gap:30px;
+.hero-content{padding:80px 0;max-width:650px}
+.eyebrow{
+color:#a98245;font-size:12px;font-weight:bold;
+letter-spacing:3px;margin-bottom:18px
 }
-
-.badge{
-    display:inline-block;
-    border:1px solid rgba(255,255,255,.2);
-    background:rgba(255,255,255,.05);
-    padding:9px 15px;
-    border-radius:30px;
-    color:#ddd;
-    font-size:12px;
-    margin-bottom:22px;
-}
-
 .hero h1{
-    font-size:clamp(45px,7vw,82px);
-    line-height:.95;
-    font-weight:900;
+font-size:clamp(48px,7vw,82px);
+line-height:.94;letter-spacing:-4px
 }
-
-.hero h1 span{
-    color:var(--red);
-}
-
+.hero h1 span{color:#a98245}
 .hero p{
-    color:#b9bbc3;
-    max-width:550px;
-    margin:25px 0;
-    line-height:1.7;
-    font-size:16px;
+font-size:17px;color:#666;max-width:570px;
+margin:25px 0;line-height:1.8
 }
-
-.buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
 .btn{
-    padding:15px 24px;
-    border-radius:8px;
-    font-weight:bold;
-    display:inline-block;
+padding:15px 24px;border-radius:5px;
+font-weight:bold;font-size:13px;display:inline-block
+}
+.dark{background:#111;color:white}
+.gold{background:#a98245;color:white}
+.outline{border:1px solid #bbb;background:white}
+
+/* STATS */
+.stats{margin-top:-45px;position:relative;z-index:5}
+.statsbox{
+display:grid;grid-template-columns:repeat(4,1fr);
+background:#111;color:white;border-radius:14px;
+overflow:hidden;box-shadow:0 15px 40px rgba(0,0,0,.15)
+}
+.stat{text-align:center;padding:25px;border-right:1px solid #333}
+.stat:last-child{border:0}
+.stat b{font-size:26px;color:#d4b37a}
+.stat small{display:block;color:#aaa;margin-top:5px}
+
+/* SECTIONS */
+section{padding:95px 0}
+.heading{margin-bottom:42px}
+.heading small{
+color:#a98245;font-weight:bold;letter-spacing:3px
+}
+.heading h2{
+font-size:44px;letter-spacing:-1.5px;margin-top:7px
+}
+.heading p{color:#777;margin-top:10px}
+
+/* VEHICLES */
+.vehicles{background:white}
+.vehiclegrid{
+display:grid;grid-template-columns:repeat(3,1fr);gap:22px
+}
+.vehicle{
+border:1px solid #e6e6e6;border-radius:14px;
+overflow:hidden;background:#fff;
+transition:.3s
+}
+.vehicle:hover{
+transform:translateY(-7px);
+box-shadow:0 18px 45px rgba(0,0,0,.1)
+}
+.vehiclephoto{height:230px;background:#eee;overflow:hidden}
+.vehiclephoto img{
+width:100%;height:100%;object-fit:cover;transition:.4s
+}
+.vehicle:hover img{transform:scale(1.04)}
+.vehiclebody{padding:22px}
+.vehiclebody h3{font-size:22px}
+.specs{
+display:grid;grid-template-columns:1fr 1fr;
+gap:8px;margin:15px 0
+}
+.spec{
+background:#f5f5f3;padding:9px;
+border-radius:5px;font-size:12px;color:#555
+}
+.price{
+display:flex;align-items:center;
+justify-content:space-between;margin-top:18px
+}
+.price strong{font-size:23px}
+.whatsapp{
+background:#25d366;color:white;
+padding:11px 14px;border-radius:5px;
+font-size:11px;font-weight:bold
 }
 
-.primary{
-    background:var(--red);
+/* OFFER */
+.offer{
+background:#111;color:white
 }
-
-.secondary{
-    border:1px solid #555;
-    background:#12141a;
+.offerbox{
+border-radius:18px;
+padding:50px;
+background:
+linear-gradient(110deg,#111 45%,#211b12);
+border:1px solid #332c21;
+display:flex;justify-content:space-between;
+align-items:center;gap:30px
 }
-
-.hero-image{
-    height:540px;
-    border-radius:25px;
-    overflow:hidden;
-    position:relative;
-    border:1px solid rgba(255,255,255,.12);
-    box-shadow:0 25px 80px rgba(0,0,0,.6);
-}
-
-.hero-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.hero-overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(0deg,rgba(0,0,0,.8),transparent 60%);
-}
-
-.hero-label{
-    position:absolute;
-    bottom:25px;
-    left:25px;
-}
-
-.hero-label small{
-    color:#aaa;
-}
-
-.hero-label h2{
-    font-size:28px;
-}
-
-/* SECTION */
-
-section{
-    padding:90px 22px;
-}
-
-.container{
-    max-width:1250px;
-    margin:auto;
-}
-
-.section-title{
-    margin-bottom:40px;
-}
-
-.section-title small{
-    color:var(--red);
-    font-weight:bold;
-    letter-spacing:2px;
-}
-
-.section-title h2{
-    font-size:42px;
-    margin-top:8px;
-}
+.offerbox small{color:#d4b37a;letter-spacing:3px;font-weight:bold}
+.offerbox h2{font-size:48px;margin:8px 0}
+.offerbox p{color:#aaa}
 
 /* FEATURES */
-
 .features{
-    background:#0c0e13;
+display:grid;grid-template-columns:repeat(3,1fr);gap:18px
 }
-
-.feature-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
 .feature{
-    background:linear-gradient(145deg,#151820,#0e1016);
-    padding:28px;
-    border-radius:15px;
-    border:1px solid rgba(255,255,255,.08);
+padding:28px;border:1px solid #e3e3e3;
+border-radius:12px;background:white
 }
-
-.feature-icon{
-    font-size:32px;
-    margin-bottom:18px;
+.icon{
+font-size:25px;margin-bottom:15px
 }
-
-.feature h3{
-    margin-bottom:10px;
-}
-
-.feature p{
-    color:#999;
-    line-height:1.6;
-}
-
-/* BIKES */
-
-.bikes{
-    background:#08090d;
-}
-
-.bike-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.bike{
-    background:var(--card);
-    border-radius:16px;
-    overflow:hidden;
-    border:1px solid rgba(255,255,255,.08);
-    transition:.35s;
-}
-
-.bike:hover{
-    transform:translateY(-8px);
-    border-color:var(--red);
-}
-
-.bike-img{
-    height:250px;
-    overflow:hidden;
-}
-
-.bike-img img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.5s;
-}
-
-.bike:hover img{
-    transform:scale(1.06);
-}
-
-.bike-info{
-    padding:20px;
-}
-
-.bike-info h3{
-    font-size:21px;
-}
-
-.details{
-    color:#888;
-    font-size:13px;
-    margin:10px 0 17px;
-}
-
-.price{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.price strong{
-    color:white;
-    font-size:21px;
-}
-
-.view{
-    background:var(--red);
-    padding:10px 15px;
-    border-radius:6px;
-    font-size:12px;
-    font-weight:bold;
-}
+.feature h3{margin-bottom:8px}
+.feature p{color:#777;font-size:14px}
 
 /* VIDEO */
-
-.video-section{
-    background:
-    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.85)),
-    url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1600&q=80");
-    background-size:cover;
-    background-position:center;
-    text-align:center;
+.video{
+background:#f0f0ed
+}
+.videobox{
+border-radius:16px;overflow:hidden;
+background:#111;box-shadow:0 20px 50px rgba(0,0,0,.15)
+}
+.videobox video{
+display:block;width:100%;max-height:620px;
+object-fit:cover
+}
+.video-note{
+text-align:center;color:#888;
+margin-top:12px;font-size:12px
 }
 
-.video-box{
-    max-width:950px;
-    margin:35px auto 0;
-    border-radius:20px;
-    overflow:hidden;
-    border:1px solid rgba(255,255,255,.2);
-    box-shadow:0 25px 70px #000;
+/* SHOWROOM */
+.showroom{
+display:grid;grid-template-columns:1.1fr .9fr;
+gap:50px;align-items:center
 }
-
-.video-box iframe{
-    width:100%;
-    height:500px;
-    border:0;
+.showroomphoto{
+height:480px;border-radius:16px;overflow:hidden
 }
-
-/* SERVICES */
-
-.services{
-    background:#0c0e13;
+.showroomphoto img{
+width:100%;height:100%;object-fit:cover
 }
-
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
+.showroom h2{font-size:45px}
+.showroom p{color:#777;margin:18px 0;line-height:1.8}
+.checks{list-style:none}
+.checks li{
+padding:8px 0;font-weight:bold
 }
-
-.service{
-    padding:25px;
-    border-radius:14px;
-    background:#12151c;
-    border-left:4px solid var(--red);
-}
-
-.service h3{
-    margin-bottom:8px;
-}
-
-.service p{
-    color:#999;
+.checks li:before{
+content:"✓";color:#a98245;margin-right:10px
 }
 
 /* INSTAGRAM */
-
 .instagram{
-    text-align:center;
-    background:
-    radial-gradient(circle at 50% 0%,rgba(103,61,230,.2),transparent 40%),
-    #08090d;
+background:white;text-align:center
+}
+.insta{
+display:inline-block;margin-top:25px;
+padding:15px 25px;border-radius:30px;
+color:white;font-weight:bold;
+background:linear-gradient(90deg,#833ab4,#e1306c,#f77737)
 }
 
-.insta-btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:16px 30px;
-    border-radius:40px;
-    background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
-    font-weight:bold;
+/* LOCATION */
+.location{
+background:#f0f0ed
 }
-
-/* CONTACT */
-
-.contact{
-    background:#0c0e13;
+.locationgrid{
+display:grid;grid-template-columns:1fr 1fr;gap:25px
 }
-
-.contact-box{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
+.locationcard{
+background:white;padding:35px;border-radius:15px;
+border:1px solid #e3e3e3
 }
-
-.contact-card{
-    padding:35px;
-    background:#12151c;
-    border-radius:18px;
-}
-
-.contact-card h3{
-    margin-bottom:20px;
-    font-size:25px;
-}
-
-.contact-card p{
-    color:#aaa;
-    line-height:1.9;
-}
-
-.contact-btn{
-    display:inline-block;
-    margin-top:20px;
-    background:#168b45;
-    padding:14px 23px;
-    border-radius:8px;
-    font-weight:bold;
+.locationcard h3{font-size:24px;margin-bottom:15px}
+.locationcard p{color:#666;line-height:1.9}
+.map{
+width:100%;height:300px;border:0;border-radius:12px
 }
 
 /* FOOTER */
-
 footer{
-    padding:35px 22px;
-    text-align:center;
-    background:#050609;
-    border-top:1px solid rgba(255,255,255,.08);
+background:#111;color:#aaa;padding:35px 0
 }
-
-footer b{
-    color:var(--red);
+.footer{
+display:flex;justify-content:space-between;gap:20px
 }
-
-footer p{
-    color:#777;
-    margin-top:8px;
-    font-size:13px;
-}
+.footer b{color:white}
+.footer small{color:#777}
 
 /* MOBILE */
-
-@media(max-width:850px){
-
-    nav{
-        display:none;
-    }
-
-    .nav-btn{
-        padding:10px 14px;
-        font-size:12px;
-    }
-
-    .hero-content{
-        grid-template-columns:1fr;
-        padding-top:50px;
-    }
-
-    .hero-image{
-        height:420px;
-    }
-
-    .feature-grid,
-    .bike-grid{
-        grid-template-columns:1fr;
-    }
-
-    .service-grid,
-    .contact-box{
-        grid-template-columns:1fr;
-    }
-
-    .section-title h2{
-        font-size:32px;
-    }
-
-    .video-box iframe{
-        height:250px;
-    }
+@media(max-width:800px){
+.navlinks{display:none}
+.hero{
+background:
+linear-gradient(rgba(255,255,255,.94),rgba(255,255,255,.88)),
+url("shop.jpg") center/cover
+}
+.hero h1{letter-spacing:-2px}
+.statsbox{grid-template-columns:1fr 1fr}
+.stat:nth-child(2){border-right:0}
+.vehiclegrid,.features,.showroom,.locationgrid{
+grid-template-columns:1fr
+}
+.offerbox{
+display:block;padding:35px
+}
+.offerbox h2{font-size:38px}
+.showroomphoto{height:350px}
+.heading h2{font-size:34px}
+section{padding:70px 0}
+.footer{display:block}
 }
 </style>
 </head>
@@ -527,361 +270,15 @@ footer p{
 <body>
 
 <header>
-<div class="nav">
+<div class="container nav">
 
-<a href="#" class="logo">
-<div class="logo-box">BK</div>
-<div class="logo-text">
-<b>B.K. MOTORS</b>
-<span>DEHRADUN</span>
-</div>
+<a href="#home" class="logo">
+B.K. <span>MOTORS</span>
 </a>
 
-<nav>
+<div class="navlinks">
 <a href="#home">HOME</a>
-<a href="#bikes">BIKES</a>
+<a href="#vehicles">VEHICLES</a>
 <a href="#services">SERVICES</a>
-<a href="#about">ABOUT</a>
-<a href="#contact">CONTACT</a>
-</nav>
-
-<a class="nav-btn" href="tel:+918126525454">CALL NOW</a>
-
-</div>
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-<div>
-
-<div class="badge">DEHRADUN'S TRUSTED 2-WHEELER BAZAR</div>
-
-<h1>
-YOUR NEXT<br>
-<span>RIDE</span> STARTS<br>
-HERE.
-</h1>
-
-<p>
-Premium pre-owned motorcycles and scooters.
-Buy, sell, exchange and finance your next two-wheeler
-with B.K. Motors Dehradun.
-</p>
-
-<div class="buttons">
-<a href="#bikes" class="btn primary">VIEW BIKES</a>
-<a href="#contact" class="btn secondary">CONTACT US</a>
-</div>
-
-</div>
-
-
-<div class="hero-image">
-
-<img src="https://images.unsplash.com/photo-1558981403-c5f9891c3d83?auto=format&fit=crop&w=1200&q=85">
-
-<div class="hero-overlay"></div>
-
-<div class="hero-label">
-<small>PRE-OWNED TWO WHEELERS</small>
-<h2>QUALITY • TRUST • VALUE</h2>
-</div>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- FEATURES -->
-
-<section class="features" id="about">
-
-<div class="container">
-
-<div class="section-title">
-<small>WHY B.K. MOTORS</small>
-<h2>More Than Just A Deal.</h2>
-</div>
-
-<div class="feature-grid">
-
-<div class="feature">
-<div class="feature-icon">🏍️</div>
-<h3>Quality Checked</h3>
-<p>Every vehicle goes through a comprehensive check before delivery.</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">🔄</div>
-<h3>Easy Exchange</h3>
-<p>Exchange your existing two-wheeler and upgrade to your next ride.</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">💳</div>
-<h3>Loan Facility</h3>
-<p>Finance options available for selected vehicles and customers.</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">💰</div>
-<h3>Buy Back</h3>
-<p>We also provide a convenient buy-back facility.</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">⚡</div>
-<h3>Instant Transfer</h3>
-<p>Fast and convenient vehicle transfer assistance.</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">🔧</div>
-<h3>First 2 Services Free</h3>
-<p>Selected vehicles come with our service support facility.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- BIKES -->
-
-<section class="bikes" id="bikes">
-
-<div class="container">
-
-<div class="section-title">
-<small>OUR COLLECTION</small>
-<h2>Featured Rides</h2>
-</div>
-
-<div class="bike-grid">
-
-<div class="bike">
-<div class="bike-img">
-<img src="https://images.unsplash.com/photo-1558980664-10e7170f2d1f?auto=format&fit=crop&w=900&q=80">
-</div>
-<div class="bike-info">
-<h3>Royal Enfield Classic</h3>
-<div class="details">Used • Petrol • Manual • Dehradun</div>
-<div class="price">
-<strong>₹1.XX Lakh</strong>
-<a href="tel:+918126525454" class="view">ENQUIRE</a>
-</div>
-</div>
-</div>
-
-
-<div class="bike">
-<div class="bike-img">
-<img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=900&q=80">
-</div>
-<div class="bike-info">
-<h3>Premium Motorcycle</h3>
-<div class="details">Used • Petrol • Manual • Dehradun</div>
-<div class="price">
-<strong>₹XX,000</strong>
-<a href="tel:+918126525454" class="view">ENQUIRE</a>
-</div>
-</div>
-</div>
-
-
-<div class="bike">
-<div class="bike-img">
-<img src="https://images.unsplash.com/photo-1525160354320-d8e92641c563?auto=format&fit=crop&w=900&q=80">
-</div>
-<div class="bike-info">
-<h3>Premium Scooter</h3>
-<div class="details">Used • Petrol • Automatic • Dehradun</div>
-<div class="price">
-<strong>₹XX,000</strong>
-<a href="tel:+918126525454" class="view">ENQUIRE</a>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- VIDEO -->
-
-<section class="video-section">
-
-<div class="container">
-
-<div class="section-title">
-<small>INSIDE B.K. MOTORS</small>
-<h2>See The Showroom</h2>
-</div>
-
-<div class="video-box">
-
-<iframe
-src="https://www.youtube.com/embed/ScMzIvxBSi4"
-allowfullscreen>
-</iframe>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- SERVICES -->
-
-<section class="services" id="services">
-
-<div class="container">
-
-<div class="section-title">
-<small>WHAT WE OFFER</small>
-<h2>Our Facilities</h2>
-</div>
-
-<div class="service-grid">
-
-<div class="service">
-<h3>🏍️ Used 2-Wheeler Sale</h3>
-<p>Quality checked pre-owned motorcycles and scooters.</p>
-</div>
-
-<div class="service">
-<h3>💰 Buy & Sell</h3>
-<p>Looking to sell your vehicle? Contact B.K. Motors.</p>
-</div>
-
-<div class="service">
-<h3>🔄 Exchange Facility</h3>
-<p>Exchange your current vehicle for another two-wheeler.</p>
-</div>
-
-<div class="service">
-<h3>💳 Finance / Loan</h3>
-<p>Loan facility available on selected vehicles.</p>
-</div>
-
-<div class="service">
-<h3>🔧 Vehicle Check-Up</h3>
-<p>Comprehensive vehicle inspection before delivery.</p>
-</div>
-
-<div class="service">
-<h3>⚡ Vehicle Transfer</h3>
-<p>Assistance with quick and convenient transfer.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- INSTAGRAM -->
-
-<section class="instagram">
-
-<div class="container">
-
-<div class="section-title">
-<small>FOLLOW OUR JOURNEY</small>
-<h2>Latest Vehicles On Instagram</h2>
-</div>
-
-<p style="color:#999;">
-See our latest arrivals, showroom updates and vehicles.
-</p>
-
-<a
-class="insta-btn"
-href="https://www.instagram.com/bkmotorsdehradun/"
-target="_blank">
-📸 FOLLOW @BKMOTORSDEHRADUN
-</a>
-
-</div>
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<div class="container">
-
-<div class="section-title">
-<small>VISIT US</small>
-<h2>Let's Find Your Ride.</h2>
-</div>
-
-<div class="contact-box">
-
-<div class="contact-card">
-
-<h3>B.K. Motors Dehradun</h3>
-
-<p>
-📍 182 Chakrata Road,<br>
-Seyad Mohalla, Khurbura Mohalla,<br>
-Dehradun, Uttarakhand
-</p>
-
-<p>
-📞 8126525454<br>
-📞 6398060310
-</p>
-
-<a class="contact-btn"
-href="https://maps.google.com/?q=B.K.+Motors+182+Chakrata+Road+Dehradun"
-target="_blank">
-📍 GET DIRECTIONS
-</a>
-
-</div>
-
-
-<div class="contact-card">
-
-<h3>Ready To Buy?</h3>
-
-<p>
-Call us to check available motorcycles,
-scooters, prices and exchange options.
-</p>
-
-<a class="contact-btn"
-href="tel:+918126525454">
-📞 CALL B.K. MOTORS
-</a>
-
-</div>
-
-</div>
-</div>
-</section>
-
-
-<footer>
-
-<p>
-© 2026 <b>B.K. MOTORS</b> Dehradun.
-All Rights Reserved.
-</p>
-
-<p>
-Your Trusted 2-Wheeler Bazar
-</p>
-
-</footer>
-
-</body>
-</html>
+<a href="#showroom">SHOWROOM</a>
+<a href="#location
