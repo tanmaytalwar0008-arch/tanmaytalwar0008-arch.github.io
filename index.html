@@ -2,93 +2,286 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="B.K. Motors Dehradun - Premium Used Two-Wheeler Sales & Purchase">
-<title>B.K. Motors Dehradun | Used Two-Wheelers</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B.K. Motors Dehradun</title>
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:#142238;background:#f6f7f9}
+a{text-decoration:none}
+header{background:#071a33;color:#fff;padding:15px 5%;position:sticky;top:0;z-index:9}
+nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:23px;font-weight:800;color:#fff}
+.logo span{color:#d5b36a}
+nav div{display:flex;gap:25px;align-items:center}
+nav a{color:white;font-size:14px}
+.topbtn,.gold{background:#d5b36a;color:#071a33!important;padding:11px 17px;border-radius:6px;font-weight:bold}
+.hero{background:#071a33;color:#fff;padding:90px 6%;min-height:550px}
+.heroinside{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.tag{color:#d5b36a;font-size:13px;font-weight:bold;letter-spacing:1px}
+h1{font-size:58px;line-height:1.05;margin:18px 0}
+h1 span{color:#d5b36a}
+.hero p{color:#cbd4df;font-size:17px;max-width:600px;margin-bottom:28px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 20px;border-radius:6px;font-weight:bold;font-size:14px}
+.outline{border:1px solid #aab5c2;color:#fff}
+.scooter{height:270px;position:relative}
+.sbody{position:absolute;background:#e8ebee;width:270px;height:90px;border-radius:100px 120px 35px 30px;top:85px;left:60px}
+.sfront{position:absolute;background:#dce1e5;width:85px;height:130px;border-radius:40px;right:25px;top:60px;transform:rotate(8deg)}
+.seat{position:absolute;background:#151b23;width:120px;height:22px;border-radius:20px;left:105px;top:65px}
+.handle{position:absolute;background:#aab2bb;width:75px;height:8px;right:0;top:48px;transform:rotate(-10deg)}
+.wheel{position:absolute;background:#111820;border:9px solid #69727c;width:65px;height:65px;border-radius:50%;bottom:15px}
+.w1{left:70px}.w2{right:40px}
+.rating{position:absolute;right:5px;bottom:0;background:#fff;color:#071a33;padding:18px;border-radius:9px;box-shadow:0 10px 30px #0006}
+.rating b{font-size:25px;display:block}
+.trust{background:#fff;padding:25px 6%;border-bottom:1px solid #ddd}
+.trustin{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.trust strong{display:block;color:#071a33}
+.trust small{color:#777}
+section{padding:75px 6%}
+.container{max-width:1200px;margin:auto}
+.heading{text-align:center;margin-bottom:40px}
+.heading small{color:#aa8235;font-weight:bold;letter-spacing:1px}
+.heading h2{font-size:38px;color:#071a33;margin:7px}
+.heading p{color:#697586}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.box{background:#fff;border:1px solid #e1e5e9;border-radius:9px;padding:23px}
+.box:hover{box-shadow:0 12px 30px #071a3312;transform:translateY(-3px)}
+.icon{font-size:25px;margin-bottom:12px}
+.box h3{font-size:17px;margin-bottom:7px}
+.box p{font-size:13px;color:#697586}
+.inventory{background:#fff}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{border:1px solid #dfe3e7;border-radius:9px;overflow:hidden;background:#fff}
+.pic{height:190px;background:#e9edf1;display:flex;align-items:center;justify-content:center;position:relative}
+.pic:after{content:"BIKE";font-size:45px;font-weight:900;color:#9ca5ae}
+.badge{position:absolute;top:10px;left:10px;background:#071a33;color:#fff;padding:5px 8px;font-size:10px;border-radius:4px;z-index:2}
+.info{padding:17px}
+.info h3{font-size:18px}
+.model{font-size:12px;color:#777;margin-bottom:14px}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.spec{background:#f4f5f7;padding:7px;font-size:11px}
+.spec b{display:block;color:#172238}
+.price{display:flex;justify-content:space-between;align-items:center;margin-top:15px}
+.price strong{font-size:20px}
+.enq{background:#071a33;color:#fff;padding:9px 11px;border-radius:5px;font-size:11px;font-weight:bold}
+.services{background:#f6f7f9}
+.servicegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.buyback{background:#071a33;color:#fff}
+.buyinside{max-width:1000px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.buyback h2{font-size:40px;margin:10px 0}
+.buyback p{color:#ccd4de;font-size:14px}
+.buybox{background:#fff;color:#071a33;padding:27px;border-radius:10px}
+.buyrow{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #ddd;font-size:14px}
+.buyrow:last-child{border:0}
+.note{font-size:11px!important;color:#777!important;margin-top:10px}
+.finance{background:#fff}
+.financebox{max-width:950px;margin:auto;border:1px solid #ddd;border-radius:10px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.financebox h3{font-size:27px;margin-bottom:10px}
+.financebox p{color:#687486;font-size:14px}
+.finlist div{background:#f4f5f7;padding:12px;margin-bottom:8px;font-size:13px;font-weight:bold}
+.brands{background:#f6f7f9}
+.brandgrid{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
+.brand{background:#fff;border:1px solid #ddd;padding:12px 22px;border-radius:5px;font-weight:bold}
+.location{background:#fff}
+.locgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px}
+.locbox{border:1px solid #ddd;border-radius:10px;padding:28px}
+.locbox h3{font-size:25px;margin-bottom:15px}
+.address{color:#687486;font-size:14px;line-height:1.8;margin-bottom:18px}
+.map{min-height:350px;border:1px solid #ddd;border-radius:10px;overflow:hidden}
+.map iframe{width:100%;height:100%;min-height:350px;border:0}
+.cta{text-align:center;background:#edf0f3}
+.cta h2{font-size:38px;margin-bottom:10px}
+.cta p{color:#687486;margin-bottom:22px}
+footer{background:#061326;color:#fff;padding:45px 6% 25px}
+.foot{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:30px;border-bottom:1px solid #ffffff20}
+footer h3{font-size:22px}
+footer h4{color:#d5b36a;margin-bottom:12px}
+footer p,footer li,footer a{color:#aeb8c5;font-size:13px;margin:7px 0;list-style:none}
+.copy{max-width:1200px;margin:18px auto 0;color:#7e8998;font-size:11px}
+.whatsapp{position:fixed;right:20px;bottom:20px;background:#168b48;color:white;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;z-index:20}
+@media(max-width:900px){
+nav div{gap:12px}.heroinside{grid-template-columns:1fr;text-align:center}
+.hero p{margin:auto auto 25px}.buttons{justify-content:center}
+.trustin{grid-template-columns:1fr 1fr;gap:15px}.grid,.cards{grid-template-columns:1fr 1fr}
+.servicegrid{grid-template-columns:1fr 1fr}.buyinside,.financebox,.locgrid{grid-template-columns:1fr}
+.foot{grid-template-columns:1fr 1fr}
 }
-
-html{
-  scroll-behavior:smooth;
+@media(max-width:600px){
+nav div a:not(.topbtn){display:none}h1{font-size:42px}
+.hero{padding:65px 5%}.scooter{transform:scale(.8)}
+.grid,.cards,.servicegrid{grid-template-columns:1fr}
+section{padding:55px 5%}.heading h2,.cta h2{font-size:30px}
+.buyback h2{font-size:31px}.foot{grid-template-columns:1fr}
 }
+</style>
+</head>
+<body>
 
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f7f8fa;
-  color:#172033;
-  line-height:1.6;
-}
+<header>
+<nav>
+<a class="logo" href="#home">B.K. <span>MOTORS</span></a>
+<div>
+<a href="#home">Home</a>
+<a href="#inventory">Vehicles</a>
+<a href="#services">Services</a>
+<a href="#finance">Finance</a>
+<a href="#location">Location</a>
+<a class="topbtn" href="https://wa.me/918126525454" target="_blank">WhatsApp</a>
+</div>
+</nav>
+</header>
 
-a{
-  text-decoration:none;
-  color:inherit;
-}
+<section class="hero" id="home">
+<div class="heroinside">
+<div>
+<div class="tag">TRUSTED USED TWO-WHEELER DEALER</div>
+<h1>Find Your Next <span>Ride.</span></h1>
+<p>Premium used two-wheelers in Dehradun with transparent deals, vehicle checks, finance assistance and customer-focused support.</p>
+<div class="buttons">
+<a class="btn gold" href="#inventory">Explore Vehicles</a>
+<a class="btn outline" href="https://wa.me/918126525454?text=Hello%20B.K.%20Motors%2C%20I%20want%20to%20enquire%20about%20a%20vehicle." target="_blank">💬 Chat on WhatsApp</a>
+</div>
+</div>
+<div class="scooter">
+<div class="sbody"></div><div class="sfront"></div><div class="seat"></div><div class="handle"></div>
+<div class="wheel w1"></div><div class="wheel w2"></div>
+<div class="rating"><small>Customer Rating</small><b>4.7 ★</b>★★★★★</div>
+</div>
+</div>
+</section>
 
-button{
-  font-family:inherit;
-}
+<div class="trust">
+<div class="trustin">
+<div><strong>6 Months</strong><small>Engine Warranty</small></div>
+<div><strong>2 Services</strong><small>Free Services</small></div>
+<div><strong>Anytime</strong><small>Buy-Back Option</small></div>
+<div><strong>Instant</strong><small>Transfer Assistance</small></div>
+</div>
+</div>
 
-/* ================= HEADER ================= */
+<section>
+<div class="container">
+<div class="heading"><small>WHY B.K. MOTORS</small><h2>A Better Way To Buy Used</h2><p>Customer-focused benefits with every eligible purchase.</p></div>
+<div class="grid">
+<div class="box"><div class="icon">✓</div><h3>6 Months Engine Warranty</h3><p>Engine warranty support for added peace of mind. Terms apply.</p></div>
+<div class="box"><div class="icon">🔧</div><h3>2 Free Services</h3><p>First two services free according to applicable terms.</p></div>
+<div class="box"><div class="icon">↻</div><h3>Anytime Buy-Back</h3><p>Sell your vehicle back whenever you decide, subject to valuation and terms.</p></div>
+<div class="box"><div class="icon">₹</div><h3>Finance Assistance</h3><p>Assistance with suitable loan and finance options.</p></div>
+<div class="box"><div class="icon">✓</div><h3>Pre-Delivery Check</h3><p>Comprehensive pre-delivery check before handover.</p></div>
+<div class="box"><div class="icon">⚡</div><h3>Instant Transfer</h3><p>Assistance with ownership transfer documentation.</p></div>
+<div class="box"><div class="icon">⇄</div><h3>Exchange</h3><p>Ask about exchanging your existing two-wheeler.</p></div>
+<div class="box"><div class="icon">●</div><h3>Buy & Sell</h3><p>Purchase or sell your used scooter or motorcycle with us.</p></div>
+</div>
+</div>
+</section>
 
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#071a33;
-  color:white;
-  border-bottom:1px solid rgba(255,255,255,.12);
-}
+<section class="inventory" id="inventory">
+<div class="container">
+<div class="heading"><small>CURRENT INVENTORY</small><h2>Featured Two-Wheelers</h2><p>Contact us for latest availability and final pricing.</p></div>
+<div class="cards">
 
-.nav{
-  max-width:1250px;
-  margin:auto;
-  padding:16px 22px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
+<div class="card"><div class="pic"><span class="badge">AVAILABLE</span></div><div class="info"><h3>Suzuki Access 125</h3><div class="model">2016 Model • Red</div><div class="specs"><div class="spec">KM<b>16,000 km</b></div><div class="spec">Owner<b>1st Owner</b></div><div class="spec">Model<b>2016</b></div><div class="spec">Colour<b>Red</b></div></div><div class="price"><strong>₹24,000</strong><a class="enq" href="https://wa.me/918126525454?text=I%20am%20interested%20in%20Suzuki%20Access%20125" target="_blank">ENQUIRE</a></div></div></div>
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
+<div class="card"><div class="pic"><span class="badge">AVAILABLE</span></div><div class="info"><h3>TVS Ntorq</h3><div class="model">2019 Model • Blue</div><div class="specs"><div class="spec">KM<b>24,000 km</b></div><div class="spec">Owner<b>1st Owner</b></div><div class="spec">Model<b>2019</b></div><div class="spec">Colour<b>Blue</b></div></div><div class="price"><strong>₹48,000</strong><a class="enq" href="https://wa.me/918126525454?text=I%20am%20interested%20in%20TVS%20Ntorq" target="_blank">ENQUIRE</a></div></div></div>
 
-.logo-box{
-  width:46px;
-  height:46px;
-  border:2px solid #d6b36a;
-  border-radius:10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:900;
-  color:#d6b36a;
-  font-size:18px;
-}
+<div class="card"><div class="pic"><span class="badge">FEATURED</span></div><div class="info"><h3>KTM Duke</h3><div class="model">2019 Model</div><div class="specs"><div class="spec">KM<b>7,800 km</b></div><div class="spec">Owner<b>1st Owner</b></div><div class="spec">Model<b>2019</b></div><div class="spec">Status<b>Premium Used</b></div></div><div class="price"><strong>₹70,000</strong><a class="enq" href="https://wa.me/918126525454?text=I%20am%20interested%20in%20KTM%20Duke" target="_blank">ENQUIRE</a></div></div></div>
 
-.logo-text strong{
-  display:block;
-  font-size:19px;
-  letter-spacing:.5px;
-}
+<div class="card"><div class="pic"><span class="badge">FEATURED</span></div><div class="info"><h3>Royal Enfield Bullet</h3><div class="model">2021 Model • Black</div><div class="specs"><div class="spec">KM<b>On Enquiry</b></div><div class="spec">Owner<b>On Enquiry</b></div><div class="spec">Model<b>2021</b></div><div class="spec">Colour<b>Black</b></div></div><div class="price"><strong>₹1,20,000</strong><a class="enq" href="https://wa.me/918126525454?text=I%20am%20interested%20in%20Royal%20Enfield%20Bullet" target="_blank">ENQUIRE</a></div></div></div>
 
-.logo-text span{
-  font-size:11px;
-  color:#cbd4df;
-}
+<div class="card"><div class="pic"><span class="badge">NEW ARRIVAL</span></div><div class="info"><h3>TVS Jupiter 125</h3><div class="model">2024 Model</div><div class="specs"><div class="spec">KM<b>On Enquiry</b></div><div class="spec">Owner<b>On Enquiry</b></div><div class="spec">Model<b>2024</b></div><div class="spec">Price<b>Enquire</b></div></div><div class="price"><strong>Enquire</strong><a class="enq" href="https://wa.me/918126525454?text=I%20am%20interested%20in%20TVS%20Jupiter%20125" target="_blank">ENQUIRE</a></div></div></div>
 
-nav{
-  display:flex;
-  gap:25px;
-  align-items:center;
-}
+</div>
+</div>
+</section>
 
-nav a{
-  font-size:14px;
+<section class="services" id="services">
+<div class="container">
+<div class="heading"><small>OUR SERVICES</small><h2>Everything Under One Roof</h2></div>
+<div class="servicegrid">
+<div class="box"><h3>01 • Buy</h3><p>Choose from available used two-wheelers according to your requirements.</p></div>
+<div class="box"><h3>02 • Sell</h3><p>Enquire about selling your existing scooter or motorcycle.</p></div>
+<div class="box"><h3>03 • Exchange</h3><p>Exchange your existing vehicle for another available vehicle.</p></div>
+<div class="box"><h3>04 • Finance</h3><p>Finance assistance subject to lender approval.</p></div>
+<div class="box"><h3>05 • Transfer</h3><p>Ownership transfer documentation assistance.</p></div>
+<div class="box"><h3>06 • Check-Up</h3><p>Comprehensive pre-delivery vehicle check.</p></div>
+</div>
+</div>
+</section>
+
+<section class="buyback">
+<div class="buyinside">
+<div>
+<small style="color:#d5b36a;font-weight:bold">B.K. MOTORS ADVANTAGE</small>
+<h2>Your Ride Today.<br>Your Option Tomorrow.</h2>
+<p>Our anytime buy-back option allows you to contact B.K. Motors whenever you decide to sell, subject to vehicle valuation, condition and applicable terms.</p>
+</div>
+<div class="buybox">
+<h3>Anytime Buy-Back</h3>
+<div class="buyrow"><span>Availability</span><b>Anytime</b></div>
+<div class="buyrow"><span>Applicable deduction</span><b>₹6,000</b></div>
+<div class="buyrow"><span>Indicative benefit</span><b>₹16/day</b></div>
+<div class="buyrow"><span>Process</span><b>Contact Us</b></div>
+<p class="note">₹16/day is an indicative representation. Buy-back is subject to vehicle condition, valuation, documentation and B.K. Motors terms.</p>
+</div>
+</div>
+</section>
+
+<section class="finance" id="finance">
+<div class="container">
+<div class="heading"><small>FINANCE & OWNERSHIP</small><h2>Make Your Purchase Easier</h2></div>
+<div class="financebox">
+<div><h3>Finance Assistance</h3><p>Ask our team about available loan options, documentation and purchase assistance.</p><br><a class="btn gold" href="https://wa.me/918126525454?text=Hello%20B.K.%20Motors%2C%20I%20want%20finance%20assistance." target="_blank">Ask About Finance</a></div>
+<div class="finlist"><div>✓ Loan / Finance Assistance</div><div>✓ Ownership Transfer</div><div>✓ Pre-Delivery Check</div><div>✓ 6 Months Engine Warranty</div><div>✓ First 2 Services Free</div></div>
+</div>
+</div>
+</section>
+
+<section class="brands">
+<div class="container">
+<div class="heading"><small>BRANDS</small><h2>Popular Two-Wheeler Brands</h2></div>
+<div class="brandgrid">
+<div class="brand">Honda</div><div class="brand">TVS</div><div class="brand">Suzuki</div><div class="brand">Hero</div><div class="brand">Yamaha</div><div class="brand">Royal Enfield</div><div class="brand">KTM</div><div class="brand">Bajaj</div><div class="brand">Ather</div><div class="brand">Ola Electric</div><div class="brand">BMW</div><div class="brand">Kawasaki</div><div class="brand">Triumph</div><div class="brand">Jawa</div><div class="brand">Vespa</div>
+</div>
+</div>
+</section>
+
+<section class="location" id="location">
+<div class="container">
+<div class="heading"><small>VISIT OUR SHOWROOM</small><h2>Find B.K. Motors Dehradun</h2></div>
+<div class="locgrid">
+<div class="locbox">
+<h3>B.K. Motors Dehradun</h3>
+<div class="address">Shop No. 182, near Krishan Nagar Chowk,<br>Chakrata Road, Seyad Mohalla,<br>Dehradun – 248001, Uttarakhand</div>
+<p><b>WhatsApp:</b> +91 81265 25454</p>
+<p><b>Rating:</b> 4.7 ★</p><br>
+<a class="btn gold" href="https://www.google.com/maps/search/?api=1&query=182+Chakrata+Road,+Dehradun" target="_blank">📍 Open in Google Maps</a><br><br>
+<a class="btn" style="background:#071a33;color:#fff" href="https://www.instagram.com/bkmotorsdehradoon?igsi=MWg0dDdicDAxN3R6OQ==" target="_blank">Instagram</a>
+</div>
+<div class="map">
+<iframe src="https://www.google.com/maps?q=182%20Chakrata%20Road%2C%20Dehradun&output=embed" loading="lazy"></iframe>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+<h2>Looking For Your Next Two-Wheeler?</h2>
+<p>Tell us your preferred model, budget and requirements.</p>
+<a class="btn gold" href="https://wa.me/918126525454?text=Hello%20B.K.%20Motors%2C%20I%20am%20looking%20for%20a%20used%20two-wheeler." target="_blank">💬 Chat on WhatsApp</a>
+</div>
+</section>
+
+<footer>
+<div class="foot">
+<div><h3>B.K. MOTORS DEHRADUN</h3><p>Used Two-Wheeler Sales & Purchase in Dehradun.</p></div>
+<div><h4>Quick Links</h4><p><a href="#home">Home</a></p><p><a href="#inventory">Vehicles</a></p><p><a href="#services">Services</a></p><p><a href="#location">Location</a></p></div>
+<div><h4>Contact</h4><p><a href="https://wa.me/918126525454" target="_blank">WhatsApp: +91 81265 25454</a></p><p><a href="https://www.instagram.com/bkmotorsdehradoon?igsi=MWg0dDdicDAxN3R6OQ==" target="_blank">Instagram</a></p><p>Shop No. 182, Chakrata Road</p><p>Dehradun – 248001</p></div>
+</div>
+<div class="copy">© 2026 B.K. Motors Dehradun. All rights reserved.</div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918126525454?text=Hello%20B.K.%20Motors%2C%20I%20want%20to%20enquire." target="_blank">💬</a>
+
+</body>
+                                                                          </html>
